@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+    <head> 
+        <title>S.O.S Angola</title> 
+         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+    <link rel="stylesheet" href="css/dist/font-awesome/css/all.css"> 
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+      <meta charset='utf-8' /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1"> 
+        <meta name='author' content='Okusindja Almeida, Preencham aqui' /> 
+        <meta name='description' content='Gestão dos laboratótios do ISPTEC' /> 
+        <meta name='keywords' content='GestLab Gestão Laboratório' /> 
+        <meta property='og:image' content='img/logo.png' /> 
+        <meta property='og:title' content=GestLab /> 
+        <meta property='og:description' content='Gestão dos laboratótios do ISPTEC' /> 
+        <link rel="apple-touch-icon" href="icon.png"> 
+        
+        <link rel="stylesheet" href="css/dist/font-awesome/css/all.css"> 
+      
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+      
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+   <a class="navbar-brand" href="index.html" style="margin-left: 2%;">
+   <img src="img/logo-farm.png" width="58" height="50" class="d-inline-block align-top" alt="">
+  covid-Ang
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+     
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+    
+   
+    <ul class="nav nav-pills mr-auto" id="pills-tab" role="tablist">
+        <li class="nav-item">
+    <a class="nav-link active"  href="index.html" >Inicio</a>
+  </li>
+  
+</ul>
+    <form class="form-inline my-2 my-lg-0" action="painel.html">
+   
+      <button class="btn btn-outline-success my-2 my-sm-0" >Iniciar Sessão</button>
+    </form>
+  </div>
+</nav>
+
+        <div  id="conteudo">
+            <div class="conteudo_geral" >
+                <form  id="login_form">
+                    <div class="logo">
+                        <a href="index.html">
+                            <div class="img_conteiner">
+                                <img src="img/logo-farm.png">
+                            </div>
+                            <div class="titulos_logo">
+                                <div class="parte_titulo_logo">
+                                    <span>Registar</span>
+                                </div>
+                                <div class="parte_titulo_logo">
+                                    <span>Farmácia</span>
+                                </div>
+                            </div>
+                            
+                        </a>
+                    </div>
+
+                    <div class="conteiner_login">
+                        <div class="inputs_conteiner">
+                        <div style="margin: 1%;"> Farmacia: <input type="text" placeholder ="Farmácia" id="farmacia" style="width: 78%;" required></div>
+                         <div style="margin: 1%;">Telefone: <input type="number" placeholder="Telefone" id="contacto" style="width: 79.2%;" required></div>
+                        <div style="margin: 1%;"> Nif: <input placeholder="NIF" type="text" id="nif" style="width: 91%;" required></div>
+                         <div style="margin: 1%;">Senha: <input placeholder="Senha" type="password" id="senha" style="width: 84.4%;" required></div>
+                         <div style="margin: 1%;">confirmar Senha: <input placeholder="Confirmar Senha" type="password" id="senha1" style="width: 63.4%;"></div>
+                         <div style="margin: 1%;">Endereço: <input type="text" placeholder="Endereço" id="local" style="width: 72.4%" required></div>
+                            
+                            <input type="button" class="botaoRegistar"  value="Registar" onclick="registar(this);" style="padding: 2%;border-radius: 8px;">
+                        </div>
+                        <div class="spinner-grow text-success" role="status" id="carregar" style=" position: absolute;left: 40%;width: 20%;height: 16%; display: none;">
+          
+                          </div>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+<div class="footer">
+  <div class="logotipo">
+    <img src="img/logo-farm.png">
+  </div>
+  <div class="numbers">
+    <span>Contactos:</span>
+    <ul>
+      
+      <li>931517500</li>
+      <li>990199257</li>
+      
+      <li>covidango@gmail.com</li>
+    </ul>
+  </div>
+  <div class="redes_sociais">
+    <span>Equipa Desenvolvedora</span>
+    <ul>
+      <li><i class="fab fa-instagram"></i> Adolfo Quende (@g_quende)</li>
+      <li><i class="fab fa-instagram"></i> Átila e Sousa </li>
+      <li><i class="fab fa-instagram"></i> Edmilson Júlio (@edjulio_denzel)</li>
+      <li><i class="fab fa-instagram"></i> Hairton Vanda (@silvestre_vanda)</li>
+      <li><i class="fab fa-instagram"></i> Marco Pitra (@69raios)</li>
+      <li><i class="fab fa-instagram"></i> Hélio Vicente </li>
+     
+      <li><i class="fab fa-instagram"></i> Okusindja de Almeida (@guccikussy)</li>
+      
+    </ul>
+  </div>
+<div class="consideracoes">
+  <p>De Angola com muito amor</p>
+  <p>S.O.S Mundo, Angola Report</p>
+  <a>Imagens por -<a href="https://br.freepik.com/"> freepik.com;</a>
+  <a href="https://www.pexels.com"> pexels.com;</a><a href="https://www.dreamstime.com"> dreamstime.com</a></a>
+
+</div>
+
+</div>
+<div class="rodape">Este é um projecto comunitário sem fins-lucrativos destinado a todos os angolanos.</div>
+
+
+    <script src="js/jquery-2.1.1.min.js"></script>     
+   <script src="js/bootstrap.min.js"></script>  
+    <script src="js/jquery.easing.min.js"></script>
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+      <script type="text/javascript" src="js/modelo.js"></script>
+    </body>
+
+</html>
