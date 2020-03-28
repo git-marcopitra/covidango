@@ -82,7 +82,7 @@ function registar(botao) {
         var regexp2 = new RegExp(/[A-Z]{2}/);
         var regexp3 = new RegExp(/[0-9]{3}/i);
         var regexp4 = new RegExp(/[0-9]{10}/i);
-        var n = regexp1.test(nif.substring(0, 9)) && regexp2.test(nif.substring(9, 11)) && regexp3.test(nif.substring(11));
+        var n = regexp1.test(nif) && regexp2.test(nif.substring(9, 11)) && regexp3.test(nif.substring(11));
         var n1 = regexp4.test(nif)
         if (contacto.length > 9 || contacto.length < 9) {
             alert("Telefone Invalido");
@@ -141,7 +141,7 @@ function inicarSessao() {
 
             var user = firebase.auth().currentUser.uid;
 
-            window.location.href = 'user.html';
+            window.location.href = 'pages/user.html';
         }).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
@@ -274,7 +274,7 @@ function produtos() {
             filho1_1_1.classList.add("foto_conteiner");
             filho1_1_1_1 = document.createElement("img");
 
-            filho1_1_1_1.src = "img/" + doc.data().produto + ".jpg"
+            filho1_1_1_1.src = "assets/img/" + doc.data().produto + ".jpg"
 
             filho1_1_1.appendChild(filho1_1_1_1);
             filho1_1.appendChild(filho1_1_1);

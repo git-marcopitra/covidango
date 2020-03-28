@@ -3,18 +3,16 @@
 
 <head>
     <title>S.O.S Angola</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
-    <link rel="stylesheet" href="css/dist/font-awesome/css/all.css">
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
-    <link rel="shortcut icon" type="image/x-png" href="img/logo-farm.png">
-
-    <link rel="stylesheet" href="css/dist/font-awesome/css/all.css">
-
+    <link rel="shortcut icon" type="image/x-png" href="../assets/img/logo-farm.png">
+    <link rel="stylesheet" type="text/css" href="../assets/dist/bootstrap/bootstrap.css">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+    <link rel="stylesheet" href="../assets/dist/font-awesome/css/all.css">
+    <link rel="stylesheet" href="../assets/dist/font-awesome/css/all.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 
 </head>
 
@@ -23,8 +21,8 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html" style="margin-left: 2%;">
-            <img src="img/logo-farm.png" height='60' class="d-inline-block align-top" alt="">
+        <a class="navbar-brand" href="../index.html" style="margin-left: 2%;">
+            <img src="../assets/img/logo-farm.png" height='60' class="d-inline-block align-top" alt="">
             <p class="logo-desc"> <strong>Covid</strong>Ang </p>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,9 +38,9 @@
                 </li>
 
             </ul>
-            <form class="form-inline my-2 my-lg-0" action="painel.html">
+            <form class="form-inline my-2 my-lg-0" action="registar.html">
 
-                <button class="btn btn-outline-success my-2 my-sm-0">Iniciar Sessão</button>
+                <button class="btn btn-outline-success my-2 my-sm-0">Registar</button>
             </form>
         </div>
     </nav>
@@ -51,60 +49,39 @@
         <div class="conteudo_geral">
             <form id="login_form">
                 <div class="logo">
-                    <a href="index.html">
-                        <div class="img_conteiner">
-                            <img src="img/logo-farm.png">
+                    <div class="img_conteiner">
+                        <img src="../assets/img/logo-farm.png">
+                    </div>
+                    <div class="titulos_logo">
+                        <div class="parte_titulo_logo">
+                            <span>Login</span>
                         </div>
-                        <div class="titulos_logo">
-                            <div class="parte_titulo_logo">
-                                <span>Registar</span>
-                            </div>
-                            <div class="parte_titulo_logo">
-                                <span>Farmácia</span>
-                            </div>
+                        <div class="parte_titulo_logo">
+                            <span>Farmácia</span>
                         </div>
-
-                    </a>
+                    </div>
                 </div>
-
                 <div class="conteiner_login">
-                    <label for="id" class="input-label"> Farmácia </label>
-                    <input class="form-input field" type="text" placeholder="Insira o nome da farmácia" id="farmacia" required>
-
-                    <label for="id" class="input-label">Telefone</label>
-                    <input class="form-input field" type="number" placeholder="Telefone" id="contacto" required>
-
-                    <label for="id" class="input-label">NIF</label>
-                    <input class="form-input field" placeholder="Insira um NIF válido e atualizado" type="text" id="nif" required>
-
-                    <label for="id" class="input-label">Senha</label>
-                    <input class="form-input field" placeholder="Senha" type="password" id="senha" required>
-
-                    <label for="id" class="input-label">Confirmar Senha</label>
-                    <input class="form-input field" placeholder="Confirmar Senha" type="password" id="senha1">
-
-                    <label for="id" class="input-label">Endereço </label>
-                    <input class="form-input field" type="text" placeholder="Endereço" id="local" required>
-
-                    <input class="form-input botaoRegistar" type="button" value="Registar" onclick="registar(this);">
-
-                    <div class="spinner-grow text-success" role="status" id="carregar" style=" position: absolute;left: 40%;width: 20%;height: 16%; display: none;">
+                    <div class="inputs_conteiner">
+                        <input class="form-input field" placeholder="NIF" type="text" id="nif">
+                        <input class="form-input field" placeholder="Telefone" type="number" id="contacto">
+                        <input class="form-input field" placeholder="Senha" type="password" id="senha">
+                        <span>Não possou uma conta <a href="registar.html">Registar</a></span>
+                        <input class="form-input botaoRegistar" onClick="inicarSessao();" type="button" value="Iniciar sessão">
                     </div>
                 </div>
 
             </form>
-
-
         </div>
     </div>
+
     <div class="footer">
         <div class="logotipo">
-            <img src="img/logo-farm.png">
+            <img src="../assets/img/logo-farm.png">
         </div>
         <div class="numbers">
             <span>Contactos:</span>
             <ul>
-
 
 
                 <li>covidango@gmail.com</li>
@@ -136,19 +113,19 @@
     <div class="rodape">Este é um projecto comunitário sem fins-lucrativos destinado a todos os angolanos.</div>
 
 
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="../assets/js/jquery-2.1.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.easing.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
-    <script type="text/javascript" src="js/modelo.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+    <script type="text/javascript" src="../assets/js/modelo.js"></script>
     <script type="text/javascript">
         /**Reactive functions */
         window.onload = function() {
@@ -163,7 +140,6 @@
             })
         };
     </script>
-
 </body>
 
 </html>

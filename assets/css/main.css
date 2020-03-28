@@ -59,7 +59,11 @@ header .logo {
 
 .logo-desc {
     text-transform: uppercase;
-    color: var(--primary-color);
+    color: #B44;
+}
+
+.logo-desc strong {
+    color: #28A745;
 }
 
 header .logo a {
@@ -106,7 +110,7 @@ header .logo .titulos_logo .parte_titulo_logo:nth-child(2) span {
     margin-right: auto;
     margin-left: auto;
     display: flex;
-    min-height: 100vh;
+    min-height: calc(100vh - 400px);
     padding-left: 20px;
     padding-right: 20px;
     flex-direction: column;
@@ -297,6 +301,13 @@ header #menu-inputs input[type="button"]:hover {
 
 .post_informations .bloco_conteiner {
     flex-wrap: wrap;
+}
+
+.informacaoProduto {
+    padding: 50px 10px 30px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid rgba(0, 200, 0, .2);
+    text-transform: uppercase;
 }
 
 .post_informations .bloco_conteiner .bloco_singular {
@@ -604,11 +615,33 @@ header #menu-inputs input[type="button"]:hover {
 
 .conjunto_texto h2,
 .conjunto_texto h1 {
-    padding-top: 30px;
+    padding: 30px 0 20px;
+    text-transform: uppercase;
 }
 
 .conjunto_texto ul {
     list-style: circle;
+}
+
+.card {
+    max-width: 350px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.card-img {
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 100%;
+    width: auto;
+    min-width: 100%;
+}
+
+.card-body {
+    height: auto;
 }
 
 h1,
@@ -697,7 +730,7 @@ h2 {
         margin-right: auto;
         margin-left: auto;
         display: flex;
-        min-height: 100vh;
+        min-height: calc(100vh - 400px);
         padding-left: 20px;
         padding-right: 20px;
         flex-direction: column;
@@ -755,7 +788,7 @@ h2 {
         font-size: 23px;
     }
     .post_informations_plus h1 {
-        width: 72%;
+        width: 80%;
         color: var(--primary-color);
     }
     .footer {

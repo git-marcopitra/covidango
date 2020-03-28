@@ -3,15 +3,15 @@
 
 <head>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/dist/bootstrap/bootstrap.css">
     <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
-    <link rel="stylesheet" href="css/dist/font-awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="assets/dist/font-awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
-    <link rel="shortcut icon" type="image/x-png" href="img/logo-farm.png">
-    <link rel="stylesheet" href="css/dist/font-awesome/css/all.css">
+    <link rel="shortcut icon" type="image/x-png" href="assets/img/logo-farm.png">
+    <link rel="stylesheet" href="assets/dist/font-awesome/css/all.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
@@ -19,9 +19,11 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.html" style="margin-left: 2%;">
-            <img src="img/logo-farm.png" height='60' class="d-inline-block align-top" alt="">
+            <img src="assets/img/logo-farm.png" height='60' class="d-inline-block align-top" alt="">
             <p class="logo-desc"> <strong>Covid</strong>Ang </p>
         </a>
+
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
      
     <span class="navbar-toggler-icon"></span>
@@ -34,7 +36,8 @@
                     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#inicio" role="tab" aria-controls="inicio" aria-selected="true">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="produtos.html">Produtos</a>
+                    <!--a-- class="nav-link" href="produtos.html">Produtos</!--a-->
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#farmacia" role="tab" aria-controls="farmacia" aria-selected="false">Fármacos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#covid19" role="tab" aria-controls="covid19" aria-selected="false">COVID-19</a>
@@ -53,7 +56,7 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" id="conta" style="display: none;">Conta</button>
 
             </form>
-            <form class="form-inline my-2 my-lg-0" action="painel.html">
+            <form class="form-inline my-2 my-lg-0" action="pages/painel.html">
 
                 <button class="btn btn-outline-success my-2 my-sm-0" id="sessao"></button>
             </form>
@@ -93,7 +96,7 @@
                     </div>
                     <div class="bloco_conteiner">
                         <div class="bloco_singular bloco_grande">
-                            <a href="produtos.html" style=" margin-left: 4%;">Farmácias e centros com materiais para prevenção à venda <i class="fas fa-chevron-circle-right"></i></a>
+                            <a aria-controls="farmacia" data-toggle="pill" href="#farmacia" style=" margin-left: 4%;">Farmácias e centros com materiais para prevenção à venda <i class="fas fa-chevron-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -104,21 +107,21 @@
                         <div class="bloco_singular" type="button" data-toggle="modal" data-target="#principaissintomas">
                             <div class="segurador"></div>
                             <div class="foto_conteiner">
-                                <img src="img/1.jpg">
+                                <img src="assets/img/1.jpg">
                             </div>
                             <a>Principais sintomas</a>
                         </div>
                         <div class="bloco_singular" type="button" data-toggle="modal" data-target="#cisp">
                             <div class="segurador"></div>
                             <div class="foto_conteiner">
-                                <img src="img/ciscp.jpg">
+                                <img src="assets/img/ciscp.jpg">
                             </div>
                             <a>Em caso de suspeita</a>
                         </div>
                         <div class="bloco_singular" type="button" data-toggle="modal" data-target="#familiar">
                             <div class="segurador"></div>
                             <div class="foto_conteiner">
-                                <img src="img/4.jfif">
+                                <img src="assets/img/4.jfif">
                             </div>
                             <a href="#">Planeamento familiar frente ao vírus</a>
                         </div>
@@ -131,7 +134,7 @@
                         <div class="bloco_singular" type="button" data-toggle="modal" data-target="#mitos">
                             <div class="foto_bloco_sigular">
                                 <div class="foto_conteiner">
-                                    <img src="img/mito.jpg">
+                                    <img src="assets/img/mito.jpg">
                                 </div>
                             </div>
                             <div class="informacao1">
@@ -141,7 +144,7 @@
                         <div class="bloco_singular" onclick="location.href='https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6'">
                             <div class="foto_bloco_sigular">
                                 <div class="foto_conteiner">
-                                    <img src="img/mapa.jpg">
+                                    <img src="assets/img/mapa.jpg">
                                 </div>
                             </div>
                             <div class="informacao1">
@@ -161,7 +164,7 @@
                         <div class="bloco_singular" onclick="location.href='https://www.covid19.gov.ao/'">
                             <div class="foto_bloco_sigular">
                                 <div class="foto_conteiner">
-                                    <img src="img/angola.png">
+                                    <img src="assets/img/angola.png">
                                 </div>
                             </div>
                             <div class="informacao1">
@@ -171,7 +174,7 @@
                         <div class="bloco_singular" type="button" data-toggle="modal" data-target="#propagacao">
                             <div class="foto_bloco_sigular">
                                 <div class="foto_conteiner">
-                                    <img src="img/covid.jpg">
+                                    <img src="assets/img/covid.jpg">
                                 </div>
                             </div>
                             <div class="informacao1">
@@ -184,7 +187,25 @@
 
         </div>
 
+        <div class="tab-pane fade" id="farmacia" role="tabpanel" aria-labelledby="pills-home-tab">
 
+            <div class="conteudo_geral">
+
+                <div class="bloco_de_coisas post_informations_plus" id="itens">
+                    <h1 class="informacaoProduto">Fármacos Disponíveis para sua proteção</h1>
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+        </div>
 
 
 
@@ -196,7 +217,8 @@
                     <h2> O que é coronavírus? </h2>
 
                     <p class="text-muted" style="font-size: 16pt;">O coronavírus (CoV) é uma grande família viral, conhecida desde meados dos anos 1960, que causam infecções respiratórias em seres humanos e animais. O novo agente do coronavírus foi descoberto em 31/12/2019 após casos registados na
-                        China.</p>
+                        China.
+                    </p>
 
                     <p class="text-muted" style="font-size: 16pt;">A doença provocada pelo novo Coronavírus é oficialmente conhecida como COVID-19, sigla em inglês “coronavirus disease 2019” (doença de coronavírus 2019).</p>
 
@@ -227,7 +249,8 @@
         <div class="tab-pane fade" id="sintomas" role="tabpanel" aria-labelledby="pills-contact-tab">
             <div class="conteudo_geral">
                 <div class="conjunto_texto">
-                    <h2>Quais são os sintomas do coronavírus? </h2>
+                    <h2 class="conjunto-texto-titulo">Quais são os sintomas do coronavírus? </h2>
+
                     <p style="font-size: 16pt;">Os sinais e sintomas do coronavírus são principalmente respiratórios, semelhantes a um resfriado. Podem, também, causar infecção do trato respiratório inferior, como as pneumonias. No entanto, o coronavírus (SARS-CoV-2) ainda precisa
                         de mais estudos e investigações para caracterizar melhor os sinais e sintomas da doença.</p>
 
@@ -240,7 +263,8 @@
                                 <h4 class="card-title">Febre</h4>
 
                             </div>
-                            <img src="img/outros/febre.jpg" class="card-img-top" alt="...">
+                            <div class="card-img">
+                                <img src="assets/img/outros/febre.jpg" class="card-img-top" alt="..."></div>
 
                         </div>
                         <div class="carde">
@@ -248,7 +272,8 @@
                                 <h4 class="card-title">Tosse</h4>
 
                             </div>
-                            <img src="img/outros/tosse.jpg" class="card-img-top" alt="...">
+                            <div class="card-img">
+                                <img src="assets/img/outros/tosse.jpg" class="card-img-top" alt="..."></div>
 
                         </div>
                         <div class="carde">
@@ -256,7 +281,9 @@
                                 <h4 class="card-title">Dificuldade para respirar</h4>
 
                             </div>
-                            <img src="img/outros/respiracao.jpg" class="card-img-top" alt="...">
+                            <div class="card-img">
+
+                                <img src="assets/img/outros/respiracao.jpg" class="card-img-top" alt="..."></div>
 
                         </div>
                     </div>
@@ -305,7 +332,9 @@
                     <div class="row row-cols-1 row-cols-md-3">
                         <div class="col mb-4">
                             <div class="card">
-                                <img src="img/outros/lavarsabao.jpg" class="card-img-top" alt="...">
+                                <div class="card-img">
+                                    <img src="assets/img/outros/lavarsabao.jpg" class="card-img-top" alt="...">
+                                </div>
                                 <div class="card-body">
                                     <h4 class="card-title">Sempre...</h4>
                                     <p>Lavar as mãos frequentemente com água e sabão por pelo menos 20 segundos, respeitando os 5 momentos de higienização. Se não houver água e sabonete, usar um desinfetante para as mãos à base de álcool.</p>
@@ -314,8 +343,10 @@
                             </div>
                         </div>
                         <div class="col mb-4">
+
                             <div class="card">
-                                <img src="img/outros/tocar.jpg" class="card-img-top" alt="...">
+                                <div class="card-img">
+                                    <img src="assets/img/outros/tocar.jpg" class="card-img-top" alt="..."></div>
                                 <div class="card-body">
                                     <h4 class="card-title">Sempre...</h4>
                                     <p>Evitar tocar nos olhos, nariz e boca com as mãos não lavadas.</p>
@@ -325,7 +356,8 @@
                         </div>
                         <div class="col mb-4">
                             <div class="card">
-                                <img src="img/outros/comu.jpg" class="card-img-top" alt="...">
+                                <div class="card-img">
+                                    <img src="assets/img/outros/comu.jpg" class="card-img-top" alt="..."></div>
                                 <div class="card-body">
                                     <h4 class="card-title">Sempre...</h4>
                                     <p>Evitar contacto próximo com pessoas doentes.</p>
@@ -335,7 +367,8 @@
 
                         <div class="col mb-4">
                             <div class="card">
-                                <img src="img/outros/emcasa.jpg" class="card-img-top" alt="...">
+                                <div class="card-img">
+                                    <img src="assets/img/outros/emcasa.jpg" class="card-img-top" alt="..."></div>
                                 <div class="card-body">
                                     <h4 class="card-title">Sempre...</h4>
                                     <p>Ficar em casa quando estiver doente.</p>
@@ -345,7 +378,8 @@
 
                         <div class="col mb-4">
                             <div class="card">
-                                <img src="img/outros/lenco.jpg" class="card-img-top" alt="...">
+                                <div class="card-img">
+                                    <img src="assets/img/outros/lenco.jpg" class="card-img-top" alt="..."></div>
                                 <div class="card-body">
                                     <h4 class="card-title">Sempre...</h4>
                                     <p>Cobrir boca e nariz ao tossir ou espirrar com um lenço de papel e jogar no lixo.</p>
@@ -356,7 +390,8 @@
 
                         <div class="col mb-4">
                             <div class="card">
-                                <img src="img/outros/desin.jpg" class="card-img-top" alt="...">
+                                <div class="card-img">
+                                    <img src="assets/img/outros/desin.jpg" class="card-img-top" alt="..."></div>
                                 <div class="card-body">
                                     <h4 class="card-title">Sempre...</h4>
                                     <p>Limpar e desinfetar objetos e superfícies tocados com freqüência.</p>
@@ -378,11 +413,13 @@
         <div class="tab-pane fade" id="sobre" role="tabpanel" aria-labelledby="pills-contact-tab">
             <div class="conteudo_geral">
                 <div class="conjunto_texto">
-                    <p style="font-size: 16pt;"> Somos um Grupo de estudantes de Engenharia Informatica que face a pandemia que nos assola e como jovens activos na sociedade decidimos contribuir com o que sabemos e tirando proveito das ferramentas das Tecnologias de Informação e
-                        Comunicação desenvolvemos uma plataforma que congregasse toda a informação referente ao vírus (Covid-19).</p>
-                    <p style="font-size: 16pt;">Com a plataforma procuramos expor também a localização das farmácias onde encontrar os fármacos mais procurados e reportar em tempo real a disponibilidade dos mesmos, de modo a evitar enchentes e a locomação desnecessaria. A plataforma
-                        também tem disponivel tutoriais das precauções a serem tomadas para evitar a contaminação do vírus e informação credivel do estado da pandemia proveniente das autoridades responsaveis combatendo assim o Covid-19 e o Covidizer </p>
-
+                    <h1> Sobre nós</h1>
+                    <p style="font-size: 16pt;"> Somos uma equipa de estudantes de engenharia informática que face a <b>pandemia</b> que assola o planeta e como jovens activos na sociedade decidimos contribuir com o que sabemos e tirando proveito das ferramentas e tecnologias de
+                        Informação e Comunicação desenvolvemos uma plataforma que congregasse toda a informação referente ao vírus COVID-19 (ou conhecido como, Coronavírus).</p>
+                    <p style="font-size: 16pt;">Com a plataforma procuramos expor também a localização das farmácias onde podemos encontrar os fármacos mais procurados e reportar em tempo real a disponibilidade dos mesmos, de modo a evitar enchentes e a locomação desnecessária.
+                        A plataforma também tem disponivel tutoriais das precauções a serem tomadas para evitar a contaminação do vírus e informação credível do estado da pandemia proveniente das autoridades responsaveis combatendo assim o COVID-19 e
+                        <i title="O que ouvi dizer">o Covidizer</i>.
+                    </p>
                     <p style="font-size: 14pt;"><b>Enquanto o vírus não nos caça, quem lhe caça não descança!</b></p>
 
 
@@ -465,7 +502,7 @@
                 </div>
                 <div class="modal-body">
                     <h4>A propagação do vírus é inevitável?</h4>
-                    <h5>Não!</h5>
+                    <h5>R: Não!...</h5>
                     <p>A propagação do virus é anulada quando uma pessoa saudavel não tem contacto com uma pessoa infectada pelo virus, daí que a maior luta contra o vírus é o isolamento social(quarentena).</p>
 
                     <p>Por isso enquanto os médicos cuidam dos infectados, nós só precisamos de ficar em casa. Esta é a maneirade fazermos parte da luta contra o COVID-19.</p>
@@ -488,17 +525,17 @@
                 <div class="modal-body">
                     <h5>1 – Itens como luvas e máscaras nos protegem da transmissão da doença? </h5>
                     <div style="margin-left: 3%;">
-                        <p>R:Verdade. O uso da máscara só é recomendado para pacientes com casos confirmados e para aqueles com suspeita da doença. A recomendação para prevenção é descartar as máscaras a cada 4 horas quando em ambientes externos.</p>
+                        <p>R: Verdade, o uso da máscara só é recomendado para pacientes com casos confirmados e para aqueles com suspeita da doença. A recomendação para prevenção é descartar as máscaras a cada 4 horas quando em ambientes externos.</p>
                     </div>
                     <hr>
                     <h5>2 – Pessoas com máscaras podem contrair o Coronavírus? </h5>
                     <div style="margin-left: 3%;">
-                        <p>R:Verdade. A máscara protege contra a doença, mas não a evita. Existem outras formas de contrair o Coronavírus mesmo estando de máscara</p>
+                        <p>R: Verdade, a máscara protege contra a doença, mas não a evita. Existem outras formas de contrair o Coronavírus mesmo estando de máscara.</p>
                     </div>
                     <hr>
                     <h5>3 – Existe um exame capaz de detectar a existência do Coronavírus no corpo humano? </h5>
                     <div style="margin-left: 3%;">
-                        <p>R:Verdade. É possível fazer o diagnóstico laboratorial específico para Coronavírus, através da detecção do genoma viral.</p>
+                        <p>R: Verdade, é possível fazer o diagnóstico laboratorial específico para Coronavírus, através da detecção do genoma viral.</p>
                     </div>
 
                 </div>
@@ -533,7 +570,7 @@
 
     <div class="footer">
         <div class="logotipo">
-            <img src="img/logo-farm.png">
+            <img src="assets/img/logo-farm.png">
         </div>
         <div class="numbers">
             <span>Contactos:</span>
@@ -567,9 +604,9 @@
     <div class="rodape">Este é um projecto comunitário sem fins-lucrativos destinado a todos os angolanos.</div>
 
 
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 
@@ -580,10 +617,13 @@
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
-    <script type="text/javascript" src="js/modelo.js"></script>
+    <script type="text/javascript" src="assets/js/modelo.js"></script>
     <script type="text/javascript">
         inicio();
+        verifica();
+        produtos();
     </script>
+
 </body>
 
 </html>
