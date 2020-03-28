@@ -9,13 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
       <meta charset='utf-8' /> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1"> 
-        <meta name='author' content='Okusindja Almeida, Preencham aqui' /> 
-        <meta name='description' content='Gestão dos laboratótios do ISPTEC' /> 
-        <meta name='keywords' content='GestLab Gestão Laboratório' /> 
-        <meta property='og:image' content='img/logo.png' /> 
-        <meta property='og:title' content=GestLab /> 
-        <meta property='og:description' content='Gestão dos laboratótios do ISPTEC' /> 
-        <link rel="apple-touch-icon" href="icon.png"> 
+        <link rel="shortcut icon" type="image/x-png" href="img/logo-farm.png" >
         <link rel="stylesheet" href="css/dist/font-awesome/css/all.css"> 
       
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -25,8 +19,8 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
    <a class="navbar-brand" href="index.html" style="margin-left: 2%;">
-    <img src="img/logo-farm.png" width="58" height="50" class="d-inline-block align-top" alt="">
-  covid-Ang
+     <img src="img/logo-farm1.png" width="120" height=60 class="d-inline-block align-top" alt="">
+  
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
      
@@ -55,8 +49,12 @@
     <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#sobre" role="tab" aria-controls="sobre" aria-selected="false">Sobre</a>
   </li>
 </ul>
+<form class="form-inline my-2 my-lg-0" action="user.html">
+   <button class="btn btn-outline-success my-2 my-sm-0" id="conta" style="display: none;">Conta</button>
+    
+    </form>
     <form class="form-inline my-2 my-lg-0" action="painel.html">
-   
+   <button class="btn btn-outline-success my-2 my-sm-0" id="conta" style="display: none;" onclick="window.location.href='user.html'">Conta</button>
       <button class="btn btn-outline-success my-2 my-sm-0" id="sessao" ></button>
     </form>
   </div>
@@ -278,8 +276,18 @@
      <p style="font-size: 16pt;">Com a plataforma procuramos expor também a localização das farmácias onde encontrar os fármacos mais procurados e reportar em tempo real a disponibilidade dos mesmos, de modo a evitar  enchentes e a locomação desnecessaria. A plataforma também tem disponivel tutoriais das precauções a serem tomadas para evitar a contaminação do vírus e informação credivel do estado da pandemia proveniente das autoridades responsaveis combatendo assim o Covid-19 e o Covidizer </p>
 
      <p style="font-size: 14pt;"><b>Enquanto o vírus não nos caça, quem lhe caça não descança!</b></p> 
+
+
+       <div class="form-group mx-sm-3 mb-2">
+    <label for="sugestao">Deixe aqui a sua sugestão para o enriquecimento da plataforma</label>
+    <textarea class="form-control" id="sugestao" rows="3" placeholder="Sugestão"></textarea>
+  </div>
+<button  class="btn btn-success mb-2" style="float: right; margin-right: 1%;" type="button" onclick="sugestao();">Enviar</button>
+
     </div>
   </div>
+
+
 </div>
 </div>
 
@@ -397,8 +405,7 @@
     <span>Contactos:</span>
     <ul>
     
-      <li>931517500</li>
-      <li>990199257</li>
+  
       
       <li>covidango@gmail.com</li>
     </ul>
