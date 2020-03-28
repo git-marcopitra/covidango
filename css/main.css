@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900&display=swap');*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
 
 :root{
     --primary-color: #28A745;
@@ -9,7 +10,9 @@ body{
     padding: 0;
     margin: 0;
     background-color: #f3f3f3;
-    font-family: 'Roboto', sans-serif;
+   /* font-family: 'Roboto', sans-serif;*/
+    font-family: 'Ubuntu', sans-serif;
+
 }
 
 *{
@@ -420,6 +423,11 @@ header #menu-inputs input[type="button"]:hover{
     display: flex;
 }
 
+.titulo2{
+        color: #BB4444;
+    font-size: 4rem;
+}
+
 .pesquisas_farm select{
     height: 35px;
     border: 0.3px solid #c0c0c0;
@@ -607,6 +615,61 @@ h1, h2{
     flex-wrap: wrap;
 }
 
+.footer .logotipo{
+    width: 150px;
+    filter: grayscale(100%);
+    opacity: 0.4;
+}
+
+.footer span{
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+.footer .fab{
+    color: var(--primary-color);
+}
+
+.footer .numbers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer ul{
+    padding: 0;
+    margin: 0;
+}
+
+.footer .logotipo img{
+    width: 100%;
+}
+
+.rodape{
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: black;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-weight: 300;
+}
+/*Miltinho*/
+
+.botaoRegistar{
+    background-color: var(--primary-color);
+    color: white;
+    border: 0.3px solid #cecece;
+    text-align: center;
+}
+
+
+
+
 @media  screen and (max-width: 700px) {
 
     .conteudo_geral{
@@ -729,57 +792,18 @@ h1, h2{
     flex-direction: column;
     align-items: center;
 }
+
+
+.titulo2{
+        color: #BB4444;
+    font-size: 2rem;
 }
 
-.footer .logotipo{
-    width: 150px;
-    filter: grayscale(100%);
-    opacity: 0.4;
+.conjunto_texto {
+margin-left: 0;
+    margin-right: 0;
+    padding-top: 5px;
+    text-align: justify;
 }
-
-.footer span{
-    color: var(--primary-color);
-    font-weight: 900;
-}
-
-.footer .fab{
-    color: var(--primary-color);
-}
-
-.footer .numbers{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.footer ul{
-    padding: 0;
-    margin: 0;
-}
-
-.footer .logotipo img{
-    width: 100%;
-}
-
-.rodape{
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    background-color: black;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    font-weight: 300;
-}
-/*Miltinho*/
-
-.botaoRegistar{
-    background-color: var(--primary-color);
-    color: white;
-    border: 0.3px solid #cecece;
-    text-align: center;
 }
 
