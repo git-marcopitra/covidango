@@ -1,582 +1,589 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
-<link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
-	<link rel="stylesheet" href="css/dist/font-awesome/css/all.css"> 
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	  <meta charset='utf-8' /> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1"> 
-        <link rel="shortcut icon" type="image/x-png" href="img/logo-farm.png" >
-        <link rel="stylesheet" href="css/dist/font-awesome/css/all.css"> 
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+    <link rel="stylesheet" href="css/dist/font-awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" type="image/x-png" href="img/logo-farm.png">
+    <link rel="stylesheet" href="css/dist/font-awesome/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light" >
-   <a class="navbar-brand" href="#" style="margin-left: 2%;">
-    <img src="img/logo-farm1.png" width="120" height=60 class="d-inline-block align-top" alt="">
-  
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html" style="margin-left: 2%;">
+            <img src="img/logo-farm.png" height='60' class="d-inline-block align-top" alt="">
+            <p class="logo-desc"> <strong>Covid</strong>Ang </p>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
      
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
-    
-   
-    <ul class="nav nav-pills mr-auto" id="pills-tab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active"   id="pills-home-tab" data-toggle="pill" href="#inicio" role="tab" aria-controls="inicio" aria-selected="true">Inicio</a>
-  </li>
-      <li class="nav-item">
-    <a class="nav-link"  href="produtos.html" >Produtos</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#covid19" role="tab" aria-controls="covid19" aria-selected="false">COVID-19</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#sintomas" role="tab" aria-controls="sintomas" aria-selected="false">Sintomas</a>
-  </li>
-   <li class="nav-item">
-    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#precaucoes" role="tab" aria-controls="precaucoes" aria-selected="false">Precauções</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#sobre" role="tab" aria-controls="sobre" aria-selected="false">Sobre</a>
-  </li>
-</ul>
- <form class="form-inline my-2 my-lg-0" action="user.html">
-   <button class="btn btn-outline-success my-2 my-sm-0" id="conta" style="display: none;">Conta</button>
-    
-    </form>
-    <form class="form-inline my-2 my-lg-0" action="painel.html">
-  
-      <button class="btn btn-outline-success my-2 my-sm-0" id="sessao" ></button>
-    </form>
-  </div>
-</nav>
+        <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
 
 
-<div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="inicio" role="tabpanel" aria-labelledby="pills-home-tab">
-    
-        <div class="conteudo_geral" >
-            <div class="bloco_de_coisas">
-                <div id="head_principal_bloco">
-                  <div class="spinner-grow text-success" role="status" id="carregar">
-          
-                  </div>
-                  <div id="titulo">
-                 
-                    </div>
-                    <div class="estatisticas">
-                        <ul id="actualizacao">
-                           
-                          
-                        </ul>
-                         <div style="float: right; display: none;" id="fonte">
-                        <p>fonte- Televisão Publica de Angola</p>
+            <ul class="nav nav-pills mr-auto" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#inicio" role="tab" aria-controls="inicio" aria-selected="true">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="produtos.html">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#covid19" role="tab" aria-controls="covid19" aria-selected="false">COVID-19</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#sintomas" role="tab" aria-controls="sintomas" aria-selected="false">Sintomas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#precaucoes" role="tab" aria-controls="precaucoes" aria-selected="false">Precauções</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#sobre" role="tab" aria-controls="sobre" aria-selected="false">Sobre</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="user.html">
+                <button class="btn btn-outline-success my-2 my-sm-0" id="conta" style="display: none;">Conta</button>
+
+            </form>
+            <form class="form-inline my-2 my-lg-0" action="painel.html">
+
+                <button class="btn btn-outline-success my-2 my-sm-0" id="sessao"></button>
+            </form>
+        </div>
+    </nav>
+
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="inicio" role="tabpanel" aria-labelledby="pills-home-tab">
+
+            <div class="conteudo_geral">
+                <div class="bloco_de_coisas">
+                    <div id="head_principal_bloco">
+                        <div class="spinner-grow text-success" role="status" id="carregar">
+
+                        </div>
+                        <div id="titulo">
+
+                        </div>
+                        <div class="estatisticas">
+                            <ul id="actualizacao">
+
+
+                            </ul>
+                            <div style="float: right; display: none;" id="fonte">
+                                <p>fonte- Televisão Publica de Angola</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="bloco_conteiner">
-                    <button class="bloco_singular" style="border: none;"  type="button"  data-toggle="modal" data-target="#familiar">
+                    <div class="bloco_conteiner">
+                        <button class="bloco_singular" style="border: none;" type="button" data-toggle="modal" data-target="#familiar">
                         <a href="#">Como proteger-me e conselhos <i class="fas fa-chevron-circle-right"></i></a>
                     </button>
-                    <div class="bloco_singular">
-                        <a href="https://coronabr.com.br/">Teste aqui a tua saúde <i class="fas fa-chevron-circle-right"></i></a>
+                        <div class="bloco_singular">
+                            <a href="https://coronabr.com.br/">Teste aqui a tua saúde <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="bloco_conteiner">
+                        <div class="bloco_singular bloco_grande">
+                            <a href="produtos.html" style=" margin-left: 4%;">Farmácias e centros com materiais para prevenção à venda <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="bloco_conteiner">
-                    <div class="bloco_singular bloco_grande">
-                        <a href="produtos.html" style=" margin-left: 4%;">Farmácias e centros com materiais para prevenção à venda <i class="fas fa-chevron-circle-right"></i></a>
+
+                <div class="bloco_de_coisas post_informations">
+                    <h1>O que você precisa saber</h1>
+                    <div class="bloco_conteiner">
+                        <div class="bloco_singular" type="button" data-toggle="modal" data-target="#principaissintomas">
+                            <div class="segurador"></div>
+                            <div class="foto_conteiner">
+                                <img src="img/1.jpg">
+                            </div>
+                            <a>Principais sintomas</a>
+                        </div>
+                        <div class="bloco_singular" type="button" data-toggle="modal" data-target="#cisp">
+                            <div class="segurador"></div>
+                            <div class="foto_conteiner">
+                                <img src="img/ciscp.jpg">
+                            </div>
+                            <a>Em caso de suspeita</a>
+                        </div>
+                        <div class="bloco_singular" type="button" data-toggle="modal" data-target="#familiar">
+                            <div class="segurador"></div>
+                            <div class="foto_conteiner">
+                                <img src="img/4.jfif">
+                            </div>
+                            <a href="#">Planeamento familiar frente ao vírus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bloco_de_coisas post_informations_plus">
+                    <h1>Evite fontes não seguras</h1>
+                    <div class="bloco_conteiner">
+                        <div class="bloco_singular" type="button" data-toggle="modal" data-target="#mitos">
+                            <div class="foto_bloco_sigular">
+                                <div class="foto_conteiner">
+                                    <img src="img/mito.jpg">
+                                </div>
+                            </div>
+                            <div class="informacao1">
+                                <a>Factos e mitos sobre o COVID-19</a>
+                            </div>
+                        </div>
+                        <div class="bloco_singular" onclick="location.href='https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6'">
+                            <div class="foto_bloco_sigular">
+                                <div class="foto_conteiner">
+                                    <img src="img/mapa.jpg">
+                                </div>
+                            </div>
+                            <div class="informacao1">
+                                <a href="https://www.bing.com/covid">Acompanhe os casos de Covid-19 pelo mundo</a>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+                    <div class="bloco_conteiner">
+                        <div class="bloco_singular" onclick="location.href='https://www.covid19.gov.ao/'">
+                            <div class="foto_bloco_sigular">
+                                <div class="foto_conteiner">
+                                    <img src="img/angola.png">
+                                </div>
+                            </div>
+                            <div class="informacao1">
+                                <a href="https://www.covid19.gov.ao/">Sobre o COVID-19 em Angola</a>
+                            </div>
+                        </div>
+                        <div class="bloco_singular" type="button" data-toggle="modal" data-target="#propagacao">
+                            <div class="foto_bloco_sigular">
+                                <div class="foto_conteiner">
+                                    <img src="img/covid.jpg">
+                                </div>
+                            </div>
+                            <div class="informacao1">
+                                <a href="#propagacaoInevitavel">A propagação do vírus é inevitável?</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="bloco_de_coisas post_informations">
-                <h1>O que você precisa saber</h1>
-                <div class="bloco_conteiner">
-                    <div class="bloco_singular" type="button"  data-toggle="modal" data-target="#principaissintomas" >
-                        <div class="segurador"></div>
-                        <div class="foto_conteiner">
-                            <img src="img/1.jpg">
-                        </div>
-                        <a  >Principais sintomas</a>
-                    </div>
-                    <div class="bloco_singular"   type="button"  data-toggle="modal" data-target="#cisp">
-                        <div class="segurador"></div>
-                        <div class="foto_conteiner">
-                            <img src="img/ciscp.jpg">
-                        </div>
-                        <a>Em caso de suspeita</a>
-                    </div>
-                    <div class="bloco_singular"   type="button"  data-toggle="modal" data-target="#familiar">
-                        <div class="segurador"></div>
-                        <div class="foto_conteiner">
-                            <img src="img/4.jfif">
-                        </div>
-                        <a href="#">Planeamento familiar frente ao vírus</a>
-                    </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="tab-pane fade" id="covid19" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="conteudo_geral">
+                <div class="conjunto_texto">
+                    <h2> O que é coronavírus? </h2>
+
+                    <p class="text-muted" style="font-size: 16pt;">O coronavírus (CoV) é uma grande família viral, conhecida desde meados dos anos 1960, que causam infecções respiratórias em seres humanos e animais. O novo agente do coronavírus foi descoberto em 31/12/2019 após casos registados na
+                        China.</p>
+
+                    <p class="text-muted" style="font-size: 16pt;">A doença provocada pelo novo Coronavírus é oficialmente conhecida como COVID-19, sigla em inglês “coronavirus disease 2019” (doença de coronavírus 2019).</p>
+
+                    <p v style="font-size: 16pt;">Alguns coronavírus podem causar síndromes respiratórias graves, como a síndrome respiratória aguda grave que ficou conhecida pela sigla SARS da síndrome em inglês “Severe Acute Respiratory Syndrome”.</p>
+
+
+                    <h2>Período de incubação do coronavírus </h2>
+                    <p style="font-size: 16pt;">Período de incubação é o tempo que leva para os primeiros sintomas aparecerem desde a infecção por coronavírus, que pode ser de 2 a 14 dias.</p>
+                    <h2>Transmissão do coronavírus.</h2>
+
+                    <p style="font-size: 16pt;">De uma forma geral, a principal forma de transmissão dos coronavírus se dá por contato próximo de pessoa a pessoa, ou seja, qualquer pessoa que cuidou do paciente, incluindo profissionais de saúde ou membro da família que tenha tido
+                        contato físico com o paciente, tenha permanecido no mesmo local que o paciente doente. E isto pode ser transmitido a partir de:</p>
+                    <ul>
+                        <li style="font-size: 16pt;">Espirros</li>
+                        <li style="font-size: 16pt;">Tosse</li>
+                        <li style="font-size: 16pt;">Catarro</li>
+                        <li style="font-size: 16pt;">Gotículas de saliva</li>
+                        <li style="font-size: 16pt;">Contato próximo, como toque ou aperto de mão com pessoa infectada (caso suspeito ou confirmado)</li>
+                        <li style="font-size: 16pt;">Contato com objeto ou superfícies contaminadas. Seguido de contato com boca, nariz ou olhos</li>
+                    </ul>
                 </div>
+
             </div>
 
-            <div class="bloco_de_coisas post_informations_plus">
-                <h1>Evite fontes não seguras</h1>
-                <div class="bloco_conteiner">
-                    <div class="bloco_singular" type="button"  data-toggle="modal" data-target="#mitos">
-                        <div class="foto_bloco_sigular">
-                            <div class="foto_conteiner">
-                                  <img src="img/mito.jpg">
+
+        </div>
+
+        <div class="tab-pane fade" id="sintomas" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="conteudo_geral">
+                <div class="conjunto_texto">
+                    <h2>Quais são os sintomas do coronavírus? </h2>
+                    <p style="font-size: 16pt;">Os sinais e sintomas do coronavírus são principalmente respiratórios, semelhantes a um resfriado. Podem, também, causar infecção do trato respiratório inferior, como as pneumonias. No entanto, o coronavírus (SARS-CoV-2) ainda precisa
+                        de mais estudos e investigações para caracterizar melhor os sinais e sintomas da doença.</p>
+
+                    <p style="font-size: 16pt;">Os principais são sintomas conhecidos até o momento são:</p>
+
+
+                    <div class="card-deck">
+                        <div class="carde">
+                            <div class="card-body">
+                                <h4 class="card-title">Febre</h4>
+
                             </div>
+                            <img src="img/outros/febre.jpg" class="card-img-top" alt="...">
+
                         </div>
-                        <div class="informacao1">
-                        <a>Factos e mitos sobre o COVID-19</a>
-                      </div>
-                    </div>
-                    <div class="bloco_singular" onclick="location.href='https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6'">
-                        <div class="foto_bloco_sigular">
-                            <div class="foto_conteiner">
-                                  <img src="img/mapa.jpg">
+                        <div class="carde">
+                            <div class="card-body">
+                                <h4 class="card-title">Tosse</h4>
+
                             </div>
+                            <img src="img/outros/tosse.jpg" class="card-img-top" alt="...">
+
                         </div>
-                        <div class="informacao1">
-                        <a href="https://www.bing.com/covid">Acompanhe os casos de Covid-19 pelo mundo</a>
-                        </div>
-                    </div>
+                        <div class="carde">
+                            <div class="card-body">
+                                <h4 class="card-title">Dificuldade para respirar</h4>
 
-
-
-                     
-
-
-
-                </div>
-
-                <div class="bloco_conteiner"  >
-                    <div class="bloco_singular" onclick="location.href='https://www.covid19.gov.ao/'">
-                        <div class="foto_bloco_sigular">
-                            <div class="foto_conteiner">
-                                <img src="img/angola.png">
                             </div>
+                            <img src="img/outros/respiracao.jpg" class="card-img-top" alt="...">
+
                         </div>
-                       <div class="informacao1">
-                        <a href="https://www.covid19.gov.ao/">Sobre o COVID-19 em Angola</a>
-                     </div>
                     </div>
-                    <div class="bloco_singular"  type="button"  data-toggle="modal" data-target="#propagacao">
-                        <div class="foto_bloco_sigular">
-                            <div class="foto_conteiner">
-                                <img src="img/covid.jpg">
-                            </div>
-                        </div>
-                        <div class="informacao1">
-                        <a href="#propagacaoInevitavel">A propagação do vírus é inevitável?</a>
-                      </div>
-                    </div>
+                    <p>Caso apresentar os sintomas, ligue para o 111</p>
+
+                    <h2>Como o coronavírus é transmitido? </h2>
+                    <p style="font-size: 16pt;">As investigações sobre as formas de transmissão do coronavírus ainda estão em andamento, mas a disseminação de pessoa para pessoa, ou seja, a contaminação por gotículas respiratórias ou contato.</p>
+
+                    <p style="font-size: 16pt;">Qualquer pessoa que tenha contato próximo (cerca de 1m) com alguém com sintomas respiratórios está em risco de ser exposta à infecção. É importante observar que a disseminação de pessoa para pessoa pode ocorrer de forma continuada.</p>
+
+                    <p style="font-size: 16pt;">Apesar disso, a transmissão dos coronavírus costuma ocorrer pelo ar ou por contato pessoal com secreções contaminadas, como: </p>
+                    <ul>
+                        <li style="font-size: 16pt;">Gotículas de saliva</li>
+                        <li style="font-size: 16pt;">Espirro</li>
+                        <li style="font-size: 16pt;">Tosse</li>
+                        <li style="font-size: 16pt;">Catarro</li>
+                        <li style="font-size: 16pt;">Contacto pessoal próximo, como toque ou aperto de mão</li>
+                        <li style="font-size: 16pt;">Contacto com objetos ou superfícies contaminadas, seguido de contato com a boca, nariz ou olhos.</li>
+                    </ul>
+                    <br>
+
+
+
+
+                    <p style="font-size: 16pt;"> A transmissibilidade dos pacientes infectados por SARSCoV é em média de 7 dias após o início dos sintomas. No entanto, dados preliminares do coronavírus (SARS-CoV-2) sugerem que a transmissão possa ocorrer mesmo sem o aparecimento
+                        de sinais e sintomas. Até o momento, não há informações suficientes de quantos dias anteriores ao início dos sinais e sintomas uma pessoa infectada passa a transmitir o vírus.</p>
+
+
                 </div>
             </div>
         </div>
 
-  </div>
+
+
+        <div class="tab-pane fade" id="precaucoes" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="conteudo_geral">
+                <div class="conjunto_texto">
+                    <h2> Como prevenir o coronavírus? </h2>
+                    <p style="font-size: 16pt;">O Ministério da Saúde orienta cuidados básicos para reduzir o risco geral de contrair ou transmitir infecções respiratórias agudas, incluindo o coronavírus. Entre as medidas estão: </p>
 
 
 
 
 
 
+                    <div class="row row-cols-1 row-cols-md-3">
+                        <div class="col mb-4">
+                            <div class="card">
+                                <img src="img/outros/lavarsabao.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title">Sempre...</h4>
+                                    <p>Lavar as mãos frequentemente com água e sabão por pelo menos 20 segundos, respeitando os 5 momentos de higienização. Se não houver água e sabonete, usar um desinfetante para as mãos à base de álcool.</p>
 
-  <div class="tab-pane fade" id="covid19" role="tabpanel" aria-labelledby="pills-profile-tab">
-      <div class="conteudo_geral" >
-        <div class="conjunto_texto">
-          <h2> O que é coronavírus? </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-4">
+                            <div class="card">
+                                <img src="img/outros/tocar.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title">Sempre...</h4>
+                                    <p>Evitar tocar nos olhos, nariz e boca com as mãos não lavadas.</p>
 
-          <p class="text-muted" style="font-size: 16pt;">O coronavírus (CoV) é uma grande família viral, conhecida desde meados dos anos 1960, que causam infecções respiratórias em seres humanos e animais. O novo agente do coronavírus foi descoberto em 31/12/2019 após casos registados na China.</p> 
-          
-          <p class="text-muted" style="font-size: 16pt;">A doença provocada pelo novo Coronavírus é oficialmente conhecida como COVID-19, sigla em inglês “coronavirus disease 2019” (doença de coronavírus 2019).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-4">
+                            <div class="card">
+                                <img src="img/outros/comu.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title">Sempre...</h4>
+                                    <p>Evitar contacto próximo com pessoas doentes.</p>
+                                </div>
+                            </div>
+                        </div>
 
-          <p v style="font-size: 16pt;">Alguns coronavírus podem causar síndromes respiratórias graves, como a síndrome respiratória aguda grave que ficou conhecida pela sigla SARS da síndrome em inglês “Severe Acute Respiratory Syndrome”.</p>
+                        <div class="col mb-4">
+                            <div class="card">
+                                <img src="img/outros/emcasa.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title">Sempre...</h4>
+                                    <p>Ficar em casa quando estiver doente.</p>
+                                </div>
+                            </div>
+                        </div>
 
-         
-      <h2 >Período de incubação do coronavírus </h2>
-          <p style="font-size: 16pt;">Período de incubação é o tempo que leva para os primeiros sintomas aparecerem desde a infecção por coronavírus, que pode ser de 2 a 14 dias.</p>
-      <h2>Transmissão do coronavírus.</h2>
-      
-          <p style="font-size: 16pt;">De uma forma geral, a principal forma de transmissão dos coronavírus se dá por contato próximo de pessoa a pessoa, ou seja, qualquer pessoa que cuidou do paciente, incluindo profissionais de saúde ou membro da família que tenha tido contato físico com o paciente, tenha permanecido no mesmo local que o paciente doente. E isto pode ser transmitido a partir de:</p>
-          <ul>
-          <li style="font-size: 16pt;">Espirros</li>
-          <li style="font-size: 16pt;">Tosse</li>
-          <li style="font-size: 16pt;">Catarro</li>
-          <li style="font-size: 16pt;">Gotículas de saliva</li>
-          <li style="font-size: 16pt;">Contato próximo, como toque ou aperto de mão com pessoa infectada (caso suspeito ou confirmado)</li>
-          <li style="font-size: 16pt;">Contato com objeto ou superfícies contaminadas. Seguido de contato com boca, nariz ou olhos</li>
-        </ul>
+                        <div class="col mb-4">
+                            <div class="card">
+                                <img src="img/outros/lenco.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title">Sempre...</h4>
+                                    <p>Cobrir boca e nariz ao tossir ou espirrar com um lenço de papel e jogar no lixo.</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4">
+                            <div class="card">
+                                <img src="img/outros/desin.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title">Sempre...</h4>
+                                    <p>Limpar e desinfetar objetos e superfícies tocados com freqüência.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="propagacaoInevitavel">A propagação do vírus é inevitável?</h2>
+                    <h3 style="margin-right: 1%;">Não!</h3>
+                    <p style="font-size: 16pt;">A propagação do virus é anulada quando uma pessoa saudavel não tem contacto com uma pessoa infectada pelo virus, daí que a maior luta contra o vírus é o isolamento social(quarentena)</p>
+                    <p style="font-size: 16pt;">Por isso enquanto os médicos cuidam dos infectados, nós só precisamos de ficar em casa. Esta é a maneirade fazermos parte da luta contra o Covid-19 </p>
+
+                </div>
+            </div>
         </div>
-       
+
+        <div class="tab-pane fade" id="sobre" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="conteudo_geral">
+                <div class="conjunto_texto">
+                    <p style="font-size: 16pt;"> Somos um Grupo de estudantes de Engenharia Informatica que face a pandemia que nos assola e como jovens activos na sociedade decidimos contribuir com o que sabemos e tirando proveito das ferramentas das Tecnologias de Informação e
+                        Comunicação desenvolvemos uma plataforma que congregasse toda a informação referente ao vírus (Covid-19).</p>
+                    <p style="font-size: 16pt;">Com a plataforma procuramos expor também a localização das farmácias onde encontrar os fármacos mais procurados e reportar em tempo real a disponibilidade dos mesmos, de modo a evitar enchentes e a locomação desnecessaria. A plataforma
+                        também tem disponivel tutoriais das precauções a serem tomadas para evitar a contaminação do vírus e informação credivel do estado da pandemia proveniente das autoridades responsaveis combatendo assim o Covid-19 e o Covidizer </p>
+
+                    <p style="font-size: 14pt;"><b>Enquanto o vírus não nos caça, quem lhe caça não descança!</b></p>
+
+
+
+
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="sugestao">Deixe aqui a sua sugestão para o enriquecimento da plataforma</label>
+                        <textarea class="form-control" id="sugestao" rows="3" placeholder="Sugestão"></textarea>
+                    </div>
+                    <button class="btn btn-success mb-2" style="float: right; margin-right: 1%;" type="button" onclick="sugestao();">Enviar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="principaissintomas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Principais Sintomas do COVID-19</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <p>Os sintomas do coronavírus são principalmente respiratórios, semelhantes a um resfriado.</p>
+
+                    <li>Febres Altas</li>
+                    <li>Tosse Seca</li>
+                    <li>Dificuldades de respiração</li>
+                    <p>Caso apresentar os sintomas, ligue para o 111</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="familiar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Precausões frente ao COVID-19</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <p>O Ministério da Saúde orienta cuidados básicos para reduzir o risco geral de contrair ou transmitir infecções respiratórias agudas, incluindo o coronavírus. Entre as medidas estão:</p>
+
+                    <ul class="lista_modal">
+                        <li>Lavar as mãos frequentemente com água e sabão por pelo menos 20 segundos, respeitando os 5 momentos de higienização. Se não houver água e sabonete, usar um desinfetante para as mãos à base de álcool.</li>
+                        <li>Evitar tocar nos olhos, nariz e boca com as mãos não lavadas.</li>
+                        <li>Evitar contacto próximo com pessoas doentes.</li>
+                        <li>Cobrir boca e nariz ao tossir ou espirrar com um lenço de papel e colocar no lixo.</li>
+                        <li>Limpar e desinfetar objetos e superfícies tocados com frequência.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="propagacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Propagaçã do COVID-19</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <h4>A propagação do vírus é inevitável?</h4>
+                    <h5>Não!</h5>
+                    <p>A propagação do virus é anulada quando uma pessoa saudavel não tem contacto com uma pessoa infectada pelo virus, daí que a maior luta contra o vírus é o isolamento social(quarentena).</p>
+
+                    <p>Por isso enquanto os médicos cuidam dos infectados, nós só precisamos de ficar em casa. Esta é a maneirade fazermos parte da luta contra o COVID-19.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="mitos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Factos e mitos sobre o COVID-19</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <h5>1 – Itens como luvas e máscaras nos protegem da transmissão da doença? </h5>
+                    <div style="margin-left: 3%;">
+                        <p>R:Verdade. O uso da máscara só é recomendado para pacientes com casos confirmados e para aqueles com suspeita da doença. A recomendação para prevenção é descartar as máscaras a cada 4 horas quando em ambientes externos.</p>
+                    </div>
+                    <hr>
+                    <h5>2 – Pessoas com máscaras podem contrair o Coronavírus? </h5>
+                    <div style="margin-left: 3%;">
+                        <p>R:Verdade. A máscara protege contra a doença, mas não a evita. Existem outras formas de contrair o Coronavírus mesmo estando de máscara</p>
+                    </div>
+                    <hr>
+                    <h5>3 – Existe um exame capaz de detectar a existência do Coronavírus no corpo humano? </h5>
+                    <div style="margin-left: 3%;">
+                        <p>R:Verdade. É possível fazer o diagnóstico laboratorial específico para Coronavírus, através da detecção do genoma viral.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="cisp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Em caso de suspeita</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <h5>Em caso de suspeita, ligue para 111 </h5>
+                    <div style="margin-left: 3%;">
+                        <p>CISP - Centro Integrado de Segurança pública</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="logotipo">
+            <img src="img/logo-farm.png">
+        </div>
+        <div class="numbers">
+            <span>Contactos:</span>
+            <ul>
+                <li>covidango@gmail.com</li>
+            </ul>
+        </div>
+        <div class="redes_sociais">
+            <span>Equipa Desenvolvedora</span>
+            <ul>
+                <li><i class="fab fa-instagram"></i> Adolfo Quende (@g_quende)</li>
+                <li><i class="fab fa-instagram"></i> Átila e Sousa </li>
+                <li><i class="fab fa-instagram"></i> Edmilson Júlio (@edjulio_denzel)</li>
+                <li><i class="fab fa-instagram"></i> Hairton Vanda (@silvestre_vanda)</li>
+                <li><i class="fab fa-instagram"></i> Marco Pitra (@69raios)</li>
+                <li><i class="fab fa-instagram"></i> Hélio Vicente </li>
+
+                <li><i class="fab fa-instagram"></i> Okusindja de Almeida (@guccikussy)</li>
+
+            </ul>
+        </div>
+        <div class="consideracoes">
+            <p>De Angola com muito amor</p>
+            <p>S.O.S Mundo, Angola Report</p>
+            <a>Imagens por -<a href="https://br.freepik.com/"> freepik.com;</a>
+            <a href="https://www.pexels.com"> pexels.com;</a><a href="https://www.dreamstime.com"> dreamstime.com</a></a>
+
         </div>
 
-
-  </div>
-
-  <div class="tab-pane fade" id="sintomas" role="tabpanel" aria-labelledby="pills-contact-tab">
-    <div class="conteudo_geral" >
-      <div class="conjunto_texto">
-       <h2>Quais são os sintomas do coronavírus? </h2>
-                <p style="font-size: 16pt;">Os sinais e sintomas do coronavírus são principalmente respiratórios, semelhantes a um resfriado. Podem, também, causar infecção do trato respiratório inferior, como as pneumonias. No entanto, o coronavírus (SARS-CoV-2) ainda precisa de mais estudos e investigações para caracterizar melhor os sinais e sintomas da doença.</p>
-
-                <p style="font-size: 16pt;">Os principais são sintomas conhecidos até o momento são:</p> 
-
-                  
-                  <div class="card-deck">
-  <div class="carde">
-    <div class="card-body">
-      <h4 class="card-title">Febre</h4>
-  
     </div>
-    <img src="img/outros/febre.jpg" class="card-img-top" alt="...">
-    
-  </div>
-  <div class="carde">
-    <div class="card-body" >
-      <h4 class="card-title">Tosse</h4>
-      
-    </div>
-    <img src="img/outros/tosse.jpg" class="card-img-top" alt="...">
-    
-  </div>
-  <div class="carde">
-    <div class="card-body">
-      <h4 class="card-title">Dificuldade para respirar</h4>
-    
-    </div>
-    <img src="img/outros/respiracao.jpg" class="card-img-top" alt="...">
-    
-  </div>
-</div> 
-<p>Caso apresentar os sintomas, ligue para o 111</p>
- 
-            <h2>Como o coronavírus é transmitido? </h2>
-                <p style="font-size: 16pt;">As investigações sobre as formas de transmissão do coronavírus ainda estão em andamento, mas a disseminação de pessoa para pessoa, ou seja, a contaminação por gotículas respiratórias ou contato.</p>
-
-                <p style="font-size: 16pt;">Qualquer pessoa que tenha contato próximo (cerca de 1m) com alguém com sintomas respiratórios está em risco de ser exposta à infecção. É importante observar que a disseminação de pessoa para pessoa pode ocorrer de forma continuada.</p> 
-
-                <p style="font-size: 16pt;">Apesar disso, a transmissão dos coronavírus costuma ocorrer pelo ar ou por contato pessoal com secreções contaminadas, como: </p>
-                  <ul>
-                    <li style="font-size: 16pt;">Gotículas de saliva</li> 
-                    <li style="font-size: 16pt;">Espirro</li>
-                    <li style="font-size: 16pt;">Tosse</li>
-                    <li style="font-size: 16pt;">Catarro</li>
-                    <li style="font-size: 16pt;">Contacto pessoal próximo, como toque ou aperto de mão</li> 
-                    <li style="font-size: 16pt;">Contacto com objetos ou superfícies contaminadas, seguido de contato com a boca, nariz ou olhos.</li>
-                  </ul>
-                     <br>
- 
-              
+    <div class="rodape">Este é um projecto comunitário sem fins-lucrativos destinado a todos os angolanos.</div>
 
 
-                <p style="font-size: 16pt;"> A transmissibilidade dos pacientes infectados por SARSCoV é em média de 7 dias após o início dos sintomas. No entanto, dados preliminares do coronavírus (SARS-CoV-2) sugerem que a transmissão possa ocorrer mesmo sem o aparecimento de sinais e sintomas. 
-                Até o momento, não há informações suficientes de quantos dias anteriores ao início dos sinais e sintomas uma pessoa infectada passa a transmitir o vírus.</p>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 
-
-    </div>
-  </div>
-  </div>
-
-
-
-   <div class="tab-pane fade" id="precaucoes" role="tabpanel" aria-labelledby="pills-contact-tab">
-      <div class="conteudo_geral" >
-        <div class="conjunto_texto">
-           <h2> Como prevenir o coronavírus? </h2>
-            <p style="font-size: 16pt;">O Ministério da Saúde orienta cuidados básicos para reduzir o risco geral de contrair ou transmitir infecções respiratórias agudas, incluindo o coronavírus. Entre as medidas estão: </p>
-            
-
-
-
-
-
-<div class="row row-cols-1 row-cols-md-3">
-  <div class="col mb-4">
-    <div class="card">
-      <img src="img/outros/lavarsabao.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h4 class="card-title">Sempre...</h4>
-        <p>Lavar as mãos frequentemente com água e sabão por pelo menos 20 segundos, respeitando os 5 momentos de higienização. Se não houver água e sabonete, usar um desinfetante para as mãos à base de álcool.</p>
-        
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4">
-    <div class="card">
-      <img src="img/outros/tocar.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h4 class="card-title">Sempre...</h4>
-        <p>Evitar tocar nos olhos, nariz e boca com as mãos não lavadas.</p>
-       
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4">
-    <div class="card">
-      <img src="img/outros/comu.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h4 class="card-title">Sempre...</h4>
-        <p>Evitar contacto próximo com pessoas doentes.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col mb-4">
-    <div class="card">
-      <img src="img/outros/emcasa.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h4 class="card-title">Sempre...</h4>
-        <p>Ficar em casa quando estiver doente.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col mb-4">
-    <div class="card">
-      <img src="img/outros/lenco.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h4 class="card-title">Sempre...</h4>
-        <p>Cobrir boca e nariz ao tossir ou espirrar com um lenço de papel e jogar no lixo.</p>
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="col mb-4">
-    <div class="card">
-      <img src="img/outros/desin.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h4 class="card-title">Sempre...</h4>
-        <p>Limpar e desinfetar objetos e superfícies tocados com freqüência.</p>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-             <h2 id="propagacaoInevitavel">A propagação do vírus é inevitável?</h2> 
-                <h3 style="margin-right: 1%;">Não!</h3>
-                <p style="font-size: 16pt;">A propagação do virus é anulada quando uma pessoa saudavel não tem contacto com uma pessoa infectada pelo virus, daí que a maior luta contra o vírus é o isolamento social(quarentena)</p>
-                <p style="font-size: 16pt;">Por isso enquanto os médicos cuidam dos infectados, nós só precisamos de ficar em casa. Esta é a maneirade fazermos parte da luta contra o Covid-19 </p>
-
-      </div>
-    </div>
-   </div>
-
-    <div class="tab-pane fade" id="sobre" role="tabpanel" aria-labelledby="pills-contact-tab">
-      <div class="conteudo_geral" >
-        <div class="conjunto_texto">
-          <p style="font-size: 16pt;"> Somos um Grupo de estudantes de Engenharia Informatica que face a pandemia que nos assola e como jovens activos na sociedade  decidimos contribuir com o que sabemos e tirando proveito das ferramentas das Tecnologias de Informação e Comunicação desenvolvemos uma plataforma que congregasse toda a informação referente ao vírus (Covid-19).</p>
-         <p style="font-size: 16pt;">Com a plataforma procuramos expor também a localização das farmácias onde encontrar os fármacos mais procurados e reportar em tempo real a disponibilidade dos mesmos, de modo a evitar  enchentes e a locomação desnecessaria. A plataforma também tem disponivel tutoriais das precauções a serem tomadas para evitar a contaminação do vírus e informação credivel do estado da pandemia proveniente das autoridades responsaveis combatendo assim o Covid-19 e o Covidizer </p>
-
-         <p style="font-size: 14pt;"><b>Enquanto o vírus não nos caça, quem lhe caça não descança!</b></p> 
-
-         
-  
-  
-  <div class="form-group mx-sm-3 mb-2">
-    <label for="sugestao">Deixe aqui a sua sugestão para o enriquecimento da plataforma</label>
-    <textarea class="form-control" id="sugestao" rows="3" placeholder="Sugestão"></textarea>
-  </div>
-<button  class="btn btn-success mb-2" style="float: right; margin-right: 1%;" type="button" onclick="sugestao();">Enviar</button>
-
-        </div>
-      </div>
-    </div>
-</div>
-
-
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="principaissintomas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Principais Sintomas do COVID-19</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Os sintomas do coronavírus são principalmente respiratórios, semelhantes a um resfriado.</p>
-       
-       <li>Febres Altas</li>
-        <li>Tosse Seca</li>
-         <li>Dificuldades de respiração</li>
-         <p>Caso apresentar os sintomas, ligue para o 111</p>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-
-
-<div class="modal fade" id="familiar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Precausões frente ao COVID-19</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>O Ministério da Saúde orienta cuidados básicos para reduzir o risco geral de contrair ou transmitir infecções respiratórias agudas, incluindo o coronavírus. Entre as medidas estão:</p>
-       
-       <ul class="lista_modal">
-        <li>Lavar as mãos frequentemente com água e sabão por pelo menos 20 segundos, respeitando os 5 momentos de higienização. Se não houver água e sabonete, usar um desinfetante para as mãos à base de álcool.</li>
-        <li>Evitar tocar nos olhos, nariz e boca com as mãos não lavadas.</li>
-         <li>Evitar contacto próximo com pessoas doentes.</li>
-         <li>Cobrir boca e nariz ao tossir ou espirrar com um lenço de papel e colocar no lixo.</li>
-         <li>Limpar e desinfetar objetos e superfícies tocados com frequência.</li>
-       </ul>
-
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="propagacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Propagaçã do COVID-19</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-               <h4>A propagação do vírus é inevitável?</h4>
-<h5>Não!</h5>
-<p>A propagação do virus é anulada quando uma pessoa saudavel não tem contacto com uma pessoa infectada pelo virus, daí que a maior luta contra o vírus é o isolamento social(quarentena).</p>
-
-<p>Por isso enquanto os médicos cuidam dos infectados, nós só precisamos de ficar em casa. Esta é a maneirade fazermos parte da luta contra o COVID-19.</p>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-
-<div class="modal fade" id="mitos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Factos e mitos sobre o COVID-19</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-               <h5>1 – Itens como luvas e máscaras nos protegem da transmissão da doença? </h5>
-                  <div style="margin-left: 3%;">
-                      <p >R:Verdade. 
-                       O uso da máscara só é recomendado para pacientes com casos confirmados e para aqueles com suspeita da doença. A recomendação para prevenção é descartar as máscaras a cada 4 horas quando em ambientes externos.</p>
-                  </div>
-                  <hr>
-                <h5>2 –  Pessoas com máscaras podem contrair o Coronavírus? </h5>
-                  <div style="margin-left: 3%;">
-                      <p >R:Verdade. A máscara protege contra a doença, mas não a evita. Existem outras formas de contrair o Coronavírus mesmo estando de máscara</p>
-                  </div>
-                  <hr>
-                  <h5>3 –  Existe um exame capaz de detectar a existência do Coronavírus no corpo humano? </h5>
-                  <div style="margin-left: 3%;">
-                      <p >R:Verdade. É possível fazer o diagnóstico laboratorial específico para Coronavírus, através da detecção do genoma viral.</p>
-                  </div>
-
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-
-<div class="modal fade" id="cisp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Em caso de suspeita</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-               <h5>Em caso de suspeita, ligue para 111 </h5>
-                  <div style="margin-left: 3%;">
-                      <p >CISP - Centro Integrado de Segurança pública</p>
-                  </div>
-                
-
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-
-<div class="footer">
-  <div class="logotipo">
-    <img src="img/logo-farm.png">
-  </div>
-  <div class="numbers">
-    <span>Contactos:</span>
-    <ul>   
-      <li>covidango@gmail.com</li>
-    </ul>
-  </div>
-  <div class="redes_sociais">
-    <span>Equipa Desenvolvedora</span>
-    <ul>
-      <li><i class="fab fa-instagram"></i> Adolfo Quende (@g_quende)</li>
-      <li><i class="fab fa-instagram"></i> Átila e Sousa </li>
-      <li><i class="fab fa-instagram"></i> Edmilson Júlio (@edjulio_denzel)</li>
-      <li><i class="fab fa-instagram"></i> Hairton Vanda (@silvestre_vanda)</li>
-      <li><i class="fab fa-instagram"></i> Marco Pitra (@69raios)</li>
-      <li><i class="fab fa-instagram"></i> Hélio Vicente </li>
-  
-      <li><i class="fab fa-instagram"></i> Okusindja de Almeida (@guccikussy)</li>
-      
-    </ul>
-  </div>
-<div class="consideracoes">
-  <p>De Angola com muito amor</p>
-  <p>S.O.S Mundo, Angola Report</p>
-  <a>Imagens por -<a href="https://br.freepik.com/"> freepik.com;</a>
-  <a href="https://www.pexels.com"> pexels.com;</a><a href="https://www.dreamstime.com"> dreamstime.com</a></a>
-
-</div>
-
-</div>
-<div class="rodape">Este é um projecto comunitário sem fins-lucrativos destinado a todos os angolanos.</div>
-
-
-   <script src="js/jquery-2.1.1.min.js"></script>		
-   <script src="js/bootstrap.min.js"></script>	
-	<script src="js/jquery.easing.min.js"></script>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
- <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
-<script type="text/javascript" src="js/modelo.js"></script>
-<script type="text/javascript">
-  inicio();
-</script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+    <script type="text/javascript" src="js/modelo.js"></script>
+    <script type="text/javascript">
+        inicio();
+    </script>
 </body>
+
 </html>
