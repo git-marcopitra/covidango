@@ -76,18 +76,8 @@ function registar(botao) {
         local.length > 0 &&
         senha.length > 0 &&
         senha1.length > 0) {
-
-
-        var regexp1 = new RegExp('\^([0-9]{9})+([A-Za-z]{2})+([0-9]{3})$');
-        var regexp2 = new RegExp(/[A-Z]{2}/);
-        var regexp3 = new RegExp(/[0-9]{3}/i);
-        var regexp4 = new RegExp(/[0-9]{10}/i);
-        var n = regexp1.test(nif) && regexp2.test(nif.substring(9, 11)) && regexp3.test(nif.substring(11));
-        var n1 = regexp4.test(nif)
         if (contacto.length > 9 || contacto.length < 9) {
             alert("Telefone Invalido");
-        } else if (n == false && n1 == false) {
-            alert("Nif Invalido");
         } else if (senha.length < 8)
             alert("A senha de conter no minimo 8 digitos");
         else
@@ -101,12 +91,14 @@ function registar(botao) {
             firebase.auth().createUserWithEmailAndPassword(nif + "@limite.com", senha).catch(function(error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;
+           alert("Ja possui uma conta");
+
             });
             firebase.auth().onAuthStateChanged(function(user) {
                 if (user) {
 
                     firebase.database().ref('farmacia/' + user.uid + '/' + contacto).set({
-
+                        NIF: nif, 
                         permissao: false,
                         localizacao: local
 
@@ -154,14 +146,14 @@ function inicarSessao() {
 }
 
 function sugestao() {
-    var frase = document.getElementById("sugestao").value;
-    if (frase.length > 0) {
+    var frase = document.getElementById("sugestao");
+    if (frase.value.length > 0) {
         firebase.database().ref('sugestao').set({
 
-            sugestao: frase
+            sugestao: frase.value
         }).then(function() {
             alert("Sugestão enviada com sucesso");
-            frase = " ";
+            frase.value = " ";
         });
 
     }
@@ -222,13 +214,13 @@ function sair() {
     }).catch(function(error) {
         // An error happened.
     });
-    window.location.href = 'index.html';
+    window.location.href = '../index.html';
 
 }
 
 function sairUser() {
     firebase.auth().signOut().then(function() {
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
     }).catch(function(error) {
         // An error happened.
     });
@@ -266,7 +258,93 @@ function produtos() {
                 filho.classList.add("bloco_conteiner");
                 k = 1;
             }
+            if(document.getElementById(doc.data().produto+"1")==null){
+
+var pai=document.createElement("div");
+pai.setAttribute("class","modal fade");
+pai.setAttribute("id",doc.data().produto);
+pai.setAttribute("tabindex","-1");
+pai.setAttribute("role","dialog");
+pai.setAttribute("aria-labelledby","exampleModalLabel");
+pai.setAttribute("aria-hidden","true");
+
+
+var pai1=document.createElement("div");
+pai1.setAttribute("class","modal-dialog");
+pai1.setAttribute("role","document");
+
+var pai2=document.createElement("div");
+pai2.setAttribute("class","modal-content");
+
+var pai2_1=document.createElement("div");
+pai2_1.setAttribute("class","modal-header");
+
+var pai2_1_2=document.createElement("h5");
+pai2_1_2.setAttribute("class","modal-title");
+pai2_1_2.setAttribute("id","exampleModalLabel");
+var produto;
+ switch (doc.data().produto) {
+                case "mascara":
+                    produto = "Mascara";
+                    break;
+                case "luva":
+                    produto = "Luvas plasticas";
+                    break;
+                case "alcool":
+                    produto = "Alcool Etilico";
+                    break;
+                case "alcoolgel":
+                    produto = "Alcool Gel";
+                    break;
+                case "gelneutro":
+                    produto = "Alcool Neutro";
+                    break;
+                case "toalhitas":
+                    produto = "Toalhitas";
+                    break;
+                default:
+                    produto = "Sabão";
+
+            }
+
+pai2_1_2.innerHTML=produto;
+
+
+var pai2_1_3=document.createElement("buttom");
+pai2_1_3.setAttribute("class","close");
+pai2_1_3.setAttribute("type","buttom");
+pai2_1_3.setAttribute("data-dismiss","modal");
+pai2_1_3.setAttribute("aria-label","Close");
+
+var pai2_1_3_1=document.createElement("span");
+pai2_1_3_1.innerHTML="&times;";
+pai2_1_3_1.setAttribute("aria-hidden","true");
+
+
+var pai2_2=document.createElement("div");
+pai2_2.setAttribute("class","modal-body");
+pai2_2.setAttribute("id","id"+doc.data().produto);
+
+
+
+
+pai.appendChild(pai1);
+pai1.appendChild(pai2);
+pai2.appendChild(pai2_1);
+pai2_1.appendChild(pai2_1_2);
+pai2_1.appendChild(pai2_1_3);
+pai2_1_3.appendChild(pai2_1_3_1);
+pai2.appendChild(pai2_2);
+
+
+var body=document.getElementsByTagName("body")[0].appendChild(pai);
+//-------------------------------
+
             filho1 = document.createElement("div");
+            filho1.id=doc.data().produto+"1";
+            filho1.setAttribute("data-target", "#"+doc.data().produto);
+            filho1.setAttribute("data-toggle", "modal");
+            filho1.setAttribute("type", "buttom");
             filho1.classList.add("bloco_singular");
             filho1_1 = document.createElement("div");
             filho1_1.classList.add("foto_bloco_sigular");
@@ -284,57 +362,80 @@ function produtos() {
             filho1_2.classList.add("informacao");
             filho1_2_1 = document.createElement("h3");
 
-            switch (doc.data().produto) {
-                case "mascara":
-                    filho1_2_1.innerHTML = "Mascara";
-                    break;
-                case "luva":
-                    filho1_2_1.innerHTML = "Luvas plasticas";
-                    break;
-                case "alcool":
-                    filho1_2_1.innerHTML = "Alcool Etilico";
-                    break;
-                case "alcoolgel":
-                    filho1_2_1.innerHTML = "Alcool Gel";
-                    break;
-                case "gelneutro":
-                    filho1_2_1.innerHTML = "Alcool Neutro";
-                    break;
-                case "toalhitas":
-                    filho1_2_1.innerHTML = "Toalhitas";
-                    break;
-                default:
-                    filho1_2_1.innerHTML = "Sabão";
+filho1_2_1.innerHTML = produto;
+           
 
-            }
+            
+            var farmacia = "Farmácia " + doc.data().nome;
+            var preco = doc.data().preco + " akz";
+            var local = doc.data().localizacao;
+            var tlf = doc.data().contacto;
+           
+            var far=document.createElement("li");
+            far.setAttribute("class","fas fa-clinic-medical");
+            far.innerHTML="<b> "+farmacia+"</b>";
 
-            filho1_2_nome = document.createElement("p");
-            filho1_2_nome.style.marginBottom = "0px";
-            filho1_2_nome.innerHTML = "Farmácia " + doc.data().nome;
+             var tel=document.createElement("small");
+            
+            tel.style.listStyle="none";
+            tel.style.fontSize="12pt";
+            tel.innerHTML="<small class='fas fa-phone' style='transform:scaleX(-1); '></small> <b>"+tlf+"</b>";
+            var pre=document.createElement("li");
+            pre.setAttribute("class","fas fa-dollar-sign");
+            pre.innerHTML=" "+preco;
 
-            filho1_2_1_1 = document.createElement("p");
-            filho1_2_1_1.style.marginBottom = "0px";
-            filho1_2_1_1.innerHTML = doc.data().preco + " akz";
-            filho1_2_1_1_1 = document.createElement("p");
-            filho1_2_1_1_1.style.marginBottom = "0px";
-            filho1_2_1_1_1.innerHTML = doc.data().localizacao;
-            filho1_2_1_1_1_1 = document.createElement("p");
-            filho1_2_1_1_1_1.style.marginBottom = "0px";
-            filho1_2_1_1_1_1.innerHTML = doc.data().contacto;
+             var lo=document.createElement("li");
+            lo.setAttribute("class","fas fa-map-marker-alt");
+            lo.innerHTML=" "+local;
 
+pai2_2.appendChild(far);
+pai2_2.appendChild(document.createElement("br"));
+pai2_2.appendChild(tel);
+pai2_2.appendChild(document.createElement("br"));
+pai2_2.appendChild(pre);
+pai2_2.appendChild(document.createElement("br"));
+pai2_2.appendChild(lo);
+pai2_2.appendChild(document.createElement("hr"));
             filho1_2.appendChild(filho1_2_1);
-            filho1_2.appendChild(filho1_2_1_1);
-            filho1_2.appendChild(filho1_2_nome);
-
-            filho1_2.appendChild(filho1_2_1_1_1_1);
-            filho1_2.appendChild(filho1_2_1_1_1);
             filho1.appendChild(filho1_2);
 
             filho.appendChild(filho1);
 
             itens.appendChild(filho);
-            console.log(doc.data().produto);
+            
             k++;
+        }else{
+              var farmacia = "Farmácia " + doc.data().nome;
+            var preco = doc.data().preco + " akz";
+            var local = doc.data().localizacao;
+            var tlf = doc.data().contacto;
+           
+            var far=document.createElement("li");
+            far.setAttribute("class","fas fa-clinic-medical");
+            far.innerHTML="<b> "+farmacia+"</b>";
+
+             var tel=document.createElement("small");
+            
+            tel.style.listStyle="none";
+            tel.style.fontSize="12pt";
+            tel.innerHTML="<small class='fas fa-phone' style='transform:scaleX(-1); '></small> <b>"+tlf+"</b>";
+            var pre=document.createElement("li");
+            pre.setAttribute("class","fas fa-dollar-sign");
+            pre.innerHTML=" "+preco;
+
+             var lo=document.createElement("li");
+            lo.setAttribute("class","fas fa-map-marker-alt");
+            lo.innerHTML=" "+local;
+
+document.getElementById("id"+doc.data().produto).appendChild(far);
+document.getElementById("id"+doc.data().produto).appendChild(document.createElement("br"));
+document.getElementById("id"+doc.data().produto).appendChild(tel);
+document.getElementById("id"+doc.data().produto).appendChild(document.createElement("br"));
+document.getElementById("id"+doc.data().produto).appendChild(pre);
+document.getElementById("id"+doc.data().produto).appendChild(document.createElement("br"));
+document.getElementById("id"+doc.data().produto).appendChild(lo);
+document.getElementById("id"+doc.data().produto).appendChild(document.createElement("hr"));
+        }
 
         });
     });
