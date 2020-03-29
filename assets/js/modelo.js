@@ -148,7 +148,7 @@ function inicarSessao() {
 function sugestao() {
     var frase = document.getElementById("sugestao");
     if (frase.value.length > 0) {
-        firebase.database().ref('sugestao').set({
+        firebase.database().ref('sugestao').push({
 
             sugestao: frase.value
         }).then(function() {
