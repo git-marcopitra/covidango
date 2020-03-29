@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title></title>
+    <title>CovidAng</title>
     <link rel="stylesheet" type="text/css" href="assets/dist/bootstrap/bootstrap.css">
     <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
@@ -13,6 +13,16 @@
     <link rel="shortcut icon" type="image/x-png" href="assets/img/logo-farm.png">
     <link rel="stylesheet" href="assets/dist/font-awesome/css/all.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta property="og:description" content="Informação útil do Covid-19 - Informação de Fármacos disponiveis nas farmácias próximas de si" >
+    <meta property="og:locale" content="pt_Br">
+    <meta property="og:url" content="covidango.web.app">
+    <meta property="og:title" content="CovidAng">
+    <meta property="og:site_name" content="CovidAng">
+    <meta property="og:image" content="covidango.web.app/assets/img/logo-farm.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="600">
+    <meta property="og:type" content="website">
 </head>
 
 <body>
@@ -52,7 +62,7 @@
                     <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#sobre" role="tab" aria-controls="sobre" aria-selected="false">Sobre</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" action="user.html">
+            <form class="form-inline my-2 my-lg-0" action="pages/user.html">
                 <button class="btn btn-outline-success my-2 my-sm-0" id="conta" style="display: none;">Conta</button>
 
             </form>
@@ -141,7 +151,7 @@
                                 <a>Factos e mitos sobre o COVID-19</a>
                             </div>
                         </div>
-                        <div class="bloco_singular" onclick="location.href='https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6'">
+                        <div class="bloco_singular" onclick="location.href='https://www.bing.com/covid'">
                             <div class="foto_bloco_sigular">
                                 <div class="foto_conteiner">
                                     <img src="assets/img/mapa.jpg">
@@ -192,10 +202,7 @@
             <div class="conteudo_geral">
 
                 <div class="bloco_de_coisas post_informations_plus" id="itens">
-                    <h1 class="informacaoProduto">Fármacos Disponíveis para sua proteção</h1>
-
-
-
+                    <h1 class="informacaoProduto">Consulte os farmácos nas farmácias mais proximas a si</h1>
 
 
 
@@ -248,7 +255,7 @@
 
         <div class="tab-pane fade" id="sintomas" role="tabpanel" aria-labelledby="pills-contact-tab">
             <div class="conteudo_geral">
-                <div class="conjunto_texto">
+                <div class="conjunto_texto teste">
                     <h2 class="conjunto-texto-titulo">Quais são os sintomas do coronavírus? </h2>
 
                     <p style="font-size: 16pt;">Os sinais e sintomas do coronavírus são principalmente respiratórios, semelhantes a um resfriado. Podem, também, causar infecção do trato respiratório inferior, como as pneumonias. No entanto, o coronavírus (SARS-CoV-2) ainda precisa
@@ -371,7 +378,7 @@
                                     <img src="assets/img/outros/emcasa.jpg" class="card-img-top" alt="..."></div>
                                 <div class="card-body">
                                     <h4 class="card-title">Sempre...</h4>
-                                    <p>Ficar em casa quando estiver doente.</p>
+                                    <p>Caso apresentar os sintomas, ligue para o 111.</p>
                                 </div>
                             </div>
                         </div>
@@ -538,6 +545,12 @@
                         <p>R: Verdade, é possível fazer o diagnóstico laboratorial específico para Coronavírus, através da detecção do genoma viral.</p>
                     </div>
 
+<h5>4 – O Covid-19 é o mesmo que a SARS (Síndrome Respiratória Aguda Grave)? </h5>
+                    <div style="margin-left: 3%;">
+                        <p>R: Não. O Covid-19 não é igual à SARS. Contudo, análises genéticas demonstram que são relacionados.</p>
+                    </div>
+
+
                 </div>
 
             </div>
@@ -566,6 +579,11 @@
             </div>
         </div>
     </div>
+
+
+    
+
+<!--footer--->
 
 
     <div class="footer">
