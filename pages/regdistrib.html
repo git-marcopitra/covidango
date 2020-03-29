@@ -70,28 +70,37 @@
                             <span>Registar</span>
                         </div>
                         <div class="parte_titulo_logo">
-                            <span>CovidAngo</span>
+                            <span>Mantimentos</span>
                         </div>
                     </div>
                 </div>
 
-                
                 <div class="container_login">
-
-                    <h2 style="text-align: center;">Registrar-se como...</h2>
-
-                    <div class="bloco_conteiner">
-                        <div class="bloco_singular bloco_grande" style="height: 65px;">
-                            <a href="regfarm.html" style="">Farmácia <i class="fas fa-chevron-circle-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="bloco_conteiner">
-                        <div class="bloco_singular bloco_grande" style="height: 65px;">
-                            <a href="regdistrib.html" style="">Dist. de mantimentos <i class="fas fa-chevron-circle-right"></i></a>
-                        </div>
-                    </div>
                     
+                    <label for="id" class="input-label"> Distribuidor </label>
+                    <input class="form-input field" type="text" placeholder="Insira o nome da farmácia" id="farmacia"
+                        required>
+
+                    <label for="id" class="input-label">Telefone</label>
+                    <input class="form-input field" type="number" placeholder="Telefone" id="contacto" required>
+
+                    <label for="id" class="input-label">NIF</label>
+                    <input class="form-input field" placeholder="Insira um NIF válido e atualizado" type="text" id="nif"
+                        required>
+
+                    <label for="id" class="input-label">Senha</label>
+                    <input class="form-input field" placeholder="Senha" type="password" id="senha" required>
+
+                    <label for="id" class="input-label">Confirmar Senha</label>
+                    <input class="form-input field" placeholder="Confirmar Senha" type="password" id="senha1">
+
+                    <label for="id" class="input-label">Endereço </label>
+                    <input class="form-input field" type="text" placeholder="Endereço" id="local" required>
+
+                    <input class="form-input botaoRegistar" type="button" value="Registar" onclick="registar(this);">
+
+                    <div class="spinner-grow text-success" role="status" id="carregar">
+                    </div>
                 </div>
 
             </form>

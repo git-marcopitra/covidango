@@ -10254,4 +10254,10 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+
+.centrar{
+  display: flex; 
+  align-items: center; 
+  height: 100%;
+}
 /*# sourceMappingURL=bootstrap.css.map */
