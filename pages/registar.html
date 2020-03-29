@@ -2,7 +2,7 @@
 <html class="no-js" lang="pt-br">
 
 <head>
-    <title>S.O.S Angola</title>
+     <title>CovidAng</title>
     <link rel="stylesheet" type="text/css" href="../assets/dist/bootstrap/bootstrap.css">
     <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
@@ -15,7 +15,16 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
-
+      <meta property="og:description" content="Informação útil do Covid-19 - Informação de Fármacos disponiveis nas farmácias próximas de si" >
+    <meta property="og:locale" content="pt_Br">
+    <meta property="og:url" content="covidango.web.app">
+    <meta property="og:title" content="CovidAng">
+    <meta property="og:site_name" content="CovidAng">
+    <meta property="og:image" content="covidango.web.app/assets/img/logo-farm.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="600">
+    <meta property="og:type" content="website">
 </head>
 
 <body>
@@ -153,7 +162,8 @@
             console.log("O elemento sou eu :::: ", nifField);
             nifField.addEventListener('blur', () => {
                 var regexp = new RegExp('\^([0-9]{9})+([A-Za-z]{2})+([0-9]{3})$');
-                if (!regexp.test(nifField.value)) {
+                var regexp1 = new RegExp(/[0-9]{10}/i);
+                if (!regexp.test(nifField.value) && !regexp1.test(nifField.value)) {
                     alert("Nif Invalido");
                     nifField.classList.add('field-error');
                 }
