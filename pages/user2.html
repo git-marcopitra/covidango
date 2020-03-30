@@ -58,36 +58,34 @@
         <div class="bloco_de_coisas post_informations_plus">
             <h1>Todos os mantimentos</h1>
 
-            <div class="bloco_conteiner">
+            <div class="bloco_conteiner" data-toggle="modal" data-target="#exampleModal">
                 <div class="bloco_singular bloco_grande">
                     <a aria-controls="farmacia" data-toggle="pill" href="#farmacia" style=" margin-left: 4%; font-size: 32px; margin-top: 3%;">Não encontra o produto desejado? Clique aqui para adicionar manualmente <i class="fas fa-plus-circle"></i></a>
                 </div>
             </div>
 
-
-            <!--Para registrar um novo produto-->
-            <!--Para registrar um novo produto-->
-            <!--Para registrar um novo produto-->
-            <div class="bloco_conteiner" id="novo_prod_reg" style="display: none;">
-                <div class="bloco_singular bloco_grande">
-                    <!--É aqui-->
-                </div>
-            </div>
-            <!--Para registrar um novo produto-->
-            <!--Para registrar um novo produto-->
-            <!--Para registrar um novo produto-->
+            
 
 
-            <div class="bloco_conteiner" style="display: flex; justify-content: center; height: 100px; padding-bottom: 40px;">
-                <button class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;" type="button" data-toggle="modal" data-target="#familiar">
+
+
+
+            <div class="bloco_conteiner nav nav-pills mb-3" style="display: flex; justify-content: center; height: 100px; padding-bottom: 40px;"  id="pills-tab" role="tablist">
+                <button class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"  id="pills-contact-tab" data-toggle="pill" href="#alimentos" role="tab" aria-controls="alimentos" aria-selected="true">
+
                 <a href="#">Alimentos <i class="fas fa-utensils"></i></a>
                 </button>
-                <button class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;" type="button" data-toggle="modal" data-target="#familiar">
+                <li class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"id="pills-contact-tab" data-toggle="pill" href="#higiene" role="tab" aria-controls="higiene" aria-selected="false">
                 <a href="#">Higiene, Limpeza e cosméticos <i class="fas fa-shower"></i></a>
-                </button>
+                </li>
             </div>
 
-            <div class="bloco_conteiner">
+<!-- Alimentos-->
+<div class="tab-content" id="pills-tabContent">
+<div  class="tab-pane fade show active" id="alimentos" role="tabpanel" aria-labelledby="pills-home-tab">
+<div class="conteudo_geral">
+
+    <div class="bloco_conteiner">
 
                 <div class="carde mb-2 item">
                     <div class="row no-gutters">
@@ -98,29 +96,16 @@
                             <div class="card-body " style="background: #f3f3f3;">
                                 <h5 class="card-title" id="mascara">Caixa de Frango </h5>
 
-                                <div style="margin-bottom: 1.4rem;">
-                                    <b>Marca:</b>
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-   
-                                </div>
-
                                 <form class="form-inline">
+                                    <div class="form-group" style="margin-bottom: 1%;">
+                                        <label for="marcaluva1">Marca</label>
+                                        <input type="text" id="marcaluva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Marca">
+
+                                    </div>
+
                                     <div class="form-group">
-                                        <label for="mascara1">Preço</label>
-                                        <input type="number" id="mascara1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                        <label for="luva1">Preço</label>
+                                        <input type="number" id="luva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
 
                                     </div>
                                 </form>
@@ -145,26 +130,15 @@
                             <div class="card-body " style="background: #f3f3f3;">
                                 <h5 class="card-title" id="luva">Ovos de galinha</h5>
 
-                                <div style="margin-bottom: 1.4rem;">
-                                    <b>Marca:</b>
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-   
-                                </div>
+                                
 
                                 <form class="form-inline">
+                                    <div class="form-group" style="margin-bottom: 1%;">
+                                        <label for="marcaluva1">Marca</label>
+                                        <input type="text" id="marcaluva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Marca">
+
+                                    </div>
+
                                     <div class="form-group">
                                         <label for="luva1">Preço</label>
                                         <input type="number" id="luva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
@@ -183,43 +157,35 @@
                     </div>
                 </div>
             </div>
+</div>
+</div>
 
 
+<!-- Higiene...--->
+<div class="tab-pane fade" id="higiene" role="tabpanel" aria-labelledby="pills-home-tab">
+<div class="conteudo_geral">
 
-            <div class="bloco_conteiner">
+<div class="bloco_conteiner">
 
                 <div class="carde mb-2 item">
                     <div class="row no-gutters">
                         <div class="col-md-3 centrar">
-                            <img src="../assets/img/prods/oleo.jpg" class="card-img-2" alt="...">
+                            <img src="../assets/img/prods/frango.png" class="card-img-2" alt="...">
                         </div>
                         <div class="col-md-9">
                             <div class="card-body " style="background: #f3f3f3;">
-                                <h5 class="card-title" id="alcool">Óleo de cozinha </h5>
-
-                                <div style="margin-bottom: 1.4rem;">
-                                    <b>Marca:</b>
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-   
-                                </div>
+                                <h5 class="card-title" id="mascara">Caixa de Frango </h5>
 
                                 <form class="form-inline">
+                                    <div class="form-group" style="margin-bottom: 1%;">
+                                        <label for="marcaluva1">Marca</label>
+                                        <input type="text" id="marcaluva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Marca">
+
+                                    </div>
+
                                     <div class="form-group">
-                                        <label for="alcool1">Preço</label>
-                                        <input type="number" id="alcool1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                        <label for="luva1">Preço</label>
+                                        <input type="number" id="luva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
 
                                     </div>
                                 </form>
@@ -227,7 +193,7 @@
                                 <div class="carde text-right" style="background: #f3f3f3; border:none;">
 
                                     <ul>
-                                        <button name="alcool" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                        <button name="mascara" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
                                     </ul>
                                 </div>
                             </div>
@@ -238,35 +204,24 @@
                 <div class="carde mb-2 item">
                     <div class="row no-gutters">
                         <div class="col-md-3 centrar">
-                            <img src="../assets/img/alcoolgel.jpg" class="card-img-2" alt="...">
+                            <img src="../assets/img/prods/ovo.jpg" class="card-img-2" alt="...">
                         </div>
                         <div class="col-md-9">
                             <div class="card-body " style="background: #f3f3f3;">
-                                <h5 class="card-title" id="alcoolgel">Alcool Gel</h5>
+                                <h5 class="card-title" id="luva">Ovos de galinha</h5>
 
-                                <div style="margin-bottom: 1.4rem;">
-                                    <b>Marca:</b>
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-   
-                                </div>
+                                
 
                                 <form class="form-inline">
+                                    <div class="form-group" style="margin-bottom: 1%;">
+                                        <label for="marcaluva1">Marca</label>
+                                        <input type="text" id="marcaluva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Marca">
+
+                                    </div>
+
                                     <div class="form-group">
-                                        <label for="alcoolgel1">Preço</label>
-                                        <input type="number" id="alcoolgel1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                        <label for="luva1">Preço</label>
+                                        <input type="number" id="luva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
 
                                     </div>
                                 </form>
@@ -274,7 +229,7 @@
                                 <div class="carde text-right" style="background: #f3f3f3; border:none;">
 
                                     <ul>
-                                        <button name="alcoolgel" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                        <button name="luva" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
                                     </ul>
                                 </div>
                             </div>
@@ -282,303 +237,73 @@
                     </div>
                 </div>
             </div>
+</div>
+</div>
+</div>
 
-            <div class="bloco_conteiner">
 
-                <div class="carde mb-2  item">
-                    <div class="row no-gutters">
-                        <div class="col-md-3 centrar">
-                            <img src="../assets/img/gelneutro.jpg" class="card-img-2" alt="...">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="card-body " style="background: #f3f3f3;">
-                                <h5 class="card-title" id="gelneutro">Gel Neutro </h5>
-
-                                <div style="margin-bottom: 1.4rem;">
-                                    <b>Marca:</b>
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-   
-                                </div>
-
-                                <form class="form-inline">
-                                    <div class="form-group">
-                                        <label for="gelneutro1">Preço</label>
-                                        <input type="number" id="gelneutro1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
-
-                                    </div>
-                                </form>
-                                <p name="farmaciaNome"></p>
-                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
-
-                                    <ul>
-                                        <button name="gelneutro" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carde mb-2 item">
-                    <div class="row no-gutters">
-                        <div class="col-md-3 centrar">
-                            <img src="../assets/img/toalhitas.jpg" class="card-img-2" alt="...">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="card-body " style="background: #f3f3f3;">
-                                <h5 class="card-title" id="toalhitas">Toalhitas</h5>
-
-                                <div style="margin-bottom: 1.4rem;">
-                                    <b>Marca:</b>
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-   
-                                </div>
-
-                                <form class="form-inline">
-                                    <div class="form-group">
-                                        <label for="toalhitas1">Preço</label>
-                                        <input type="number" id="toalhitas1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
-
-                                    </div>
-                                </form>
-                                <p name="farmaciaNome"></p>
-                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
-
-                                    <ul>
-                                        <button name="toalhitas" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
 
 
-            <div class="bloco_conteiner">
-
-                <div class="carde mb-2 item">
-                    <div class="row no-gutters">
-                        <div class="col-md-3 centrar">
-                            <img src="../assets/img/sabaoazul.jpg" class="card-img-2" alt="...">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="card-body " style="background: #f3f3f3;">
-                                <h5 class="card-title" id="sabaoazul">Sabão </h5>
-
-                                <div style="margin-bottom: 1.4rem;">
-                                    <b>Marca:</b>
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-   
-                                </div>
-
-                                <form class="form-inline">
-                                    <div class="form-group">
-                                        <label for="sabaoazul1">Preço</label>
-                                        <input type="number" id="sabaoazul1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
-
-                                    </div>
-                                </form>
-                                <p name="farmaciaNome"></p>
-                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
-
-                                    <ul>
-                                        <button name="sabaoazul" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carde mb-2 item">
-                    <div class="row no-gutters">
-                        <div class="col-md-3 centrar">
-                            <img src="../assets/img/sabaobranco.jpg" class="card-img-2" alt="...">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="card-body " style="background: #f3f3f3;">
-                                <h5 class="card-title" id="sabaobranco">Sabão </h5>
-
-                                <div style="margin-bottom: 1.4rem;">
-                                    <b>Marca:</b>
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-   
-                                </div>
-
-                                <form class="form-inline">
-                                    <div class="form-group">
-                                        <label for="sabaobranco1">Preço</label>
-                                        <input type="number" id="sabaobranco1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
-
-                                    </div>
-                                </form>
-                                <p name="farmaciaNome"></p>
-                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
-
-                                    <ul>
-                                        <button name="sabaobranco" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
 
-            <div class="bloco_conteiner">
-
-                <div class="carde mb-2 item">
-                    <div class="row no-gutters">
-                        <div class="col-md-3 centrar">
-                            <img src="../assets/img/sabaoverde.jpg" class="card-img-2" alt="...">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="card-body " style="background: #f3f3f3;">
-                                <h5 class="card-title" id="sabaoverde">Sabão </h5>
-
-                                <div style="margin-bottom: 1.4rem;">
-                                    <b>Marca:</b>
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-   
-                                </div>
-
-                                <form class="form-inline">
-                                    <div class="form-group">
-                                        <label for="sabaoverde1">Preço</label>
-                                        <input type="number" id="sabaoverde1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
-
-                                    </div>
-                                </form>
-                                <p name="farmaciaNome"></p>
-                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
-
-                                    <ul>
-                                        <button name="sabaoverde" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carde mb-2 item">
-                    <div class="row no-gutters">
-                        <div class="col-md-3 centrar">
-                            <img src="../assets/img/sabaoneutro.jpg" class="card-img-2" alt="...">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="card-body " style="background: #f3f3f3;">
-                                <h5 class="card-title" id="sabaoneutro">Sabão </h5>
-
-                                <div style="margin-bottom: 1.4rem;">
-                                    <b>Marca:</b>
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-
-                                    <div style="display: flex; align-items: center;">
-                                        <input type="checkbox" style="margin-right: 1rem;">
-                                        <label>Marca 1</label>
-                                    </div>
-   
-                                </div>
-
-                                <form class="form-inline">
-                                    <div class="form-group">
-                                        <label for="sabaoneutro1">Preço</label>
-                                        <input type="number" id="sabaoneutro1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
-
-                                    </div>
-                                </form>
-                                <p name="farmaciaNome"></p>
-                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
-
-                                    <ul>
-                                        <button name="sabaoneutro" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+           
         </div>
     </div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Novo Mantimento</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="    padding: 4%;">
+        <form>
+             <div class="form-group row" >
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg" style=" padding: 15px;">Nome</label>
+    <div class="col-sm-10" style="padding: 1%;" >
+      <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Nome">
+    </div>
+  </div>
+      <div class="form-group row" >
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg" style=" padding: 15px;">Preço</label>
+    <div class="col-sm-10" style="padding: 1%;" >
+      <input type="number" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Preço">
+    </div>
+  </div>
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Categoria</label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+    <option selected>Categoria...</option>
+    <option value="1">Alimentos</option>
+    <option value="2">Higiene, limpeza e cosméticos</option>
+   
+  </select>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 
     <div class="footer">
         <div class="logotipo">
@@ -601,6 +326,7 @@
                 <li><i class="fab fa-instagram"></i> Edmilson Júlio (@edjulio_denzel)</li>
                 <li><i class="fab fa-instagram"></i> Hairton Vanda (@silvestre_vanda)</li>
                 <li><i class="fab fa-instagram"></i> Marco Pitra (@69raios)</li>
+                <li><i class="fab fa-instagram"></i> Milton Bernardo (@miltonbernardo11)</li>
                 <li><i class="fab fa-instagram"></i> Hélio Vicente </li>
 
                 <li><i class="fab fa-instagram"></i> Okusindja de Almeida (@guccikussy)</li>

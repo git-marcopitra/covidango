@@ -248,7 +248,7 @@ function verifica() {
 
 function produtos() {
     var k = 1;
-    var itens = document.getElementById("itens");
+    var itens = document.getElementById("itensFarmacia");
     var filho = document.createElement("div");
     filho.classList.add("bloco_conteiner");
     firebase.firestore().collection("publicacao").where("permissao", "==", true).get().then((querySnapshot) => {

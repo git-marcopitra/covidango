@@ -46,7 +46,7 @@
                     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#inicio" role="tab" aria-controls="inicio" aria-selected="true">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <!--a-- class="nav-link" href="produtos.html">Produtos</!--a-->
+                    
                     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#farmacia" role="tab" aria-controls="farmacia" aria-selected="false">Fármacos</a>
                 </li>
                 <li class="nav-item">
@@ -101,7 +101,7 @@
                         <a href="#">Como proteger-me e conselhos <i class="fas fa-chevron-circle-right"></i></a>
                     </button>
                         <div class="bloco_singular">
-                            <a href="https://coronabr.com.br/">Teste aqui a tua saúde <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="https://coronabr.com.br/" target="_blank">Teste aqui a tua saúde <i class="fas fa-chevron-circle-right"></i></a>
                         </div>
                     </div>
                     <div class="bloco_conteiner">
@@ -151,14 +151,14 @@
                                 <a>Factos e mitos sobre o COVID-19</a>
                             </div>
                         </div>
-                        <div class="bloco_singular" onclick="location.href='https://www.bing.com/covid'">
+                        <div class="bloco_singular" onclick="window.open('https://www.bing.com/covid','_blank');">
                             <div class="foto_bloco_sigular">
                                 <div class="foto_conteiner">
                                     <img src="assets/img/mapa.jpg">
                                 </div>
                             </div>
                             <div class="informacao1">
-                                <a href="https://www.bing.com/covid">Acompanhe os casos de Covid-19 pelo mundo</a>
+                                <a href="https://www.bing.com/covid" target="_blank">Acompanhe os casos de Covid-19 pelo mundo</a>
                             </div>
                         </div>
 
@@ -171,7 +171,7 @@
                     </div>
 
                     <div class="bloco_conteiner">
-                        <div class="bloco_singular" onclick="location.href='https://www.covid19.gov.ao/'">
+                        <div class="bloco_singular" onclick="window.open('https://www.covid19.gov.ao/','_blank');">
                             <div class="foto_bloco_sigular">
                                 <div class="foto_conteiner">
                                     <img src="assets/img/angola.png">
@@ -202,7 +202,51 @@
             <div class="conteudo_geral">
 
                 <div class="bloco_de_coisas post_informations_plus" id="itens">
-                    <h1 class="informacaoProduto">Consulte os farmácos nas farmácias mais proximas a si</h1>
+                    <h1 class="informacaoProduto">Consulte os artigos necessários sem sair de casa</h1>
+
+
+            <div class="bloco_conteiner nav nav-pills mb-3" style="display: flex; justify-content: center; height: 100px; padding-bottom: 40px;"  id="pills-tab" role="tablist">
+                <li class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"  id="pills-contact-tab" data-toggle="pill" href="#itensFarmacia" role="tab" aria-controls="itensFarmacia" aria-selected="false" 
+                onclick="artigos();">
+
+                <a href="#">Farmacias </a>
+                </li>
+
+                <li class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"id="pills-contact-tab" data-toggle="pill" href="#itensMantimentos" role="tab" aria-controls="itensMantimentos" aria-selected="false" onclick="artigos();">
+                <a href="#">Mantimentos </a>
+                </li>
+            </div>
+
+
+<div class="tab-content" id="artigos" style="width: -webkit-fill-available; display: none;" >
+    <div  class="tab-pane fade show active" id="itensFarmacia" role="tabpanel" aria-labelledby="pills-home-tab">
+       
+    </div>
+
+    <div  class="tab-pane fade " id="itensMantimentos" role="tabpanel" aria-labelledby="pills-home-tab">
+        
+
+                  
+
+        <div class="bloco_conteiner nav nav-pills mb-3" style="display: flex; justify-content: center; height: 100px; padding-bottom: 40px;"  id="pills-tab" role="tablist">
+                        <button class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"  id="pills-contact-tab" data-toggle="pill" href="#alimentos" role="tab" aria-controls="alimentos" aria-selected="true">
+
+                        <a href="#">Alimentos <i class="fas fa-utensils"></i></a>
+                        </button>
+                        <li class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"id="pills-contact-tab" data-toggle="pill" href="#higiene" role="tab" aria-controls="higiene" aria-selected="false">
+                        <a href="#">Higiene, Limpeza e cosméticos <i class="fas fa-shower"></i></a>
+                        </li>
+                    </div>
+
+
+        
+    </div>
+</div>
+
+
+
+
+
 
 
 
@@ -603,7 +647,7 @@
                 <li><i class="fab fa-instagram"></i> Átila e Sousa </li>
                 <li><i class="fab fa-instagram"></i> Edmilson Júlio (@edjulio_denzel)</li>
                 <li><i class="fab fa-instagram"></i> Hairton Vanda (@silvestre_vanda)</li>
-                <li><i class="fab fa-instagram"></i> Marco Pitra (@69raios)</li>
+                <li><i class="fab fa-instagram"></i> Milton Bernardo (@miltonbernardo11)</li>
                 <li><i class="fab fa-instagram"></i> Hélio Vicente </li>
 
                 <li><i class="fab fa-instagram"></i> Okusindja de Almeida (@guccikussy)</li>
@@ -637,9 +681,13 @@
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
     <script type="text/javascript" src="assets/js/modelo.js"></script>
     <script type="text/javascript">
-        inicio();
-        verifica();
+        //inicio();
+        //verifica();
         produtos();
+        function artigos(){
+            document.getElementById("artigos").style.display="block";
+
+        }
     </script>
 
 </body>
