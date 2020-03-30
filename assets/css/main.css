@@ -271,6 +271,59 @@ header #menu-inputs input[type="button"]:hover {
     transition: all 600ms ease-in-out;
 }
 
+.bloco_tabs .bloco_tab_principal{
+    background-color: var(--primary-color);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    max-height: 30px;
+}
+
+.bloco_tabs .bloco_tab_principal a{
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+.bloco_tabs .bloco_tab_principal a:hover{
+    color: white;
+    width: 100%;
+}
+
+.bloco_tabs .bloco_tab_principal:nth-child(1){
+    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 3% 100%, 0% 50%, 3% 0);
+    border-radius: 0;
+    margin-right: 10px;
+}
+
+.bloco_tabs .bloco_tab_principal:nth-child(2){
+    clip-path: polygon(97% 0, 100% 50%, 97% 100%, 0% 100%, 0 50%, 0% 0%);
+    border-radius: 0;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 881px) {
+
+    .bloco_tabs .bloco_tab_principal:nth-child(1){
+        clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    }
+    
+    .bloco_tabs .bloco_tab_principal:nth-child(2){
+        clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    }
+}
+
+.bloco_tabs{
+    position: relative;
+    flex-wrap: nowrap;
+    display: flex;
+    width: 100%;
+    margin-top: -40px;
+    margin-bottom: 30px;
+}
+
 .bloco_conteiner .bloco_singular:nth-child(even) {
     margin-left: 10px;
     margin-right: 10px;
