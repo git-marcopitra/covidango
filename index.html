@@ -204,7 +204,7 @@
                 <div class="bloco_de_coisas post_informations_plus" id="itens">
                     <h1 class="informacaoProduto">Consulte os artigos necessários sem sair de casa</h1>
 
-                    <div class="bloco_tabs">
+                    <div class="bloco_tabs nav nav-pills mb-3">
                         
                             <li class="bloco_singular bloco_tab_principal" style="border: none; height: 70px; display: flex; justify-content: center;"  id="pills-contact-tab" data-toggle="pill" href="#itensFarmacia" role="tab" aria-controls="itensFarmacia" aria-selected="false" 
                             onclick="artigos();">
@@ -220,9 +220,9 @@
                     </div>
             
 
-<div class="tab-content" style="display: none; width: 100%;" id="artigos">
+<div class="tab-content" style="width: 100%;" id="artigos">
     <div  class="tab-pane fade show active" id="itensFarmacia" role="tabpanel" aria-labelledby="pills-home-tab">
-       
+    
     </div>
 
     <div  class="tab-pane fade " id="itensMantimentos" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -230,15 +230,33 @@
 
                   
 
-        <div class="bloco_conteiner nav nav-pills mb-3"   id="pills-tab" role="tablist">
-                        <button class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"  id="pills-contact-tab" data-toggle="pill" href="#alimentos" role="tab" aria-controls="alimentos" aria-selected="true">
+                <div class="bloco_conteiner nav nav-pills mb-3"   id="pills-tab" role="tablist">
+                        <li class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"  id="pills-contact-tab" data-toggle="pill" href="#alimentos" role="tab" aria-controls="alimentos" aria-selected="true">
 
                         <a href="#">Alimentos <i class="fas fa-utensils"></i></a>
-                        </button>
+                        </li>
                         <li class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"id="pills-contact-tab" data-toggle="pill" href="#higiene" role="tab" aria-controls="higiene" aria-selected="false">
                         <a href="#">Higiene, Limpeza e cosméticos <i class="fas fa-shower"></i></a>
                         </li>
                     </div>
+
+
+
+
+<div class="tab-content" style="width: 100%;" >
+    <div  class="tab-pane fade show active" id="alimentos" role="tabpanel" aria-labelledby="pills-home-tab">
+    
+    </div>
+
+    <div  class="tab-pane fade " id="higiene" role="tabpanel" aria-labelledby="pills-home-tab">
+    
+        
+    </div>
+</div>
+
+
+
+
 
 
         
@@ -685,9 +703,10 @@
     <script type="text/javascript">
         //inicio();
         //verifica();
-        produtos();
+       
         function artigos(){
-            document.getElementById("artigos").style.display="block";
+             produtosFarmacia();
+        
 
         }
     </script>

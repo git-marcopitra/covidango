@@ -17,18 +17,18 @@ firebase.analytics();
 
 
 var url = window.location.pathname;
-
+/*
 firebase.auth().onAuthStateChanged(function(user) {
 
     if (user) {
 
     } else {
-        if (url.endsWith("/user.html")) {
+        if (url.endsWith("/user.html") || url.endsWith("/user2.html")) {
             window.location.href = 'https://covidango.firebaseapp.com/';
         }
     }
 });
-
+*/
 var p = false;
 
 
@@ -61,11 +61,145 @@ function inicio() {
 
 
 
-function registar(botao) {
+function registarFarmacia(botao) {
 
     var database = firebase.database();
     var nif = document.getElementById("nif").value;
     var farmacia = document.getElementById("farmacia").value;
+    var senha = document.getElementById("senha").value;
+    var senha1 = document.getElementById("senha1").value;
+    var contacto = document.getElementById("contacto").value;
+    var local = document.getElementById("local").value;
+    if (nif.length > 0 &&
+        farmacia.length > 0 &&
+        contacto.length > 0 &&
+        local.length > 0 &&
+        senha.length > 0 &&
+        senha1.length > 0) {
+        if (contacto.length > 9 || contacto.length < 9) {
+            alert("Telefone Invalido");
+        } else if (senha.length < 8)
+            alert("A senha de conter no minimo 8 digitos");
+        else
+        if (senha1 != senha) {
+            alert("Senhas Diferentes");
+        } else {
+            botao.style.display = "none";
+            document.getElementById("carregar").style.display = "block";
+
+
+            firebase.auth().createUserWithEmailAndPassword(contacto + "@limite.com", senha).catch(function(error) {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+         
+
+            });
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+
+                    firebase.database().ref('empresa/' + user.uid + '/' + contacto).set({
+                        NIF: nif, 
+                        permissao: false,
+                        localizacao: local,
+                        tipo: "farmacia"
+
+                    }).then(function() {
+                        user.updateProfile({
+                            displayName: farmacia,
+                            photoURL: contacto
+                        }).then(function() {
+                            window.location.href = 'user.html';
+                        });
+                    });
+
+
+                }
+            });
+        }
+    } else {
+        alert("Por Favor,Preencha todos os campos")
+    }
+}
+
+
+
+
+
+
+
+
+function registarDistribuidor(botao) {
+
+    var database = firebase.database();
+    var nif = document.getElementById("nif").value;
+    var armazem = document.getElementById("armazem").value;
+    var senha = document.getElementById("senha").value;
+    var senha1 = document.getElementById("senha1").value;
+    var contacto = document.getElementById("contacto").value;
+    var local = document.getElementById("local").value;
+    if (nif.length > 0 &&
+        armazem.length > 0 &&
+        contacto.length > 0 &&
+        local.length > 0 &&
+        senha.length > 0 &&
+        senha1.length > 0) {
+        if (contacto.length > 9 || contacto.length < 9) {
+            alert("Telefone Invalido");
+        } else if (senha.length < 8)
+            alert("A senha de conter no minimo 8 digitos");
+        else
+        if (senha1 != senha) {
+            alert("Senhas Diferentes");
+        } else {
+            botao.style.display = "none";
+            document.getElementById("carregar").style.display = "block";
+
+
+            firebase.auth().createUserWithEmailAndPassword(contacto + "@limite.com", senha).catch(function(error) {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+           alert("Ja possui uma conta");
+
+            });
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+
+                    firebase.database().ref('empresa/' + user.uid + '/' + contacto).set({
+                        NIF: nif, 
+                        permissao: false,
+                        localizacao: local,
+                        tipo: "armazem"
+
+                    }).then(function() {
+                        user.updateProfile({
+                            displayName: armazem,
+                            photoURL: contacto
+                        }).then(function() {
+                            window.location.href = 'user2.html';
+                        });
+                    });
+
+
+                }
+            });
+        }
+    } else {
+        alert("Por Favor,Preencha todos os campos")
+    }
+}
+
+
+
+
+
+
+
+
+function registarFarmacia(botao) {
+
+    var database = firebase.database();
+    var nif = document.getElementById("nif").value;
+    var armazem = document.getElementById("armazem").value;
     var senha = document.getElementById("senha").value;
     var senha1 = document.getElementById("senha1").value;
     var contacto = document.getElementById("contacto").value;
@@ -97,17 +231,18 @@ function registar(botao) {
             firebase.auth().onAuthStateChanged(function(user) {
                 if (user) {
 
-                    firebase.database().ref('farmacia/' + user.uid + '/' + contacto).set({
+                    firebase.database().ref('empresa/' + user.uid + '/' + contacto).set({
                         NIF: nif, 
                         permissao: false,
-                        localizacao: local
+                        localizacao: local,
+                        tipo: "armazem"
 
                     }).then(function() {
                         user.updateProfile({
-                            displayName: farmacia,
+                            displayName: armazem,
                             photoURL: contacto
                         }).then(function() {
-                            window.location.href = 'user.html';
+                            window.location.href = 'user2.html';
                         });
                     });
 
@@ -123,7 +258,6 @@ function registar(botao) {
 
 
 
-
 function inicarSessao() {
     var nif = document.getElementById("nif").value + "@limite.com";
     var contacto = document.getElementById("contacto").value;
@@ -131,9 +265,19 @@ function inicarSessao() {
     firebase.auth().signInWithEmailAndPassword(nif, senha)
         .then(function() {
 
-            var user = firebase.auth().currentUser.uid;
+            var user = firebase.auth().currentUser;
+        
+                firebase.database().ref('empresa/' + user.uid + '/' + user.photoURL).
+                once('value').then(function(snapshot) {
+                    var tipo=snapshot.val().tipo;
+                    
+                    if(tipo=="farmacia")
+                        window.location.href = 'user.html';
+                    else
+                        window.location.href = 'user2.html';
 
-            window.location.href = 'pages/user.html';
+                });
+            
         }).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
@@ -167,17 +311,18 @@ function item(botao) {
                 var preco = document.getElementById(botao.name + "1");
                 preco.disabled = true;
                 var localizacao1;
-                firebase.database().ref('farmacia/' + user.uid + '/' + user.photoURL).once('value').then(function(snapshot) {
+                firebase.database().ref('empresa/' + user.uid + '/' + user.photoURL).once('value').then(function(snapshot) {
                     localizacao1 = (snapshot.val() && snapshot.val().localizacao);
                     var permissao1 = (snapshot.val() && snapshot.val().permissao);
-
+                    var tipo1=(snapshot.val() && snapshot.val().tipo);
                     firebase.firestore().collection("publicacao").add({
                         produto: botao.name,
                         contacto: user.photoURL,
                         localizacao: localizacao1,
                         preco: preco.value,
                         nome: user.displayName,
-                        permissao: permissao1
+                        permissao: permissao1,
+                        tipo: tipo1
                     });
                 });
 
@@ -246,12 +391,15 @@ function verifica() {
 
 
 
-function produtos() {
+function produtosFarmacia() {
+    if(document.getElementById("itensFarmacia").childElementCount==0){
     var k = 1;
     var itens = document.getElementById("itensFarmacia");
     var filho = document.createElement("div");
     filho.classList.add("bloco_conteiner");
-    firebase.firestore().collection("publicacao").where("permissao", "==", true).get().then((querySnapshot) => {
+
+//-------------------------------------------
+    firebase.firestore().collection("publicacao").where("permissao", "==", false).where("tipo","==","farmacia").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             if (k == 3) {
                 filho = document.createElement("div");
@@ -400,7 +548,7 @@ pai2_2.appendChild(document.createElement("hr"));
             filho1.appendChild(filho1_2);
 
             filho.appendChild(filho1);
-
+        
             itens.appendChild(filho);
             
             k++;
@@ -439,6 +587,8 @@ document.getElementById("id"+doc.data().produto).appendChild(document.createElem
 
         });
     });
+
+}
 }
 
 
@@ -452,6 +602,7 @@ function remover(tel, id) {
 
             });
         });
+
 }
 
 function carregar(contacto) {
@@ -479,4 +630,62 @@ function carregar(contacto) {
             document.getElementById(doc.data().produto).appendChild(b);
         });
     });
+}
+
+
+
+
+
+
+
+function itemproduto(botao){
+ 
+
+            if ("rgb(191, 5, 5)" != botao.style.background) {
+
+                document.getElementById("titulo").innerHTML=botao.name;
+    document.getElementById("formulario").innerHTML="<form><div class='form-group'><label for='recipient-name' class='col-form-label'>Marca</label><input type='text' class='form-control' id='recipient-name'></div><div class='form-group'><label for='message-text' class='col-form-label'>Preço</label><input type='float' class='form-control' id='message-text'></div><div class='form-row'><div class='form-group col-md-6'><label for='inputCity'>Peso</label><input type='text' class='form-control' id='inputCity'></div><div class='form-group col-md-4'><label for='inputState'>Unidade</label><select id='inputState' class='form-control'><option selected>Unidade</option><option>Kg</option><option>g</option></select></div></div></form>";
+
+    document.getElementById("formulario").innerHTML="<form><div class='form-group'><label for='recipient-name' class='col-form-label'>Marca</label><input type='text' class='form-control' id='recipient-name'></div><div class='form-group'><label for='message-text' class='col-form-label'>Preço</label><input type='float' class='form-control' id='message-text'></div><div class='form-row'><div class='form-group col-md-6'><label for='inputCity'>Quantidade</label><input type='number' class='form-control' id='inputCity'></div><div class='form-group col-md-4'></div></div></form>";
+    
+
+ var b = document.createElement("b");
+                document.getElementById("confirmar").addEventListener("click",
+                 function ola(){
+                    botao.setAttribute("data-toggle","");
+                    botao.setAttribute("data-target","#");
+
+                botao.style.background = "#bf0505";
+                botao.innerHTML = "<i class='fas fa-trash-alt'></i> Esgotado!";
+                  b.innerHTML = " Divulgado";
+                }, false);
+
+
+                //--------------------------------------------------------------------
+                var preco = document.getElementById(botao.name + "1");
+                preco.disabled = true;
+                var localizacao1;
+            
+
+               
+                b.style.background = "#28A745";
+                b.style.padding = "1%";
+                b.style.borderRadius = "10px";
+                b.style.color = "#f3f3f3";
+                b.style.fontSize = "11pt";
+              if(document.getElementById(botao.name).childElementCount<1)
+                document.getElementById(botao.name).appendChild(b);
+
+                botao.setAttribute("data-toggle","modal");
+                    botao.setAttribute("data-target","#caixafrango2");
+            } else {
+                
+                var preco = document.getElementById(botao.name + "1");
+                preco.disabled = false;
+               // remover(user.photoURL, botao.name);
+                botao.style.background = "#28A745";
+                botao.innerHTML = "Publicitar";
+                document.getElementById(botao.name).removeChild(document.getElementById(botao.name).childNodes[1]);
+            }
+
 }

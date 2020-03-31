@@ -72,7 +72,7 @@
                 </div>
                 <div class="conteiner_login">
                     <div class="inputs_conteiner">
-                        <input class="form-input field" placeholder="NIF" type="text" id="nif">
+                        
                         <input class="form-input field" placeholder="Telefone" type="number" id="contacto">
                         <input class="form-input field" placeholder="Senha" type="password" id="senha">
                         <span>Não possuo-o uma conta <a href="registar.html">Registar</a></span>
@@ -137,17 +137,7 @@
     <script type="text/javascript" src="../assets/js/modelo.js"></script>
     <script type="text/javascript">
         /**Reactive functions */
-        window.onload = function() {
-            let nifField = document.getElementById("nif");
-            console.log("O elemento sou eu :::: ", nifField);
-            nifField.addEventListener('blur', () => {
-                var regexp1 = new RegExp(/[0-9]{10}/i);
-                if (!regexp.test(nifField.value) && !regexp1.test(nifField.value)) {
-                    alert("Nif Invalido");
-                    nifField.classList.add('field-error');
-                }
-            })
-        };
+        
     </script>
 </body>
 

@@ -71,10 +71,10 @@
 
 
             <div class="bloco_conteiner nav nav-pills mb-3" style="display: flex; justify-content: center; height: 100px; padding-bottom: 40px;"  id="pills-tab" role="tablist">
-                <button class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"  id="pills-contact-tab" data-toggle="pill" href="#alimentos" role="tab" aria-controls="alimentos" aria-selected="true">
+                <li class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"  id="pills-contact-tab" data-toggle="pill" href="#alimentos" role="tab" aria-controls="alimentos" aria-selected="true">
 
                 <a href="#">Alimentos <i class="fas fa-utensils"></i></a>
-                </button>
+                </li>
                 <li class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"id="pills-contact-tab" data-toggle="pill" href="#higiene" role="tab" aria-controls="higiene" aria-selected="false">
                 <a href="#">Higiene, Limpeza e cosméticos <i class="fas fa-shower"></i></a>
                 </li>
@@ -90,30 +90,24 @@
                 <div class="carde mb-2 item">
                     <div class="row no-gutters">
                         <div class="col-md-3 centrar">
-                            <img src="../assets/img/prods/frango.png" class="card-img-2" alt="...">
+                            <img src="../assets/img/prods/acucar.jpg" class="card-img-2" alt="...">
                         </div>
                         <div class="col-md-9">
                             <div class="card-body " style="background: #f3f3f3;">
-                                <h5 class="card-title" id="mascara">Caixa de Frango </h5>
+                                <h5 class="card-title" id="acucar">Açucar</h5>
 
                                 <form class="form-inline">
-                                    <div class="form-group" style="margin-bottom: 1%;">
-                                        <label for="marcaluva1">Marca</label>
-                                        <input type="text" id="marcaluva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Marca">
-
-                                    </div>
-
                                     <div class="form-group">
-                                        <label for="luva1">Preço</label>
-                                        <input type="number" id="luva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
-
+                                        <label for="acucar1">Preço</label>
+                                        <input type="number" id="acucar1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
                                     </div>
+
                                 </form>
-                                <p name="farmaciaNome"></p>
+                             
                                 <div class="carde text-right" style="background: #f3f3f3; border:none;">
 
                                     <ul>
-                                        <button name="mascara" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                        <button name="acucar" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
                                     </ul>
                                 </div>
                             </div>
@@ -124,39 +118,592 @@
                 <div class="carde mb-2 item">
                     <div class="row no-gutters">
                         <div class="col-md-3 centrar">
-                            <img src="../assets/img/prods/ovo.jpg" class="card-img-2" alt="...">
+                            <img src="../assets/img/prods/alho.jpg" class="card-img-2" alt="...">
                         </div>
                         <div class="col-md-9">
                             <div class="card-body " style="background: #f3f3f3;">
-                                <h5 class="card-title" id="luva">Ovos de galinha</h5>
+                                <h5 class="card-title" id="alho">Alho</h5>
 
                                 
 
                                 <form class="form-inline">
-                                    <div class="form-group" style="margin-bottom: 1%;">
-                                        <label for="marcaluva1">Marca</label>
-                                        <input type="text" id="marcaluva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Marca">
-
-                                    </div>
+                                   
 
                                     <div class="form-group">
-                                        <label for="luva1">Preço</label>
-                                        <input type="number" id="luva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                        <label for="alho1">Preço</label>
+                                        <input type="number" id="alho1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
 
                                     </div>
                                 </form>
-                                <p name="farmaciaNome"></p>
+                              
                                 <div class="carde text-right" style="background: #f3f3f3; border:none;">
 
                                     <ul>
-                                        <button name="luva" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                        <button name="alho" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+    </div>
+
+
+
+    <div class="bloco_conteiner">
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/azeite.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="azeite">Azeite</h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="azeite1">Preço</label>
+                                        <input type="number" id="azeite1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="azeite" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/coxa.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="coxa">Caixa de Coxa</h5>
+
+                                
+
+                                <form class="form-inline">
+                                   
+
+                                    <div class="form-group">
+                                        <label for="coxa1">Preço</label>
+                                        <input type="number" id="coxa1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+
+                                    </div>
+                                </form>
+                              
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="coxa" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+
+
+
+    <div class="bloco_conteiner">
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/caixafrango.png" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="caixafrango">Caixa de Frango </h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="caixafrango1">Preço</label>
+                                        <input type="number" id="caixafrango1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="caixafrango" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/alho.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="leite">Caixa Leite</h5>
+
+                                
+
+                                <form class="form-inline">
+                                   
+
+                                    <div class="form-group">
+                                        <label for="leite1">Preço</label>
+                                        <input type="number" id="leite1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+
+                                    </div>
+                                </form>
+                              
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="leite" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+
+
+    <div class="bloco_conteiner">
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/massa.png" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="massa">Caixa de Massa </h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="massa1">Preço</label>
+                                        <input type="number" id="massa1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="massa" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/oleo.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="oleo">Caixa de oleo</h5>
+
+                                
+
+                                <form class="form-inline">
+                                   
+
+                                    <div class="form-group">
+                                        <label for="oleo1">Preço</label>
+                                        <input type="number" id="oleo1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+
+                                    </div>
+                                </form>
+                              
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="oleo" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+
+  <div class="bloco_conteiner">
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/peitofrango.png" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="peitofrango">Caixa de Peito de Frango</h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="peitofrango1">Preço</label>
+                                        <input type="number" id="peitofrango1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="peitofrango" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/ovos.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="ovos">Cartão de Ovos</h5>
+
+                                
+
+                                <form class="form-inline">
+                                   
+
+                                    <div class="form-group">
+                                        <label for="ovos1">Preço</label>
+                                        <input type="number" id="ovos1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+
+                                    </div>
+                                </form>
+                              
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="ovos" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+
+
+  <div class="bloco_conteiner">
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/farinha.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="farinha">Farinha Trigo </h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="farinha1">Preço</label>
+                                        <input type="number" id="farinha1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="farinha" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/feijao.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="feijao">Feijão</h5>
+
+                                
+
+                                <form class="form-inline">
+                                   
+
+                                    <div class="form-group">
+                                        <label for="feijao1">Preço</label>
+                                        <input type="number" id="feijao1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+
+                                    </div>
+                                </form>
+                              
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="feijao" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+
+
+  <div class="bloco_conteiner">
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/agua.png" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="agua">Grade de Água</h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="agua1">Preço</label>
+                                        <input type="number" id="agua1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="agua" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/batataRena.png" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="batataRena">Saco de Batata Rena</h5>
+
+                                
+
+                                <form class="form-inline">
+                                   
+
+                                    <div class="form-group">
+                                        <label for="batataRena1">Preço</label>
+                                        <input type="number" id="batataRena1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+
+                                    </div>
+                                </form>
+                              
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="batataRena" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+
+
+  <div class="bloco_conteiner">
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/batataDoce.webp" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="batataDoce">Saco de Batata Doce</h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="batataDoce1">Preço</label>
+                                        <input type="number" id="batataDoce1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="batataDoce" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/cebola.png" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="cebola">Saco de Cebola</h5>
+
+                                
+
+                                <form class="form-inline">
+                                   
+
+                                    <div class="form-group">
+                                        <label for="cebola1">Preço</label>
+                                        <input type="number" id="cebola1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+
+                                    </div>
+                                </form>
+                              
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="cebola" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+
+
+  <div class="bloco_conteiner">
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/fubaMilho.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="fubaMilho">Saco de Fuba</h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="fubaMilho1">Preço</label>
+                                        <input type="number" id="fubaMilho1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="fubaMilho" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/sal.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="sal">Sal</h5>
+
+                                
+
+                                <form class="form-inline">
+                                   
+
+                                    <div class="form-group">
+                                        <label for="sal1">Preço</label>
+                                        <input type="number" id="sal1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+
+                                    </div>
+                                </form>
+                              
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="sal" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+
+
+<div class="bloco_conteiner">
+
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/vinagre.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="vinagre">Vinagre</h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="vinagre1">Preço</label>
+                                        <input type="number" id="vinagre1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="vinagre" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              
+    </div>
+
+
 </div>
 </div>
 
@@ -167,33 +714,28 @@
 
 <div class="bloco_conteiner">
 
+               
                 <div class="carde mb-2 item">
                     <div class="row no-gutters">
                         <div class="col-md-3 centrar">
-                            <img src="../assets/img/prods/frango.png" class="card-img-2" alt="...">
+                            <img src="../assets/img/prods/cremepele.jpg" class="card-img-2" alt="...">
                         </div>
                         <div class="col-md-9">
                             <div class="card-body " style="background: #f3f3f3;">
-                                <h5 class="card-title" id="mascara">Caixa de Frango </h5>
+                                <h5 class="card-title" id="cremepele">Creme para Pele</h5>
 
                                 <form class="form-inline">
-                                    <div class="form-group" style="margin-bottom: 1%;">
-                                        <label for="marcaluva1">Marca</label>
-                                        <input type="text" id="marcaluva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Marca">
-
-                                    </div>
-
                                     <div class="form-group">
-                                        <label for="luva1">Preço</label>
-                                        <input type="number" id="luva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
-
+                                        <label for="cremepele1">Preço</label>
+                                        <input type="number" id="cremepele1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
                                     </div>
+
                                 </form>
-                                <p name="farmaciaNome"></p>
+                             
                                 <div class="carde text-right" style="background: #f3f3f3; border:none;">
 
                                     <ul>
-                                        <button name="mascara" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                        <button name="cremepele" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
                                     </ul>
                                 </div>
                             </div>
@@ -201,35 +743,153 @@
                     </div>
                 </div>
 
+               
                 <div class="carde mb-2 item">
                     <div class="row no-gutters">
                         <div class="col-md-3 centrar">
-                            <img src="../assets/img/prods/ovo.jpg" class="card-img-2" alt="...">
+                            <img src="../assets/img/prods/gelbanho.jpg" class="card-img-2" alt="...">
                         </div>
                         <div class="col-md-9">
                             <div class="card-body " style="background: #f3f3f3;">
-                                <h5 class="card-title" id="luva">Ovos de galinha</h5>
-
-                                
+                                <h5 class="card-title" id="gelbanho">Gel de Banho</h5>
 
                                 <form class="form-inline">
-                                    <div class="form-group" style="margin-bottom: 1%;">
-                                        <label for="marcaluva1">Marca</label>
-                                        <input type="text" id="marcaluva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Marca">
-
-                                    </div>
-
                                     <div class="form-group">
-                                        <label for="luva1">Preço</label>
-                                        <input type="number" id="luva1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
-
+                                        <label for="gelbanho1">Preço</label>
+                                        <input type="number" id="gelbanho1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
                                     </div>
+
                                 </form>
-                                <p name="farmaciaNome"></p>
+                             
                                 <div class="carde text-right" style="background: #f3f3f3; border:none;">
 
                                     <ul>
-                                        <button name="luva" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" onclick="item(this);">Publicitar</button>
+                                        <button name="gelbanho" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="bloco_conteiner">
+
+               
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/omo.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="omo">OMO</h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="omo1">Preço</label>
+                                        <input type="number" id="omo1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="omo" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/sabao.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="vinagre">Sabão</h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="sabao1">Preço</label>
+                                        <input type="number" id="sabao1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="sabao" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bloco_conteiner">
+
+               
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/sabaoliquido.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="sabaoliquido">Sabão em liquido</h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="sabaoliquido1">Preço</label>
+                                        <input type="number" id="sabaoliquido1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="sabaoliquido" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="carde mb-2 item">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 centrar">
+                            <img src="../assets/img/prods/sabonete.jpg" class="card-img-2" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body " style="background: #f3f3f3;">
+                                <h5 class="card-title" id="sabonete">Sabonete</h5>
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="sabonete1">Preço</label>
+                                        <input type="number" id="sabonete1" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="0,00akz">
+                                    </div>
+
+                                </form>
+                             
+                                <div class="carde text-right" style="background: #f3f3f3; border:none;">
+
+                                    <ul>
+                                        <button name="sabonete" class="btn" style=" background: #28A745;padding: 2%;border-radius: 10px;color: #f3f3f3; max-width: fit-content;" type="button" data-toggle="modal" data-target="#caixafrango2" onclick="itemproduto(this);">Publicitar</button>
                                     </ul>
                                 </div>
                             </div>
@@ -301,6 +961,28 @@
 
 
 
+
+
+<!-- Modal -->
+<div class="modal fade" id="caixafrango2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="titulo"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="formulario">
+   
+      </div>
+      <div class="modal-footer">
+        <button id="cancelar" type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button id="confirmar" type="button" class="btn btn-success" data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
