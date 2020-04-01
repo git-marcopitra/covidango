@@ -207,12 +207,12 @@
                     <div class="bloco_tabs nav nav-pills mb-3">
                         
                             <li class="bloco_singular bloco_tab_principal" style="border: none; height: 70px; display: flex; justify-content: center;"  id="pills-contact-tab" data-toggle="pill" href="#itensFarmacia" role="tab" aria-controls="itensFarmacia" aria-selected="false" 
-                            onclick="artigos();">
+                            onclick="produtosFarmacia();">
             
                             <a href="#">Farmacias </a>
                             </li>
             
-                            <li class="bloco_singular bloco_tab_principal" style="border: none; height: 70px; display: flex; justify-content: center;"id="pills-contact-tab" data-toggle="pill" href="#itensMantimentos" role="tab" aria-controls="itensMantimentos" aria-selected="false" onclick="artigos();">
+                            <li class="bloco_singular bloco_tab_principal" style="border: none; height: 70px; display: flex; justify-content: center;"id="pills-contact-tab" data-toggle="pill" href="#itensMantimentos" role="tab" aria-controls="itensMantimentos" aria-selected="false" >
                             <a href="#">Mantimentos </a>
                             </li>
                         
@@ -231,11 +231,11 @@
                   
 
                 <div class="bloco_conteiner nav nav-pills mb-3"   id="pills-tab" role="tablist">
-                        <li class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"  id="pills-contact-tab" data-toggle="pill" href="#alimentos" role="tab" aria-controls="alimentos" aria-selected="true">
+                        <li class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"  id="pills-contact-tab" data-toggle="pill" href="#alimentos" role="tab" aria-controls="alimentos" aria-selected="true" onclick="produtosAlimentos();">
 
                         <a href="#">Alimentos <i class="fas fa-utensils"></i></a>
                         </li>
-                        <li class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"id="pills-contact-tab" data-toggle="pill" href="#higiene" role="tab" aria-controls="higiene" aria-selected="false">
+                        <li class="bloco_singular" style="border: none; height: 70px; display: flex; justify-content: center;"id="pills-contact-tab" data-toggle="pill" href="#higiene" role="tab" aria-controls="higiene" aria-selected="false" onclick="produtosFarmacia()">
                         <a href="#">Higiene, Limpeza e cosméticos <i class="fas fa-shower"></i></a>
                         </li>
                     </div>
@@ -703,12 +703,9 @@
     <script type="text/javascript">
         //inicio();
         //verifica();
+            
        
-        function artigos(){
-             produtosFarmacia();
-        
-
-        }
+    
     </script>
 
 </body>
