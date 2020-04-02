@@ -51,7 +51,7 @@
                 <li class="nav-item">
 
                     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#farmacia" role="tab"
-                        aria-controls="farmacia" aria-selected="false">Fármacos</a>
+                        aria-controls="farmacia" aria-selected="false">Artigos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#covid19" role="tab"
@@ -70,10 +70,10 @@
                         aria-controls="sobre" aria-selected="false">Sobre</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" action="pages/user.html">
-                <button class="btn btn-outline-success my-2 my-sm-0" id="conta" style="display: none;">Conta</button>
+            
+                <button class="btn btn-outline-success my-2 my-sm-0" id="conta" style="display: none;"  onclick="conta();" >Conta</button>
 
-            </form>
+        
             <form class="form-inline my-2 my-lg-0" action="pages/painel.html">
 
                 <button class="btn btn-outline-success my-2 my-sm-0" id="sessao"></button>
@@ -235,11 +235,11 @@
 
                     </div>
 
-
+<div class="spinner-grow text-success" role="status" id="ca" style="display: none;"></div>
                     <div class="tab-content" style="width: 100%;" id="artigos">
                         <div class="tab-pane fade show active" id="itensFarmacia" role="tabpanel"
                             aria-labelledby="pills-home-tab">
-
+                             
                         </div>
 
                         <div class="tab-pane fade " id="itensMantimentos" role="tabpanel"
@@ -249,6 +249,7 @@
 
 
                             <div class="bloco_conteiner nav nav-pills mb-3" id="pills-tab" role="tablist">
+
                                 <li class="bloco_singular"
                                     style="border: none; height: 70px; display: flex; justify-content: center;"
                                     id="pills-contact-tab" data-toggle="pill" href="#alimentos" role="tab"
@@ -259,14 +260,16 @@
                                 <li class="bloco_singular"
                                     style="border: none; height: 70px; display: flex; justify-content: center;"
                                     id="pills-contact-tab" data-toggle="pill" href="#higiene" role="tab"
-                                    aria-controls="higiene" aria-selected="false" onclick="produtosFarmacia()">
+                                    aria-controls="higiene" aria-selected="false" onclick=" produtosHigiene()">
                                     <a href="#">Higiene, Limpeza e cosméticos <i class="fas fa-shower"></i></a>
                                 </li>
+                                <br>
+
                             </div>
 
 
 
-
+                                  <div style="display: none; margin-left: 48%;" class="spinner-grow text-success" role="status" id="ca1"></div>
                             <div class="tab-content" style="width: 100%;">
                                 <div class="tab-pane fade show active" id="alimentos" role="tabpanel"
                                     aria-labelledby="pills-home-tab">
@@ -534,6 +537,13 @@
                     <p style="font-size: 16pt;">Por isso enquanto os médicos cuidam dos infectados, nós só precisamos de
                         ficar em casa. Esta é a maneira de fazermos parte da luta contra o Covid-19.</p>
 
+                       <p style="font-size: 16pt;"> Na ausência de uma cura a nossa maior defesa contra o Covid-19 é o nosso sistema imunológico, ele atua como a nossa linha da frente na batalha com o Covid-19. Ter uma boa imunidade é vital na para ajudar na luta contra a infecção e na recuperação do infetado.</p>
+    <p style="font-size: 16pt;">Existem várias maneiras de como fortalecer o nosso sistema imunológico, mas as mais recomendadas pelos especialistas a nível mundial são 4:</p>
+<li style="font-size: 16pt;"> Praticar exercícios físicos regularmente</li>
+<li style="font-size: 16pt;"> Reduzir o estresse </li>
+<li style="font-size: 16pt;">Dormir bem </li>
+<li style="font-size: 16pt;">  Ter uma alimentação balanceada</li>
+
                 </div>
             </div>
         </div>
@@ -607,7 +617,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Precausões frente ao COVID-19</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Planeamento familiar frente ao vírus</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -637,7 +647,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Propagaçã do COVID-19</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Propagação do COVID-19</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -749,9 +759,9 @@
                 <li><i class="fab fa-instagram"></i> Hairton Vanda (@silvestre_vanda)</li>
                 <li><i class="fab fa-instagram"></i> Milton Bernardo (@miltonbernardo11)</li>
                 <li><i class="fab fa-instagram"></i> Hélio Vicente </li>
-
                 <li><i class="fab fa-instagram"></i> Okusindja de Almeida (@guccikussy)</li>
-
+                <li><i class="fab fa-instagram"></i> Peterson Alves (@peterson.alves.3133)</li>
+                <li><i class="fab fa-instagram"></i> Ricardo Silva </li>
             </ul>
         </div>
         <div class="consideracoes">
@@ -783,8 +793,8 @@
     <script type="text/javascript" src="assets/js/modelo.js"></script>
 
     <script type="text/javascript">
-        //inicio();
-        //verifica();
+        inicio();
+        verifica();
 
 
         // obter o conteiner, ou div que contém os botões

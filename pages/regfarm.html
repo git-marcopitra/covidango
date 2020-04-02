@@ -77,27 +77,34 @@
 
                 <div class="container_login">
                     
-                    <label for="id" class="input-label"> Farmácia </label>
-                    <input class="form-input field" type="text" placeholder="Insira o nome da farmácia" id="farmacia"
+                    <label for="id" class="input-label"><b> Farmácia </b></label>
+                    <input class="form-input field" type="text" placeholder="Insira o nome da farmácia" id="farmacia" maxlength="30" minlength="2"
                         required>
 
-                    <label for="id" class="input-label">Telefone</label>
-                    <input class="form-input field" type="number" placeholder="Telefone" id="contacto" required>
+                    <label for="id" class="input-label" ><b>Telefone</b></label>
+                    <input class="form-input field" type="number" placeholder="Telefone" id="contacto" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==9) return false;"  required>
+                    
+                    <label for="id" class="input-label"><b>NIF/ Nº Contribuinte</b></label>
+                    <input  class="form-input field" placeholder="Insira um NIF válido e atualizado" type="text" id="nif" maxlength="13" minlength="10"required>
+                    
+                   
 
-                    <label for="id" class="input-label">NIF</label>
-                    <input class="form-input field" placeholder="Insira um NIF válido e atualizado" type="text" id="nif"
-                        required>
+                    <div style="margin-bottom: 4px;">
+                    <label for="id" class="input-label"><b>Senha</b></label>
+                    <input style="margin-bottom: 0;" class="form-input field" placeholder="Senha" type="password" id="senha"  minlength="8" required>
+                    <small>A senha deve ter no minimo 8 digitos</small>
+                    </div>
 
-                    <label for="id" class="input-label">Senha</label>
-                    <input class="form-input field" placeholder="Senha" type="password" id="senha" required>
+                    <label for="id" class="input-label"><b>Confirmar Senha</b></label>
+                    <input class="form-input field" placeholder="Confirmar Senha" type="password" id="senha1" minlength="8" required>
 
-                    <label for="id" class="input-label">Confirmar Senha</label>
-                    <input class="form-input field" placeholder="Confirmar Senha" type="password" id="senha1">
+                    <div style="margin-bottom: 4px;">
+                    <label for="id" class="input-label"><b>Endereço</b> </label>
+                    <input style="margin-bottom: 0;"  class="form-input field" type="text" placeholder="Endereço" id="local" required>
+                    <small>Preencha na seguinte ordem:<strong> Municipio, Bairro, Rua</strong></small>
+                    </div>
 
-                    <label for="id" class="input-label">Endereço </label>
-                    <input class="form-input field" type="text" placeholder="Endereço" id="local" required>
-
-                    <input class="form-input botaoRegistar" type="button" value="Registar" onclick="registarFarmacia(this);">
+                    <input class="form-input botaoRegistar" type="button" value="Registar" maxlength="40" onclick="registarFarmacia(this);">
 
                     <div class="spinner-grow text-success" role="status" id="carregar">
                     </div>
@@ -129,9 +136,10 @@
                 <li><i class="fab fa-instagram"></i> Edmilson Júlio (@edjulio_denzel)</li>
                 <li><i class="fab fa-instagram"></i> Hairton Vanda (@silvestre_vanda)</li>
                 <li><i class="fab fa-instagram"></i> Marco Pitra (@69raios)</li>
+                <li><i class="fab fa-instagram"></i> Milton Bernardo (@miltonbernardo11)</li>
                 <li><i class="fab fa-instagram"></i> Hélio Vicente </li>
-
                 <li><i class="fab fa-instagram"></i> Okusindja de Almeida (@guccikussy)</li>
+                 <li><i class="fab fa-instagram"></i> Peterson Alves (@peterson.alves.3133)</li>
 
             </ul>
         </div>
