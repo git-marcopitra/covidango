@@ -73,7 +73,7 @@
                         <label style="display: none;" for="nif" class="input-label" id="nif1"><b>NIF/ Nº Contribuinte</b></label>
                     <input style="display: none;" class="form-input field" placeholder="Insira o NIF" type="text" id="nif" maxlength="13" minlength="10"required>
                     
-                        <input class="form-input field" placeholder="Telefone" type="number" id="contacto">
+                        <input class="form-input field" placeholder="Telefone" type="number" id="contacto"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==9) return false;">
                         <input class="form-input field" placeholder="Senha" type="password" id="senha">
                         <span>Não possuo-o uma conta <a href="registar.html">Registar</a></span>
                         <input class="form-input botaoRegistar" type="button" onclick="iniciarSessao();"  value="Iniciar sessão">
@@ -110,6 +110,7 @@
                 <li><i class="fab fa-instagram"></i> Hélio Vicente </li>
                 <li><i class="fab fa-instagram"></i> Okusindja de Almeida (@guccikussy)</li>
                  <li><i class="fab fa-instagram"></i> Peterson Alves (@peterson.alves.3133)</li>
+                 <li><i class="fab fa-instagram"></i> Ricardo Silva </li>
 
             </ul>
         </div>
