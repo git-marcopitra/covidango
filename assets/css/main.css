@@ -714,6 +714,24 @@ header #menu-inputs input[type="button"]:hover {
     height: auto;
 }
 
+.content_linha_overflows{
+    overflow-x: auto;
+    width: 100%;
+}
+
+.conteiner_colabs{
+    display: flex; 
+    flex-direction: row;  
+    flex-wrap: nowrap; 
+    padding-top: 40px;
+    justify-content: flex-start;
+    overflow-x: auto;
+}
+
+.colabs{
+    min-width: 380px;
+}
+
 h1,
 h2 {
     color: var(--primary-color);
