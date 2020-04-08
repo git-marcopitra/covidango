@@ -755,6 +755,42 @@ h2 {
     flex: 1;
 }
 
+.newsletter{
+    height: 240px;
+    width: 85%;
+    border-top: 2px solid white;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter .newsletter-h1{
+    padding-top: 20px;
+    font-size: 25px;
+}
+
+.newsletter .inputs{
+    height: 100px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.newsletter .inputs input[type="email"]{
+    text-align: center;
+}
+
+.newsletter .inputs input[type="submit"]{
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+
 .footer {
     min-height: 250px;
     margin-top: 3rem;
