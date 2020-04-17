@@ -413,26 +413,189 @@ pai2_1_2.setAttribute("class","modal-title");
 pai2_1_2.setAttribute("id","exampleModalLabel");
 var produto;
  switch (doc.data().produto) {
-                case "mascara":
-                    produto = "Mascara";
+                case "acidoAscorbico":
+                    produto="Ácido ascórbico (Vit. C)";
                     break;
-                case "luva":
-                    produto = "Luvas plasticas";
+                case "acidoFolico":
+                    produto="Ácido Fólico";
                     break;
-                case "alcool":
+                case "actifed":
+                    produto="Actifed";
+                    break;
+                case "agulhaCaneta":
+                    produto="Agulhas para as canetas";
+                    break;
+                     case "alcool":
                     produto = "Alcool Etilico";
                     break;
                 case "alcoolgel":
                     produto = "Alcool Gel";
                     break;
+                case "aminofilina":
+                    produto="Aminofilina";
+                    break;
+                case "amlodipino":
+                    produto="Amlodipina";
+                    break;
+                case "amoxilina":
+                    produto="Amoxicilina";
+                    break;
+                case "artemether":
+                    produto="Artemeter";
+                    break;
+                case "aspirina":
+                    produto="Aspirina";
+                    break;
+                case "benylin":
+                    produto="Benylin";
+                    break;
+                case "bisolvon":
+                    produto="Bisolvon";
+                    break;
+                case "bromexina":
+                    produto="Bromexina";
+                    break;
+                case "calcio":
+                    produto="Cálcio";
+                    break;
+                case "carbamazepina":
+                    produto="carbamazepina";
+                    break;
+                case "ciprofloxacina":
+                    produto="Ciprofloxacina";
+                    break;
+                case "clavamox":
+                    produto="Clavamox";
+                    break;
+                case "coartem":
+                    produto="Coartem";
+                    break;
+                case "complexoB":
+                    produto="Complexo B";
+                    break;
+                case "cotrimoxazol":
+                    produto="Cotrimoxazol";
+                    break;
+                case "desloratadina":
+                    produto="Desloratadina";
+                    break;
+                case "diazepam":
+                    produto="Diazepam";
+                    break;
+                case "diclofenacComprimido":
+                    produto="Diclofenac (Comprimido)";
+                    break;
+                case "diclofenacPomada":
+                    produto="Diclofenac (Pomada)";
+                    break;
+                case "domperidona":
+                    produto="Domperidona";
+                    break;
+                case "enalapril":
+                    produto="Enalapril";
+                    break;
+                case "fenobarbital":
+                    produto="Fenobarbital";
+                    break;
                 case "gelneutro":
                     produto = "Alcool Neutro";
+                    break;
+                case "gentamicina":
+                    produto="Gentamicina";
+                    break;
+                case "hidroclorotiazida":
+                    produto="Hidroclorotiazida";
+                    break;
+                case "hidroxidoMagnesio":
+                    produto="Hidróxido de Magnésio";
+                    break;
+                case "ibuprofenoPomada":
+                    produto="Ibuprofen (Pomada)";
+                    break;
+                case "insulinaAmpola":
+                    produto="Insulina (ampola)";
+                    break;
+                case "lisinopril":
+                    produto="Lisinopril";
+                    break;
+                    case "luva":
+                    produto = "Luvas plasticas";
+                    break;
+                    case "mascara":
+                    produto = "Mascara";
+                    break;
+                case "metformina":
+                    produto="Metformina";
+                    break;
+                case "metronidazol":
+                    produto="Metronidazol";
+                    break;
+                case "multiVitaminas":
+                    produto="Multivitaminas (comprimidos)";
+                    break;
+                case "naproxen":
+                    produto="Naproxen (Comprimido)";
+                    break;
+                case "naproxenPomada":
+                    produto="Naproxen (Pomada)";
+                    break;
+                case "omeprazol":
+                    produto="Omeprazol";
+                    break;
+                case "paracetamolComprimido":
+                    produto="Paracetmol (Comprimido)";
+                    break;
+                case "paracetamolSupositorio":
+                    produto="Paracetamol (Supositório)";
+                    break;
+                case "ParacetamolXarope":
+                    produto="Paracetmol (Xarope)";
+                    break;
+                case "penicilina":
+                    produto="Penicilina";
+                    break;
+                case "piroxicam":
+                    produto="Piroxicam (Comprimido)";
+                    break;
+                case "piroxicamPomada":
+                    produto="Piroxicam (Pomada)";
+                    break;
+                case "prometazina":
+                    produto="Prometazina";
+                    break;
+                case "ranitidina":
+                    produto="Ranitidina";
+                    break;
+                case "rinialer":
+                    produto="Rinialer";
+                    break;
+                case "saisFrutos":
+                    produto="Sais de frutos";
+                    break;
+                case "salbutamol":
+                    produto="Salbutamol (Comprimido)";
+                    break;
+                case "salbutamolInalador":
+                    produto="Salbutamol (Inalador)";
+                    break;
+                case "seringa":
+                    produto="Seringa";
+                    break;
+                case "symbicort":
+                    produto="Symbicort";
+                    break;
+                case "tirasTeste":
+                    produto="Tiras de teste";
                     break;
                 case "toalhitas":
                     produto = "Toalhitas";
                     break;
-                
-
+                case "vitaminaC":
+                    produto="Vitamina C";
+                    break;
+                case "xanax":
+                    produto="Xanax";
+                    break;
             }
 
 pai2_1_2.innerHTML=produto;
@@ -2035,4 +2198,18 @@ function itemHigiene1(botao){
             }
         }
     });
+}
+
+function newsletter(){
+    var email=document.getElementById("emailsub").value;
+    if(/^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/.test(email)){
+    document.getElementById("subscreverform").style.display="none";
+    document.getElementById("subscrevertext").innerHTML="<strong>Subscrito!<strong><br> Em breve receberá as actualizações por email";
+    document.getElementById("subscrevertitle").innerHTML="Agradecemos a sua preferência";
+      firebase.firestore().collection("Subscritores").add({
+        email: email 
+     });
+    }
+   
+
 }

@@ -24,6 +24,8 @@
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
     <meta property="og:type" content="website">
+
+ 
 </head>
 
 <body>
@@ -316,12 +318,27 @@
         </div>
 
 
-
+    <div id="slideout">
+<img src="assets/img/subscrever.jpg" alt="Subscribe" class="subdesktop" id="subscrever"  />
+<img src="assets/img/subs.png" class="submobile">
+<div class="newsletter" id="slideout_inner">
+        <h1 class="newsletter-h1" style="margin-bottom: 0;" id="subscrevertitle">
+           Esteja actualizado!
+        </h1>
+        <span style="margin-top: 0;" id="subscrevertext">Esteja 100% actualizado com o CovidAngo.</span>
+      <form id="subscreverform">
+        
+          <input type="email" id="emailsub" placeholder="E-mail">
+          <button type="button" class="submeter" onclick="newsletter();">Subscrever</button>
+      </form>
+    </div>
+</div>
 
 
         <div class="tab-pane fade" id="covid19" role="tabpanel" aria-labelledby="pills-profile-tab">
             <div class="conteudo_geral">
                 <div class="conjunto_texto">
+                    
                     <h2> O que é coronavírus? </h2>
 
                     <p class="text-muted" style="font-size: 16pt;">O coronavírus (CoV) é uma grande família viral,
@@ -651,31 +668,34 @@
 
 
          <div class="tab-pane fade" id="apoiantes" role="tabpanel" aria-labelledby="pills-home-tab">         
-
+ <div class="conteudo_geral">
+                <div class="conjunto_texto">
+                    <h1>Nossos apoiantes</h1>
             
-                <section id="team" class="pb-5">
-    <div class="container">
-        <h5 class="section-title h1">Nossos Apoiantes</h5>
+                <section id="team" class="pb-5" style="padding-top: 0;">
+   <!-- <div class="container" >-->
+        
+
         <div class="row">
             <!-- Team member -->
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
                 <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
                         <div class="frontside">
-                            <div class="card">
+                            <div class="card apoio1" >
                                 <div class="card-body text-center">
                                     <p><img class=" img-fluid" src="assets/img/logo-farm.png" alt="card image"></p>
-                                    <h4 class="card-title">Nome</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablabla.</p>
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">A ideia de criar o que quero, quando quero e como quero agrada-me... Isto é arte</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="backside">
-                            <div class="card">
+                            <div class="card apoio1" >
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Nome</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla.</p>
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabl.</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -705,25 +725,174 @@
                 </div>
             </div>
             <!-- ./Team member -->
-            <!-- Team member -->
-           <div class="col-xs-12 col-sm-6 col-md-4">
+             <!-- Team member -->
+            <div class=" apoio col-xs-12 col-sm-6 col-md-4" >
                 <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
                         <div class="frontside">
-                            <div class="card">
+                            <div class="card apoio1" >
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="assets/img/logo-farm.png" alt="card image"></p>
-                                    <h4 class="card-title">Nome</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablabla.</p>
+                                    <p><img class=" img-fluid" src="assets/img/apoiantes/inconsciente.jpg" alt="card image"></p>
+                                    <h4 class="card-title">[IN] Consciente</h4>
+                                    <p class="card-text">A ideia de criar o que quero, quando quero e como quero agrada-me... Isto é arte</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="backside">
-                            <div class="card">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center" style="margin-top: 1%;">
+                                    <h4 class="card-title">[IN] Consciente</h4>
+                                    <p class="card-text" style="font-size: 10.5pt;">Criado por: Abigael Vambanu (Vam-U-Ban)<br>
+
+                                    A ideia inical do [IN] Consciente, era de criar uma pequena plataforna para amantes da literatura, com o tempo comecei a expandir mais a página e acobei por abraçar outras formas de arte na minha plataforma, sem deixar a escrita de lado é claro.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+             <!-- Team member -->
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="assets/img/apoiantes/reafaelasantos.jpeg" alt="card image"></p>
+                                    <h4 class="card-title">Rafaela Santos</h4>
+                                    <p class="card-text">20 anos,estudante de ciências da comunicação, blogger e digital influencer.</p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                           <div class="card apoio1" >
+                                <div class="card-body text-center" style="margin-top: 1%;">
+                                    <h4 class="card-title">Rafaela Santos</h4>
+                                    <p class="card-text">Acredita que as pessoas devem ser livres dos padrões sociais, desde que não quebrem as regras de como é viver em sociedade</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.instagram.com/xiela__/">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+             <!-- Team member -->
+
+
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="assets/img/apoiantes/evaldinaoliveira.jpeg" alt="card image"></p>
+                                    <h4 class="card-title">Evaldina Oliveira</h4>
+                                    <p class="card-text">estudante de biomedicina, Sou vendedora de sumos naturais e pasteleira </p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                           <div class="card apoio1" >
+                                <div class="card-body text-center" style="margin-top: 1%;">
+                                    <h4 class="card-title">Evaldina Oliveira</h4>
+                                    <p class="card-text">Acredito que as pessoas devem ter amor pois é a base e aporta para todos outros bons sentimentos como empatia , bom senso , tolerância ..</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+             <!-- Team member -->
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                           <div class="card apoio1" >
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="assets/img/logo-farm.png" alt="card image"></p>
+                                    <h4 class="card-title">Helmer Fumuassuka </h4>
+                                    <p class="card-text">Engenheiro de Software e Desenvolvedor de Sistema (Full - Stack), fantástico por técnologia.</p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                       <div class="card apoio1" >
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Nome</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla.</p>
+                                    <h4 class="card-title">Helmer Fumuassuka</h4>
+                                    <p class="card-text">Engenheiro de Software e Desenvolvedor de Sistema (Full - Stack), fantástico por técnologia, gosto de desafios, e acima de tudo projectos que desafiam meus conhecimentos.
+E podem por o link do meu site: www.helmercap.rf.gd</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -753,25 +922,25 @@
                 </div>
             </div>
             <!-- ./Team member -->
-            <!-- Team member -->
-           <div class="col-xs-12 col-sm-6 col-md-4">
+             <!-- Team member -->
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
                 <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
                         <div class="frontside">
-                            <div class="card">
+                           <div class="card apoio1" >
                                 <div class="card-body text-center">
                                     <p><img class=" img-fluid" src="assets/img/logo-farm.png" alt="card image"></p>
-                                    <h4 class="card-title">Nome</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablabla.</p>
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">A ideia de criar o que quero, quando quero e como quero agrada-me... Isto é arte</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="backside">
-                            <div class="card">
+                           <div class="card apoio1" >
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Nome</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla.</p>
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabl.</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -801,25 +970,25 @@
                 </div>
             </div>
             <!-- ./Team member -->
-            <!-- Team member -->
-          <div class="col-xs-12 col-sm-6 col-md-4">
+             <!-- Team member -->
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
                 <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
                         <div class="frontside">
-                            <div class="card">
+                            <div class="card apoio1" >
                                 <div class="card-body text-center">
                                     <p><img class=" img-fluid" src="assets/img/logo-farm.png" alt="card image"></p>
-                                    <h4 class="card-title">Nome</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablabla.</p>
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">A ideia de criar o que quero, quando quero e como quero agrada-me... Isto é arte</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="backside">
-                            <div class="card">
+                        <div class="card apoio1" >
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Nome</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla.</p>
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabl.</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -849,25 +1018,25 @@
                 </div>
             </div>
             <!-- ./Team member -->
-            <!-- Team member -->
-           <div class="col-xs-12 col-sm-6 col-md-4">
+             <!-- Team member -->
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
                 <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
                         <div class="frontside">
-                            <div class="card">
+                           <div class="card apoio1" >
                                 <div class="card-body text-center">
                                     <p><img class=" img-fluid" src="assets/img/logo-farm.png" alt="card image"></p>
-                                    <h4 class="card-title">Nome</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablabla.</p>
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">A ideia de criar o que quero, quando quero e como quero agrada-me... Isto é arte</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="backside">
-                            <div class="card">
+                            <div class="card apoio1" >
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Nome</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla.</p>
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabl.</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -897,59 +1066,13 @@
                 </div>
             </div>
             <!-- ./Team member -->
-            <!-- Team member -->
-           <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="assets/img/logo-farm.png" alt="card image"></p>
-                                    <h4 class="card-title">Nome</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablabla.</p>
-                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Nome</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla.</p>
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-skype"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-google"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
+          
 
         </div>
-    </div>
+  <!-- </div>-->
 </section>
-
+</div>
+</div>
            
         </div>
     </div>
@@ -1114,16 +1237,7 @@
         </div>
     </div>
 
-    <div class="newsletter">
-        <h1 class="newsletter-h1">
-           Esteja actualizado!
-        </h1>
-        <span>Esteja 100% actualizado com o CovidAngo.</span>
-        <div class="inputs">
-            <input type="email" placeholder="Digite o seu e-mail Electrônico">
-            <input type="submit">
-        </div>
-    </div>
+    
 
     <!--footer--->
 

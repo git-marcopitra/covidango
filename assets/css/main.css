@@ -313,6 +313,10 @@ header #menu-inputs input[type="button"]:hover {
     margin-left: 10px;
 }
 
+.apoio{
+max-width: 24.333333%;
+}
+
 @media screen and (max-width: 881px) {
 
     .bloco_tabs .bloco_tab_principal:nth-child(1){
@@ -854,6 +858,67 @@ h2 {
      padding-bottom: 40px;
 }
 
+
+#slideout {
+position: fixed;
+z-index: 1;
+top: 80px;
+right:  56px;
+padding: 25px 0;
+-webkit-transition-duration: 0.3s;
+-moz-transition-duration: 0.3s;
+-o-transition-duration: 0.3s;
+transition-duration: 0.3s;
+-webkit-border-radius: 0 5px 5px 0;
+-moz-border-radius: 0 5px 5px 0;
+border-radius: 0 5px 5px 0;
+}
+
+#slideout_inner {
+position: fixed;
+top: 73px;
+right: -250px;
+background: #f3f3f3;
+width: 250px;
+padding-left: 5px;
+height: 196px;
+-webkit-transition-duration: 0.3s;
+-moz-transition-duration: 0.3s;
+-o-transition-duration: 0.3s;
+transition-duration: 0.3s;
+-webkit-border-radius: 0 10px 10px 0;
+-moz-border-radius: 0 10px 10px 0;
+border-radius: 10px 0 0 10px;
+}
+
+#slideout:hover {
+right: 200px;
+}
+#slideout:hover #slideout_inner {
+right: 0%;
+}
+
+#subscrever: focus{
+left: -34px;
+}
+.apoio1{
+    padding: 0;
+max-width: 250px;
+}
+
+.submobile{
+   
+    display: none;
+}
+.subdesktop{
+    display: block;
+     height: 56px;
+      transform: rotate(270deg); 
+      position: absolute; 
+      top: 94px;
+    left: -67px;
+}
+
 @media screen and (max-width: 700px) {
     .conteudo_geral {
         max-width: auto;
@@ -980,13 +1045,80 @@ h2 {
      height: 100px; 
      padding-bottom: 40px;
 }
+#slideout:hover #slideout_inner {
+right: 0%;
+}
+
+#slideout:hover {
+right: 0%;
+}
+
+#slideout {
+position: fixed;
+z-index: 1;
+top: 80px;
+right: 13%;
+padding: 25px 0;
+-webkit-transition-duration: 0.3s;
+-moz-transition-duration: 0.3s;
+-o-transition-duration: 0.3s;
+transition-duration: 0.3s;
+-webkit-border-radius: 0 5px 5px 0;
+-moz-border-radius: 0 5px 5px 0;
+border-radius: 0 5px 5px 0;
+}
+
+
+#slideout_inner {
+position: absolute;
+top: -16%;
+right: -302px;
+background: #f3f3f3;
+width: 250px;
+padding-left: 5px;
+height: 210px;
+-webkit-transition-duration: 0.3s;
+-moz-transition-duration: 0.3s;
+-o-transition-duration: 0.3s;
+transition-duration: 0.3s;
+-webkit-border-radius: 0 10px 10px 0;
+-moz-border-radius: 0 10px 10px 0;
+border-radius:10px 0 0 10px;
+}
+
+.apoio{
+max-width: 100%;
+}
+.apoio1{
+    padding: 0;
+max-width: 100%;
+}
+
+.submobile{
+    top: 68px; 
+    position: absolute;
+    display: block;
+}
+
+.subdesktop{
+    display: none;
+    
+}
 
 }
 
 
-
+.submeter{
+    float: right;
+    padding: 2%;
+    border-radius: 11px;
+    margin-top: 2%;
+    background: #28a745;
+    color: #fff;
+    border: none;
+}
 #team {
-    background: #eee !important;
+    background: #fff!important;
 }
 
 .btn-primary:hover,
@@ -1058,6 +1190,9 @@ section .section-title {
     -ms-transform: rotateY(0deg);
     z-index: 2;
     margin-bottom: 30px;
+     -webkit-box-shadow: 0px 1px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 0px 1px 9px -4px rgb(158, 158, 158);
+    box-shadow: 0px 1px 9px -4px rgb(158, 158, 158);
 }
 
 .backside {
@@ -1077,6 +1212,7 @@ section .section-title {
 
 .frontside,
 .backside {
+    height: 450px;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
@@ -1095,7 +1231,7 @@ section .section-title {
 
 .frontside .card,
 .backside .card {
-    min-height: 312px;
+    height: 312px;
 }
 
 .backside .card a {
