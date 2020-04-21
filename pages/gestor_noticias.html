@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CovidAng</title>
+    <link rel="stylesheet" type="text/css" href="../assets/dist/bootstrap/bootstrap.css">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+    <link rel="stylesheet" href="../assets/dist/font-awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" type="image/x-png" href="../assets/img/logo-farm.png">
+    <link rel="stylesheet" href="../assets/dist/font-awesome/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta property="og:description"
+        content="Informação útil do Covid-19 - Informação de Fármacos disponiveis nas farmácias próximas de si">
+    <meta property="og:locale" content="pt_Br">
+    <meta property="og:url" content="covidango.web.app">
+    <meta property="og:title" content="CovidAng">
+    <meta property="og:site_name" content="CovidAng">
+    <meta property="og:image" content="covidango.web.app/../assets/img/logo-farm.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="600">
+    <meta property="og:type" content="website">
+
+ 
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html" style="margin-left: 2%;">
+            <img src="../assets/img/logo-farm.png" height='60' class="d-inline-block align-top" alt="">
+            <p class="logo-desc"> <strong>Covid</strong>Ang </p>
+        </a>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+
+
+            <ul class="nav nav-pills mr-auto" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#inicio" role="tab"
+                        aria-controls="inicio" aria-selected="true">Inicio</a>
+                </li>
+            </ul>
+
+            <button class="btn btn-outline-success my-2 my-sm-0" id="conta" style="display: none;"
+                onclick="conta();">Conta</button>
+
+
+            <form class="form-inline my-2 my-lg-0" action="pages/painel.html">
+
+                <button class="btn btn-outline-success my-2 my-sm-0" id="sessao"></button>
+            </form>
+        </div>
+    </nav>
+
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="inicio" role="tabpanel" aria-labelledby="pills-home-tab">
+
+            <div class="conteudo_geral">
+                <div class="bloco_de_coisas">
+                    <div id="head_principal_bloco">
+                        <div class="spinner-grow text-success" role="status" id="carregar">
+
+                        </div>
+                        <div id="titulo">
+
+                        </div>
+                        <div class="estatisticas">
+                            <ul id="actualizacao">
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bloco_conteiner">
+                        <button class="bloco_singular" style="border: none;" type="button" data-toggle="modal"
+                            data-target="#noticia_normal">
+                            <a href="#">Postar uma notícia normal <i class="fas fa-chevron-circle-right"></i></a>
+                        </button>
+                        <button class="bloco_singular" style="border: none;" type="button" data-toggle="modal"
+                            data-target="#noticia_casos">
+                            <a href="#">Actualizar situação de casos <i class="fas fa-chevron-circle-right"></i></a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bloco_de_coisas post_informations">
+                    <h1>Notícias mais recentes - visualizador</h1>
+                    <div class="bloco_conteiner">
+                        <div class="bloco_singular" type="button" data-toggle="modal" data-target="#principaissintomas">
+                            <div class="segurador"></div>
+                            <div class="foto_conteiner">
+                                <img src="../assets/img/1.jpg">
+                            </div>
+                            <a>Principais sintomas</a>
+                        </div>
+                        <div class="bloco_singular" type="button" data-toggle="modal" data-target="#cisp">
+                            <div class="segurador"></div>
+                            <div class="foto_conteiner">
+                                <img src="../assets/img/ciscp.jpg">
+                            </div>
+                            <a>Em caso de suspeita</a>
+                        </div>
+                        <div class="bloco_singular" type="button" data-toggle="modal" data-target="#familiar">
+                            <div class="segurador"></div>
+                            <div class="foto_conteiner">
+                                <img src="../assets/img/4.jfif">
+                            </div>
+                            <a href="#">Planeamento familiar frente ao vírus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bloco_de_coisas post_informations_plus">
+                    <h1>Notícias mais antigas - vizualizador</h1>
+                    <div class="bloco_conteiner">
+                        <div class="bloco_singular" type="button" data-toggle="modal" data-target="#mitos">
+                            <div class="foto_bloco_sigular">
+                                <div class="foto_conteiner">
+                                    <img src="../assets/img/mito.jpg">
+                                </div>
+                            </div>
+                            <div class="informacao1">
+                                <a>Factos e mitos sobre o COVID-19</a>
+                            </div>
+                        </div>
+                        <div class="bloco_singular" onclick="window.open('https://www.bing.com/covid','_blank');">
+                            <div class="foto_bloco_sigular">
+                                <div class="foto_conteiner">
+                                    <img src="../assets/img/mapa.jpg">
+                                </div>
+                            </div>
+                            <div class="informacao1">
+                                <a href="https://www.bing.com/covid" target="_blank">Acompanhe os casos de Covid-19 pelo
+                                    mundo</a>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+                    <div class="bloco_conteiner">
+                        <div class="bloco_singular" onclick="window.open('https://www.covid19.gov.ao/','_blank');">
+                            <div class="foto_bloco_sigular">
+                                <div class="foto_conteiner">
+                                    <img src="../assets/img/angola.png">
+                                </div>
+                            </div>
+                            <div class="informacao1">
+                                <a href="https://www.covid19.gov.ao/">Sobre o COVID-19 em Angola</a>
+                            </div>
+                        </div>
+                        <div class="bloco_singular" type="button" data-toggle="modal" data-target="#propagacao">
+                            <div class="foto_bloco_sigular">
+                                <div class="foto_conteiner">
+                                    <img src="../assets/img/covid.jpg">
+                                </div>
+                            </div>
+                            <div class="informacao1">
+                                <a href="#propagacaoInevitavel">A propagação do vírus é inevitável?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="farmacia" role="tabpanel" aria-labelledby="pills-home-tab">
+
+            <div class="conteudo_geral">
+
+                <div class="bloco_de_coisas post_informations_plus" id="itens">
+                    <h1 class="informacaoProduto">Consulte os artigos necessários sem sair de casa
+                    </h1>
+                    <h5 style="position: absolute;">Artigos não sujeitos a Entrega</h5>
+
+
+                    <div class="bloco_tabs nav nav-pills mb-3" id="conteiner_tabs_principais">
+
+                        <li class="bloco_singular bloco_tab_principal" id="pills-contact-tab" data-toggle="pill"
+                            href="#itensFarmacia" role="tab" aria-controls="itensFarmacia" aria-selected="false"
+                            onclick="produtosFarmacia();">
+
+                            <a class="botao" href="#">Farmacias </a>
+                        </li>
+
+                        <li class="bloco_singular bloco_tab_principal" id="pills-contact-tab" data-toggle="pill"
+                            href="#itensMantimentos" role="tab" aria-controls="itensMantimentos" aria-selected="false">
+                            <a class="botao" href="#">Mantimentos </a>
+                        </li>
+
+
+                    </div>
+
+                    <div class="spinner-grow text-success" role="status" id="ca" style="display: none;"></div>
+                    <div class="tab-content" style="width: 100%;" id="artigos">
+                        <div class="tab-pane fade show active" id="itensFarmacia" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+
+                        </div>
+
+                        <div class="tab-pane fade " id="itensMantimentos" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+
+
+
+
+                            <div class="bloco_conteiner nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+                                <li class="bloco_singular"
+                                    style="border: none; height: 70px; display: flex; justify-content: center;"
+                                    id="pills-contact-tab" data-toggle="pill" href="#alimentos" role="tab"
+                                    aria-controls="alimentos" aria-selected="true" onclick="produtosAlimentos();">
+
+                                    <a href="#">Alimentos <i class="fas fa-utensils"></i></a>
+                                </li>
+                                <li class="bloco_singular"
+                                    style="border: none; height: 70px; display: flex; justify-content: center;"
+                                    id="pills-contact-tab" data-toggle="pill" href="#higiene" role="tab"
+                                    aria-controls="higiene" aria-selected="false" onclick=" produtosHigiene()">
+                                    <a href="#">Higiene, Limpeza e cosméticos <i class="fas fa-shower"></i></a>
+                                </li>
+                                <br>
+
+                            </div>
+
+
+
+                            <div style="display: none; margin-left: 48%;" class="spinner-grow text-success"
+                                role="status" id="ca1"></div>
+                            <div class="tab-content" style="width: 100%;">
+                                <div class="tab-pane fade show active" id="alimentos" role="tabpanel"
+                                    aria-labelledby="pills-home-tab">
+
+                                </div>
+
+                                <div class="tab-pane fade " id="higiene" role="tabpanel"
+                                    aria-labelledby="pills-home-tab">
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    <div id="slideout">
+<img src="../assets/img/subscrever.jpg" alt="Subscribe" class="subdesktop" id="subscrever"  />
+<img src="../assets/img/subs.png" class="submobile">
+<div class="newsletter" id="slideout_inner">
+        <h1 class="newsletter-h1" style="margin-bottom: 0;" id="subscrevertitle">
+           Esteja actualizado!
+        </h1>
+        <span style="margin-top: 0;" id="subscrevertext">Esteja 100% actualizado com o CovidAngo.</span>
+      <form id="subscreverform">
+        
+          <input type="email" id="emailsub" placeholder="E-mail">
+          <button type="button" class="submeter" onclick="newsletter();">Subscrever</button>
+      </form>
+    </div>
+</div>
+
+
+        <div class="tab-pane fade" id="covid19" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="conteudo_geral">
+                <div class="conjunto_texto">
+                    
+                    <h2> O que é coronavírus? </h2>
+
+                    <p class="text-muted" style="font-size: 16pt;">O coronavírus (CoV) é uma grande família viral,
+                        conhecida desde meados dos anos 1960, que causam infecções respiratórias em seres humanos e
+                        animais. O novo agente do coronavírus foi descoberto em 31/12/2019 após casos registados na
+                        China.
+                    </p>
+
+                    <p class="text-muted" style="font-size: 16pt;">A doença provocada pelo novo Coronavírus é
+                        oficialmente conhecida como COVID-19, sigla em inglês “coronavirus disease 2019” (doença de
+                        coronavírus 2019).</p>
+
+                    <p v style="font-size: 16pt;">Alguns coronavírus podem causar síndromes respiratórias graves, como a
+                        síndrome respiratória aguda grave que ficou conhecida pela sigla SARS da síndrome em inglês
+                        “Severe Acute Respiratory Syndrome”.</p>
+
+
+                    <h2>Período de incubação do coronavírus </h2>
+                    <p style="font-size: 16pt;">Período de incubação é o tempo que leva para os primeiros sintomas
+                        aparecerem desde a infecção por coronavírus, que pode ser de 2 a 14 dias.</h2>
+
+                        <p style="font-size: 16pt;">De uma forma geral, a principal forma de transmissão dos coronavírus
+                            se dá por contacto próximo de pessoa a pessoa, ou seja, qualquer pessoa que cuidou do
+                            paciente, incluindo profissionais de saúde ou membro da família que tenha tido contacto
+                            físico com o paciente, tenha permanecido no mesmo local que o paciente doente. E isto pode
+                            ser transmitido a partir de:</p>
+                        <ul>
+                            <li style="font-size: 16pt;">Espirros</li>
+                            <li style="font-size: 16pt;">Tosse</li>
+                            <li style="font-size: 16pt;">Catarro</li>
+                            <li style="font-size: 16pt;">Gotículas de saliva</li>
+                            <li style="font-size: 16pt;">Contacto pessoal próximo, como toque ou aperto de mão com
+                                pessoa
+                                infectada (caso suspeito ou confirmado)</li>
+                            <li style="font-size: 16pt;">Contacto com objetos ou superfícies contaminadas, seguido de
+                                contacto com a boca, nariz ou olhos.</li>
+                        </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="tab-pane fade" id="sintomas" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="conteudo_geral">
+                <div class="conjunto_texto teste">
+                    <h2 class="conjunto-texto-titulo">Quais são os sintomas do coronavírus? </h2>
+
+                    <p style="font-size: 16pt;">Os sinais e sintomas do coronavírus são principalmente respiratórios,
+                        semelhantes a um resfriado. Podem, também, causar infecção do trato respiratório inferior, como
+                        as pneumonias. No entanto, o coronavírus (SARS-CoV-2) ainda precisa
+                        de mais estudos e investigações para caracterizar melhor os sinais e sintomas da doença.</p>
+
+                    <p style="font-size: 16pt;">Os principais são sintomas conhecidos até o momento são:</p>
+
+
+                    <div class="card-deck">
+                        <div class="carde">
+                            <div class="card-body">
+                                <h4 class="card-title">Febre</h4>
+
+                            </div>
+                            <div class="card-img">
+                                <lottie-player src="https://../assets8.lottiefiles.com/private_files/lf30_wBcF24.json"
+                                    class="card-img-top" background="transparent" speed="1"
+                                    style="width: 100%; height: 100%;" loop autoplay>
+                                </lottie-player>
+                            </div>
+                        </div>
+                        <div class="carde">
+                            <div class="card-body">
+                                <h4 class="card-title">Tosse</h4>
+
+                            </div>
+                            <div class="card-img">
+                                <lottie-player src="https://../assets8.lottiefiles.com/private_files/lf30_hHODoj.json"
+                                    class="card-img-top" background="transparent" speed="1"
+                                    style="width: 100%; height: 100%;" loop autoplay>
+                                </lottie-player>
+
+                            </div>
+                        </div>
+                        <div class="carde">
+                            <div class="card-body">
+                                <h4 class="card-title">Dificuldade para respirar</h4>
+
+                            </div>
+                            <div class="card-img">
+
+                                <lottie-player src="https://../assets7.lottiefiles.com/packages/lf20_O0q5SC.json"
+                                    class="card-img-top" background="transparent" speed="1"
+                                    style="width: 100%; height: 100%;" loop autoplay>
+                                </lottie-player>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Como o coronavírus é transmitido? </h2>
+                    <p style="font-size: 16pt;">As investigações sobre as formas de transmissão do coronavírus ainda
+                        estão em andamento, mas a disseminação de pessoa para pessoa, ou seja, a contaminação por
+                        gotículas respiratórias ou contato.</p>
+
+                    <p style="font-size: 16pt;">Qualquer pessoa que tenha contacto próximo (cerca de 1 m) com alguém
+                        com
+                        sintomas respiratórios está em risco de ser exposta à infecção. É importante observar que a
+                        disseminação de pessoa para pessoa pode ocorrer de forma continuada.</p>
+
+                    <p style="font-size: 16pt;">Apesar disso, a transmissão dos coronavírus costuma ocorrer pelo ar
+                        ou
+                        por contacto pessoal com secreções contaminadas, como:</p>
+                    <ul>
+                        <li style="font-size: 16pt;">Gotículas de saliva</li>
+                        <li style="font-size: 16pt;">Espirro</li>
+                        <li style="font-size: 16pt;">Tosse</li>
+                        <li style="font-size: 16pt;">Catarro</li>
+                        <li style="font-size: 16pt;">Contacto pessoal próximo, como toque ou aperto de mão</li>
+                        <li style="font-size: 16pt;">Contacto com objetos ou superfícies contaminadas, seguido de
+                            contato com a boca, nariz ou olhos.</li>
+                    </ul>
+                    <br>
+
+
+
+
+                    <p style="font-size: 16pt;">A transmissibilidade dos pacientes infectados por SARSCoV é em média
+                        de
+                        7 dias após o início dos sintomas. No entanto, dados preliminares do coronavírus
+                        (SARS-CoV-2)
+                        sugerem que a transmissão possa ocorrer mesmo sem o aparecimento de sinais e sintomas. Até o
+                        momento, não há informações suficientes de quantos dias anteriores ao início dos sinais e
+                        sintomas uma pessoa infectada passa a transmitir o vírus.</p>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="tab-pane fade" id="precaucoes" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="conteudo_geral">
+                <div class="conjunto_texto">
+                    <h2> Como prevenir o coronavírus? </h2>
+                    <p style="font-size: 16pt;">O Ministério da Saúde orienta cuidados básicos para reduzir o risco
+                        geral de contrair ou transmitir infecções respiratórias agudas, incluindo o coronavírus.
+                        Entre
+                        as medidas estão: </p>
+
+
+
+
+
+
+                    <div class="row row-cols-1 row-cols-md-3">
+                        <div class="col mb-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <lottie-player src="https://../assets8.lottiefiles.com/private_files/lf30_Rq4Htd.json"
+                                    class="card-img-top" background="transparent" speed="1"
+                                    style="width: 100%; height: 100%;" loop autoplay>
+                                </lottie-player>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Sempre...</h4>
+                                    <p>Lavar as mãos frequentemente com água e sabão por pelo menos 20 segundos,
+                                        respeitando os 5 momentos de higienização. Se não houver água e sabonete,
+                                        usar
+                                        um desinfetante para as mãos à base de álcool.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-4">
+
+                            <div class="card">
+                                <div class="card-img">
+                                    <lottie-player src="https://../assets4.lottiefiles.com/private_files/lf30_oGbdoA.json"
+                                    class="card-img-top" background="transparent" speed="1"
+                                    style="width: 100%; height: 100%;" loop autoplay>
+                                </lottie-player>
+                            </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Sempre...</h4>
+                                    <p>Evitar tocar nos olhos, nariz e boca com as mãos não lavadas.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <lottie-player src="https://../assets10.lottiefiles.com/private_files/lf30_aGWCIX.json"
+                                    class="card-img-top" background="transparent" speed="1"
+                                    style="width: 100%; height: 100%;" loop autoplay>
+                                </lottie-player>
+                            </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Sempre...</h4>
+                                    <p>Evitar contacto próximo com pessoas doentes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <lottie-player src="https://../assets6.lottiefiles.com/packages/lf20_wdXBRc.json"
+                                    class="card-img-top" background="transparent" speed="1"
+                                    style="width: 100%; height: 100%;" loop autoplay>
+                                </lottie-player>
+                            </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Sempre...</h4>
+                                    <p>Caso apresentar os sintomas, ligue para o 111.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <lottie-player src="https://../assets6.lottiefiles.com/private_files/lf30_qqRru7.json"
+                                    class="card-img-top" background="transparent" speed="1"
+                                    style="width: 100%; height: 100%;" loop autoplay>
+                                </lottie-player>
+                            </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Sempre...</h4>
+                                    <p>Cobrir boca e nariz ao tossir ou espirrar com um lenço de papel e jogar no
+                                        lixo.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <lottie-player src="https://../assets6.lottiefiles.com/private_files/lf30_yQtj4O.json"
+                                    class="card-img-top" background="transparent" speed="1"
+                                    style="width: 100%; height: 100%;" loop autoplay>
+                                </lottie-player>
+                            </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Sempre...</h4>
+                                    <p>Limpar e desinfetar objetos e superfícies tocados com freqüência.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="propagacaoInevitavel">A propagação do vírus é inevitável?</h2>
+                    <h3 style="margin-right: 1%;">Não!</h3>
+                    <p style="font-size: 16pt;">A propagação do vírus é anulada quando uma pessoa saudável não tem
+                        contacto com uma pessoa infectada pelo vírus, daí que a maior luta contra o vírus é o
+                        isolamento
+                        social(quarentena).</p>
+                    <p style="font-size: 16pt;">Por isso enquanto os médicos cuidam dos infectados, nós só
+                        precisamos de
+                        ficar em casa. Esta é a maneira de fazermos parte da luta contra o Covid-19.</p>
+
+                    <p style="font-size: 16pt;"> Na ausência de uma cura a nossa maior defesa contra o Covid-19 é o
+                        nosso sistema imunológico, ele atua como a nossa linha da frente na batalha com o Covid-19.
+                        Ter
+                        uma boa imunidade é vital na para ajudar na luta contra a infecção e na recuperação do
+                        infetado.
+                    </p>
+                    <p style="font-size: 16pt;">Existem várias maneiras de como fortalecer o nosso sistema
+                        imunológico,
+                        mas as mais recomendadas pelos especialistas a nível mundial são 4:</p>
+                    <li style="font-size: 16pt;"> Praticar exercícios físicos regularmente</li>
+                    <li style="font-size: 16pt;"> Reduzir o estresse </li>
+                    <li style="font-size: 16pt;">Dormir bem </li>
+                    <li style="font-size: 16pt;"> Ter uma alimentação balanceada</li>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="sobre" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="conteudo_geral">
+                <div class="conjunto_texto">
+                    <h1> Sobre nós</h1>
+                    <p style="font-size: 16pt;">CovidAngo é uma iniciativa de um grupo de desenvolvedores composto
+                        por
+                        estudantes universitários e colaboradores que face ao estado pandêmico que assola Angola e o
+                        mundo, e como jovens activos na sociedade decidimos contribuir com o que sabemos e tirando
+                        proveito das ferramentas das Tecnologias de informação e comunicação.</p>
+                    <p style="font-size: 16pt;">
+                        Trata-se de uma plataforma web que congrega diferentes funcionalidades tais como:
+                    </p>
+                    <li style="font-size: 16pt;"> Exposição da disponibilidade dos fármacos actualmente mais
+                        procurados
+                        nas farmácias registadas na plataforma</li>
+
+                    <li style="font-size: 16pt;"> Exposição de bens alimentares e produtos de higiene disponíveis
+                        nos
+                        armazéns e supermercados registados</li>
+                    <br>
+
+                    <p style="font-size: 16pt;">Tudo isso com a intenção de evitar as enchentes e a locomoção
+                        desnecessária, a plataforma também tem disponível tutoriais das precauções a serem tomadas
+                        para
+                        evitar a contaminação do vírus e informação credível do estado da pandemia proveniente das
+                        autoridades responsáveis, combatendo assim o Covid-19 e o
+                        <i title="O que ouvi dizer"> Covidizer!</i>.
+                    </p>
+                    <p style="font-size: 14pt;"><b>Enquanto o vírus não nos caça, quem lhe caça não descança!</b>
+                    </p>
+
+
+
+
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="sugestao">Deixe aqui a sua sugestão para o enriquecimento da plataforma</label>
+                        <textarea class="form-control" id="sugestao" rows="3" placeholder="Sugestão"></textarea>
+                    </div>
+                    <button class="btn btn-success mb-2" style="float: right; margin-right: 1%;" type="button"
+                        onclick="sugestao();">Enviar</button>
+
+                </div>
+            </div>
+        </div>
+
+
+         <div class="tab-pane fade" id="apoiantes" role="tabpanel" aria-labelledby="pills-home-tab">         
+ <div class="conteudo_geral">
+                <div class="conjunto_texto">
+                    <h1>Nossos apoiantes</h1>
+            
+                <section id="team" class="pb-5" style="padding-top: 0;">
+   <!-- <div class="container" >-->
+        
+
+        <div class="row">
+            <!-- Team member -->
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="../assets/img/logo-farm.png" alt="card image"></p>
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">A ideia de criar o que quero, quando quero e como quero agrada-me... Isto é arte</p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabl.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+             <!-- Team member -->
+            <div class=" apoio col-xs-12 col-sm-6 col-md-4" >
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="../assets/img/apoiantes/inconsciente.jpg" alt="card image"></p>
+                                    <h4 class="card-title">[IN] Consciente</h4>
+                                    <p class="card-text">A ideia de criar o que quero, quando quero e como quero agrada-me... Isto é arte</p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center" style="margin-top: 1%;">
+                                    <h4 class="card-title">[IN] Consciente</h4>
+                                    <p class="card-text" style="font-size: 10.5pt;">Criado por: Abigael Vambanu (Vam-U-Ban)<br>
+
+                                    A ideia inical do [IN] Consciente, era de criar uma pequena plataforna para amantes da literatura, com o tempo comecei a expandir mais a página e acobei por abraçar outras formas de arte na minha plataforma, sem deixar a escrita de lado é claro.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+             <!-- Team member -->
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="../assets/img/apoiantes/reafaelasantos.jpeg" alt="card image"></p>
+                                    <h4 class="card-title">Rafaela Santos</h4>
+                                    <p class="card-text">20 anos,estudante de ciências da comunicação, blogger e digital influencer.</p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                           <div class="card apoio1" >
+                                <div class="card-body text-center" style="margin-top: 1%;">
+                                    <h4 class="card-title">Rafaela Santos</h4>
+                                    <p class="card-text">Acredita que as pessoas devem ser livres dos padrões sociais, desde que não quebrem as regras de como é viver em sociedade</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.instagram.com/xiela__/">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+             <!-- Team member -->
+
+
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="../assets/img/apoiantes/evaldinaoliveira.jpeg" alt="card image"></p>
+                                    <h4 class="card-title">Evaldina Oliveira</h4>
+                                    <p class="card-text">estudante de biomedicina, Sou vendedora de sumos naturais e pasteleira </p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                           <div class="card apoio1" >
+                                <div class="card-body text-center" style="margin-top: 1%;">
+                                    <h4 class="card-title">Evaldina Oliveira</h4>
+                                    <p class="card-text">Acredito que as pessoas devem ter amor pois é a base e aporta para todos outros bons sentimentos como empatia , bom senso , tolerância ..</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+             <!-- Team member -->
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                           <div class="card apoio1" >
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="../assets/img/apoiantes/helmerfumuassuka.jpeg" alt="card image"></p>
+                                    <h4 class="card-title">Helmer Fumuassuka </h4>
+                                    <p class="card-text">Engenheiro de Software e Desenvolvedor de Sistema (Full - Stack), fantástico por técnologia.</p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                       <div class="card apoio1" >
+                                <div class="card-body text-center " style="margin-top: 0%;">
+                                    <h4 class="card-title">Helmer Fumuassuka</h4>
+                                    <p class="card-text">Engenheiro de Software e Desenvolvedor de Sistema (Full - Stack), fantástico por técnologia, gosto de desafios, e acima de tudo projectos que desafiam meus conhecimentos.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fab fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.helmercap.rf.gd">
+                                                <i class="fab fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+             <!-- Team member -->
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                           <div class="card apoio1" >
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="../assets/img/logo-farm.png" alt="card image"></p>
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">A ideia de criar o que quero, quando quero e como quero agrada-me... Isto é arte</p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                           <div class="card apoio1" >
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabl.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+             <!-- Team member -->
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="../assets/img/logo-farm.png" alt="card image"></p>
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">A ideia de criar o que quero, quando quero e como quero agrada-me... Isto é arte</p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                        <div class="card apoio1" >
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabl.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+             <!-- Team member -->
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                           <div class="card apoio1" >
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="../assets/img/logo-farm.png" alt="card image"></p>
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">A ideia de criar o que quero, quando quero e como quero agrada-me... Isto é arte</p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">In-Consciente</h4>
+                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabl.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+          
+
+        </div>
+  <!-- </div>-->
+</section>
+</div>
+</div>
+           
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="principaissintomas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Principais Sintomas do COVID-19</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Os sintomas do coronavírus são principalmente respiratórios, semelhantes a um resfriado.</p>
+
+                    <li>Febres Altas</li>
+                    <li>Tosse Seca</li>
+                    <li>Dificuldades de respiração</li>
+                    <p>Caso apresentar os sintomas, ligue para o 111</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="noticia_normal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Postar nótícia normal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body postar_noticia_body">
+
+                    <form>
+                        <div>
+                            <h3>Título da notícia:</h3>
+                            <input type="text" placeholder="Digite aqui...">
+                        </div>
+                        
+                        <div>
+                            <h3>Abrangência: </h3>
+
+                            <div class="abr_opcoes">
+                                <div>
+                                    <input type="radio" id="nacional" name="abrangencia" value="Nacional">
+                                    <label for="nacional">Nacional</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="internacional" name="abrangencia" value="Internacional">
+                                    <label for="internacional">Internacional</label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <h3>Fonte da notícia:</h3>
+                            <input type="text" placeholder="Digite aqui...">
+                        </div>
+
+                        <div>
+                            <h3>Conteúdo da notícia</h3>
+                            <textarea></textarea>
+                        </div>
+                        <div class="btns_post_noticia">
+                            <button>Enviar para vizualizador</button>
+                            <button>Limpar</button>
+                        </div>
+                    </form>
+                    
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="noticia_casos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Postar nótícia normal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body postar_noticia_body">
+
+                    <form>
+                        <div>
+                            <h3>Título da notícia:</h3>
+                            <input type="text" placeholder="Digite aqui...">
+                        </div>
+                        
+                        <div>
+                            <h3>Abrangência: </h3>
+
+                            <div class="abr_opcoes">
+                                <div>
+                                    <input type="radio" id="nacional" name="abrangencia" value="Nacional">
+                                    <label for="nacional">Nacional</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="internacional" name="abrangencia" value="Internacional">
+                                    <label for="internacional">Internacional</label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <h3>Fonte da notícia:</h3>
+                            <input type="text" placeholder="Digite aqui...">
+                        </div>
+
+                        <div>
+                            <h3>Conteúdo da notícia</h3>
+                            <textarea></textarea>
+                        </div>
+                        <div class="btns_post_noticia">
+                            <button>Enviar para vizualizador</button>
+                            <button>Limpar</button>
+                        </div>
+                    </form>
+                    
+
+                </div>
+
+            </div>
+        </div>
+    </div>  
+
+    <!--footer--->
+
+    
+    <div class="footer">
+        <div class="logotipo">
+            <img src="../assets/img/logo-farm.png">
+        </div>
+        <div class="numbers">
+            <span>Contactos:</span>
+            <ul>
+                <li>covidango@gmail.com</li>
+            </ul>
+        </div>
+        <div class="redes_sociais">
+            <span>Equipa Desenvolvedora</span>
+            <ul>
+                <li><i class="fab fa-instagram"></i> Adolfo Quende (@g_quende)</li>
+                <li><i class="fab fa-instagram"></i> Átila e Sousa </li>
+                <li><i class="fab fa-instagram"></i> Edmilson Júlio (@edjulio_denzel)</li>
+                <li><i class="fab fa-instagram"></i> Hairton Vanda (@silvestre_vanda)</li>
+                <li><i class="fab fa-instagram"></i> Marco Pitra (@69raios)</li>
+                <li><i class="fab fa-instagram"></i> Milton Bernardo (@miltonbernardo11)</li>
+                <li><i class="fab fa-instagram"></i> Hélio Vicente </li>
+                <li><i class="fab fa-instagram"></i> Okusindja de Almeida (@guccikussy)</li>
+                <li><i class="fab fa-instagram"></i> Peterson Alves (@peterson.alves.3133)</li>
+                <li><i class="fab fa-instagram"></i> Ricardo Silva </li>
+            </ul>
+        </div>
+        <div class="consideracoes">
+            <p>De Angola com muito amor</p>
+            <p>S.O.S Mundo, Angola Report</p>
+            <a>Imagens por -<a href="https://br.freepik.com/"> freepik.com;</a>
+                <a href="https://www.pexels.com"> pexels.com;</a><a href="https://www.dreamstime.com">
+                    dreamstime.com</a></a>
+
+        </div>
+
+    </div>
+    <div class="rodape">Este é um projecto comunitário sem fins-lucrativos destinado a todos os angolanos.</div>
+
+
+    <script src="../assets/js/jquery-2.1.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.easing.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+    <script type="text/javascript" src="../assets/js/modelo.js"></script>
+
+    <script type="text/javascript">
+        inicio();
+        verifica();
+
+
+        // obter o conteiner, ou div que contém os botões
+        var container = document.getElementById("conteiner_tabs_principais");
+
+        // Obter todos botões que estão dentro de conteiner_tabs_principais
+        var btns = container.getElementsByClassName("botao");
+
+        // Ciclo para os botões e adiciona a classe active_tab ao botão clicado
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var atual = document.getElementsByClassName("active_tab");
+
+                // Caso o botão não seja o activo (não tem a classe active_tab)
+                if (atual.length > 0) {
+                    atual[0].className = atual[0].className.replace(" active_tab", "");
+                }
+
+                // Adiciona a class active_tab ao botão atual clicado
+                this.className += " active_tab";
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
