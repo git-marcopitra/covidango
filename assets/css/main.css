@@ -1035,9 +1035,10 @@ right: 200px;
 right: 0%;
 }
 
-#subscrever: focus{
-left: -34px;
+#subscrever:focus{
+    left: -34px;
 }
+
 .apoio1{
     padding: 0;
 max-width: 250px;
