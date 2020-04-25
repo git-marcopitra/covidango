@@ -13,6 +13,7 @@
     <link rel="shortcut icon" type="image/x-png" href="assets/img/logo-farm.png">
     <link rel="stylesheet" href="assets/dist/font-awesome/css/all.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <meta property="og:description"
         content="Informação útil do Covid-19 - Informação de Fármacos disponiveis nas farmácias próximas de si">
     <meta property="og:locale" content="pt_Br">
@@ -25,7 +26,6 @@
     <meta property="og:image:height" content="600">
     <meta property="og:type" content="website">
 
- 
 </head>
 
 <body>
@@ -50,10 +50,15 @@
                     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#inicio" role="tab"
                         aria-controls="inicio" aria-selected="true">Inicio</a>
                 </li>
+                
                 <li class="nav-item">
 
                     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#farmacia" role="tab"
                         aria-controls="farmacia" aria-selected="false">Artigos</a>
+                </li>
+                <li>
+                    <a class="nav-link " id="pills-home-tab" data-toggle="pill" href="#noticias" role="tab"
+                        aria-controls="noticias" aria-selected="false">Notícias</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#covid19" role="tab"
@@ -129,71 +134,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-                <div class="bloco_de_coisas post_noticias">
-                    <div style="display: flex; flex-direction: row; justify-content: space-between; width: 98%; align-items: center;"><h1>Notícias recentes</h1>
-                        <a href="#" style="width: 200px; color: var(--primary-color);">Ver todas notícias</a></div>
-                    
-                    <div class="bloco_conteiner">
-                        <div class="bloco_singular">
-                            <div class="segurador"></div>
-                            <div class="foto_conteiner">
-                                <img src="assets/img/1.jpg">
-                            </div>
-                            <div class="texto_noticia">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eaque assumenda esse, facilis aperiam atque inventore iusto, 
-                                    similique iste autem maxime expedita! Autem alias 
-                                    doloremque consequuntur minus exercitationem soluta eius?<br><br>
-                                    <span>Fonte: TPA</span><br>
-                                    <span>Luanda, aos 12 Setembro 2023 (terceiro ano da quarentena)</span>
-                                </p>
-                            </div>
-                            <a>Mais detalhes...</a>
-                        </div>
-                        <div class="bloco_singular">
-                            <div class="segurador"></div>
-                            <div class="foto_conteiner">
-                                <img src="assets/img/1.jpg">
-                            </div>
-                            <div class="texto_noticia">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eaque assumenda esse, facilis aperiam atque inventore iusto, 
-                                    similique iste autem maxime expedita! Autem alias 
-                                    doloremque consequuntur minus exercitationem soluta eius?<br><br>
-                                    <span>Fonte: TPA</span><br>
-                                    <span>Luanda, aos 12 Setembro 2023 (terceiro ano da quarentena)</span>
-                                </p>
-                            </div>
-                            <a>Mais detalhes...</a>
-                        </div>
-                        <div class="bloco_singular">
-                            <div class="segurador"></div>
-                            <div class="foto_conteiner">
-                                <img src="assets/img/1.jpg">
-                            </div>
-                            <div class="texto_noticia">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eaque assumenda esse, facilis aperiam atque inventore iusto, 
-                                    similique iste autem maxime expedita! Autem alias 
-                                    doloremque consequuntur minus exercitationem soluta eius?<br><br>
-                                    <span>Fonte: TPA</span><br>
-                                    <span>Luanda, aos 12 Setembro 2023 (terceiro ano da quarentena)</span>
-                                </p>
-                            </div>
-                            <a>Mais detalhes...</a>
-                        </div>
-                    </div>
-                </div>
-
-
-
 
 
 
@@ -283,6 +223,7 @@
             </div>
 
         </div>
+<!--/Section-->
 
         <div class="tab-pane fade" id="farmacia" role="tabpanel" aria-labelledby="pills-home-tab">
 
@@ -384,7 +325,23 @@
 
         </div>
 
+<!--Section-->
+         <div class="tab-pane fade" id="noticias" role="tabpanel" aria-labelledby="pills-home-tab">
 
+            <div class="conteudo_geral">
+                     <div class="bloco_de_coisas post_noticias">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between; width: 98%; align-items: center;"><h1>Notícias recentes</h1>
+                        <a href="#" style="width: 200px; color: var(--primary-color);">Ver todas notícias</a></div>
+                    
+                    <div class="bloco_conteiner" id="localNoticias">
+                     
+                   
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--/Section-->
     <div id="slideout">
 <img src="assets/img/subscrever.jpg" alt="Subscribe" class="subdesktop" id="subscrever"  />
 <img src="assets/img/subs.png" class="submobile">
@@ -1457,12 +1414,13 @@
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-messaging.js"></script>
     <script type="text/javascript" src="assets/js/modelo.js"></script>
 
     <script type="text/javascript">
         inicio();
         verifica();
-
+noticias();
 
         // obter o conteiner, ou div que contém os botões
         var container = document.getElementById("conteiner_tabs_principais");
@@ -1487,6 +1445,9 @@
 
     </script>
 
+        <script type="text/javascript">
+    
+        </script>
 </body>
 
 </html>

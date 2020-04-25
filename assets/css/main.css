@@ -1050,11 +1050,11 @@ max-width: 250px;
 }
 .subdesktop{
     display: block;
-     height: 56px;
-      transform: rotate(270deg); 
+     height: 183px;
+      transform: rotate(0deg); 
       position: absolute; 
-      top: 94px;
-    left: -67px;
+      top: 36px;
+    left: 3px;
 }
 
 @media screen and (max-width: 700px) {

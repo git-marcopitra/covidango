@@ -13,7 +13,37 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
+const messaging = firebase.messaging();
 
+messaging.usePublicVapidKey("BAH3xCaV5kk3aSudc7aCiH-ViUIIl9VsANlFybLbKjB-8AvGXiEQGHT4LYibvXmyB5y14qclHy175NuitNJCSFY");
+
+messaging.requestPermission().then((permission) => {
+  
+    console.log('Notification permission granted.');
+    
+    messaging.getToken().then((currentToken) => {
+        console.log(currentToken);
+
+}).catch((err) => {
+  console.log('An error occurred while retrieving token. ', err);
+  showToken('Error retrieving Instance ID token. ', err);
+  setTokenSentToServer(false);
+});
+ 
+
+}).catch((error)=>{
+    console.log("test" +error);
+});
+
+
+ messaging.onMessage((payload) => {
+  console.log('Message received. ', payload);
+  // ...
+});
+
+
+
+  
 
 
 var url = window.location.pathname;
@@ -2212,4 +2242,16 @@ function newsletter(){
     }
    
 
+}
+
+function noticias(){
+    firebase.database().ref("noticias/").on('value',function(result){
+        result.forEach(function(dado) {
+            var div=document.createElement("div");
+            div.setAttribute("class","bloco_singular");
+        div.innerHTML="<div class='segurador'></div><div class='foto_conteiner'><img src="+dado.val().link+"></div><div class='texto_noticia'><p>"+dado.val().texto+"<br><br><span>"+dado.val().fonte+"</span><br><span>Luanda, aos "+dado.val().dia+" "+dado.val().mes+" 2020 </span></p></div><a>Mais detalhes...</a>";
+      document.getElementById("localNoticias").appendChild(div);
+    });
+    });
+    /**/
 }
