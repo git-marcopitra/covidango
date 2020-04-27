@@ -13,33 +13,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-const messaging = firebase.messaging();
-
-messaging.usePublicVapidKey("BAH3xCaV5kk3aSudc7aCiH-ViUIIl9VsANlFybLbKjB-8AvGXiEQGHT4LYibvXmyB5y14qclHy175NuitNJCSFY");
-
-messaging.requestPermission().then((permission) => {
-  
-    console.log('Notification permission granted.');
-    
-    messaging.getToken().then((currentToken) => {
-        console.log(currentToken);
-
-}).catch((err) => {
-  console.log('An error occurred while retrieving token. ', err);
-  showToken('Error retrieving Instance ID token. ', err);
-  setTokenSentToServer(false);
-});
- 
-
-}).catch((error)=>{
-    console.log("test" +error);
-});
-
-
- messaging.onMessage((payload) => {
-  console.log('Message received. ', payload);
-  // ...
-});
 
 
 
@@ -60,8 +33,39 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 var p = false;
+messaging();
+function messaging(){
+
+    const messaging = firebase.messaging();
+
+messaging.usePublicVapidKey("BAH3xCaV5kk3aSudc7aCiH-ViUIIl9VsANlFybLbKjB-8AvGXiEQGHT4LYibvXmyB5y14qclHy175NuitNJCSFY");
+
+messaging.requestPermission().then((permission) => {
+  alert("ola");
+    console.log('Notification permission granted.');
+    
+    messaging.getToken().then((currentToken) => {
+        console.log(currentToken);
+
+}).catch((err) => {
+  console.log('An error occurred while retrieving token. ', err);
+  showToken('Error retrieving Instance ID token. ', err);
+  setTokenSentToServer(false);
+});
+ 
+
+}).catch((error)=>{
+    alert("ola");
+    console.log("test" +error);
+});
 
 
+ messaging.onMessage((payload) => {
+  console.log('Message received. ', payload);
+  // ...
+});
+
+}
 
 function inicio() {
     return firebase.database().ref('titulo').once('value').then(function(snapshot) {
