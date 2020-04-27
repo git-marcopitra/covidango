@@ -49,13 +49,12 @@ messaging.requestPermission().then((permission) => {
 
 }).catch((err) => {
   console.log('An error occurred while retrieving token. ', err);
-  showToken('Error retrieving Instance ID token. ', err);
-  setTokenSentToServer(false);
+ 
 });
  
 
 }).catch((error)=>{
-    alert("ola");
+   
     console.log("test" +error);
 });
 
@@ -638,6 +637,7 @@ pai2_1_2.innerHTML=produto;
 var pai2_1_3=document.createElement("buttom");
 pai2_1_3.setAttribute("class","close");
 pai2_1_3.setAttribute("type","buttom");
+pai2_1_3.style.cursor="pointer";
 pai2_1_3.setAttribute("data-dismiss","modal");
 pai2_1_3.setAttribute("aria-label","Close");
 
@@ -892,6 +892,7 @@ pai2_1_2.innerHTML=titulo;
 var pai2_1_3=document.createElement("buttom");
 pai2_1_3.setAttribute("class","close");
 pai2_1_3.setAttribute("type","buttom");
+pai2_1_3.style.cursor="pointer";
 pai2_1_3.setAttribute("data-dismiss","modal");
 pai2_1_3.setAttribute("aria-label","Close");
 
@@ -1307,6 +1308,7 @@ pai2_1_2.innerHTML=titulo;
 var pai2_1_3=document.createElement("buttom");
 pai2_1_3.setAttribute("class","close");
 pai2_1_3.setAttribute("type","buttom");
+pai2_1_3.style.cursor="pointer";
 pai2_1_3.setAttribute("data-dismiss","modal");
 pai2_1_3.setAttribute("aria-label","Close");
 
@@ -2235,6 +2237,7 @@ function itemHigiene1(botao){
 }
 
 function newsletter(){
+    
     var email=document.getElementById("emailsub").value;
     if(/^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/.test(email)){
     document.getElementById("subscreverform").style.display="none";
@@ -2243,19 +2246,95 @@ function newsletter(){
       firebase.firestore().collection("Subscritores").add({
         email: email 
      });
+     if (Notification.permission !== "granted"){
+        messaging();
+    }
+    }else{
+        alert("Email invalido");
     }
    
 
 }
 
 function noticias(){
-    firebase.database().ref("noticias/").on('value',function(result){
+    firebase.database().ref("noticias/").once('value').then(function(result){
         result.forEach(function(dado) {
-            var div=document.createElement("div");
-            div.setAttribute("class","bloco_singular");
-        div.innerHTML="<div class='segurador'></div><div class='foto_conteiner'><img src="+dado.val().link+"></div><div class='texto_noticia'><p>"+dado.val().texto+"<br><br><span>"+dado.val().fonte+"</span><br><span>Luanda, aos "+dado.val().dia+" "+dado.val().mes+" 2020 </span></p></div><a>Mais detalhes...</a>";
-      document.getElementById("localNoticias").appendChild(div);
+            var chave=dado.key;
+            var imagem=dado.val().link;
+            var titulo=dado.val().titulo;
+            var resumo=dado.val().resumo;
+            var texto=dado.val().texto;
+            var fonte=dado.val().fonte;
+            var data=dado.val().data;
+            
+            var div=document.createElement("div");    
+            div.setAttribute("class","bloco_singular");   
+            div.setAttribute('type',"button");
+            div.setAttribute("data-toggle",'modal');
+            div.setAttribute("data-target",'#'+chave);
+           
+        div.innerHTML="<div class='segurador'></div><div class='foto_conteiner'><img src="+imagem+" style='height: 228px;'></div><div class='texto_noticia' style='margin-top: 190px; width: 100%;'><h5 style='margin-bottom: 0;margin-left: 15px;'>"+titulo+"</h5><p style='overflow-wrap: anywhere; padding-top: 0;'>"+resumo+"<br><br><span>Fonte: "+fonte+"</span><br><span>"+data+"</span></p></div><a style='cursor: pointer;'>Mais detalhes...</a>";
+      document.getElementById("carregarNoticias").style.display="none";
+        document.getElementById("localNoticias").insertBefore(div, document.getElementById("localNoticias").childNodes[0]);
+        
+      var pai=document.createElement("div");
+pai.setAttribute("class","modal fade");
+pai.setAttribute("id",chave);
+pai.setAttribute("tabindex","-1");
+pai.setAttribute("role","dialog");
+pai.setAttribute("aria-labelledby","exampleModalLabel");
+pai.setAttribute("aria-hidden","true");
+
+
+var pai1=document.createElement("div");
+pai1.setAttribute("class","modal-dialog");
+pai1.setAttribute("role","document");
+
+var pai2=document.createElement("div");
+pai2.setAttribute("class","modal-content");
+
+var pai2_1=document.createElement("div");
+pai2_1.setAttribute("class","modal-header");
+
+var pai2_1_2=document.createElement("h5");
+pai2_1_2.setAttribute("class","modal-title");
+pai2_1_2.setAttribute("id","exampleModalLabel");
+pai2_1_2.innerHTML="Notícia";
+
+    var pai2_1_3=document.createElement("buttom");
+pai2_1_3.setAttribute("class","close");
+pai2_1_3.setAttribute("type","buttom");
+pai2_1_3.style.cursor="pointer";
+pai2_1_3.setAttribute("data-dismiss","modal");
+pai2_1_3.setAttribute("aria-label","Close");
+
+var pai2_1_3_1=document.createElement("span");
+pai2_1_3_1.innerHTML="&times;";
+pai2_1_3_1.setAttribute("aria-hidden","true");
+
+
+var pai2_2=document.createElement("div");
+pai2_2.setAttribute("class","modal-body");
+pai2_2.style="padding: 1rem;overflow-wrap: anywhere;";
+pai2_2.innerHTML="<h4>"+titulo+"</h4><p style='margin-left: 15px;'>"+texto+"</p><br><small>Fonte: "+fonte+"</small><br><small>"+data+"</small>";
+
+
+
+
+pai.appendChild(pai1);
+pai1.appendChild(pai2);
+pai2.appendChild(pai2_1);
+pai2_1.appendChild(pai2_1_2);
+pai2_1.appendChild(pai2_1_3);
+pai2_1_3.appendChild(pai2_1_3_1);
+pai2.appendChild(pai2_2);
+
+document.getElementsByTagName("body")[0].appendChild(pai);
+
     });
     });
-    /**/
+    
+
+
+
 }
