@@ -375,6 +375,7 @@ input[type=radio]{
 
 .post_noticias .bloco_conteiner {
     flex-wrap: wrap;
+    padding-top: 60px;
 }
 
 .informacaoProduto {
@@ -398,8 +399,8 @@ input[type=radio]{
     background-color: #f3f3f3;
     flex: 1;
     min-width: 300px;
-    max-width: 500px;
-    height: 600px;
+    max-width: 340px;
+    height: 450px;
     position: relative;
     overflow: hidden;
 }
@@ -478,14 +479,12 @@ input[type=radio]{
 }
 
 .post_noticias .bloco_conteiner .bloco_singular .texto_noticia{
-    height: 270px;
-    position: absolute;
-    top: 277px;
+    margin-top: 150px;
 }
 
 .post_noticias .bloco_conteiner .bloco_singular .texto_noticia p{
     color: var(--primary-color);
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
 }
 
 .post_informations h1 {
