@@ -2258,6 +2258,9 @@ function newsletter(){
 
 function noticias(){
     firebase.database().ref("noticias/").once('value').then(function(result){
+         document.getElementById("carregarNoticias").style.display="none";
+        if(result.numChildren()==0)
+            document.getElementById("semNoticias").style.display="block";
         result.forEach(function(dado) {
             var chave=dado.key;
             var imagem=dado.val().link;

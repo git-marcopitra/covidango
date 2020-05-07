@@ -122,7 +122,7 @@
                             <a href="#">Como proteger-me e conselhos <i class="fas fa-chevron-circle-right"></i></a>
                         </button>
                         <div class="bloco_singular">
-                            <a href="https://telecovidcina.web.app/" target="_blank">Faça a sua avaliação de sintomas <i
+                            <a href="https://www.coronabr.com.br/" target="_blank">Faça a sua avaliação de sintomas <i
                                     class="fas fa-chevron-circle-right"></i></a>
                         </div>
                     </div>
@@ -241,12 +241,12 @@
                             href="#itensFarmacia" role="tab" aria-controls="itensFarmacia" aria-selected="false"
                             onclick="produtosFarmacia();">
 
-                            <a class="botao" href="#">Farmacias </a>
+                            <a class="botao" href="#">Farmacos </a>
                         </li>
 
                         <li class="bloco_singular bloco_tab_principal" id="pills-contact-tab" data-toggle="pill"
                             href="#itensMantimentos" role="tab" aria-controls="itensMantimentos" aria-selected="false">
-                            <a class="botao" href="#">Mantimentos </a>
+                            <a class="botao" href="#">Mantimentos e Artigo</a>
                         </li>
 
 
@@ -278,7 +278,13 @@
                                     style="border: none; height: 70px; display: flex; justify-content: center;"
                                     id="pills-contact-tab" data-toggle="pill" href="#higiene" role="tab"
                                     aria-controls="higiene" aria-selected="false" onclick=" produtosHigiene()">
-                                    <a href="#">Higiene, Limpeza e cosméticos <i class="fas fa-shower"></i></a>
+                                    <a href="#">Higiene, Limpeza, cosméticos <i class="fas fa-shower"></i></a>
+                                </li>
+                                <li class="bloco_singular"
+                                    style="border: none; height: 70px; display: flex; justify-content: center;"
+                                    id="pills-contact-tab" data-toggle="pill" href="#artigosParceiros" role="tab"
+                                    aria-controls="artigosParceiros" aria-selected="false" >
+                                    <a href="#">Artigos <i class="fas fa-shower"></i></a>
                                 </li>
                                 <br>
 
@@ -294,9 +300,30 @@
 
                                 </div>
 
-                                <div class="tab-pane fade " id="higiene" role="tabpanel"
+                            <div class="tab-pane fade " id="higiene" role="tabpanel"
                                     aria-labelledby="pills-home-tab">
 
+                                </div>
+                                <div class="tab-pane fade " id="artigosParceiros" role="tabpanel"
+                                    aria-labelledby="pills-home-tab">
+
+                                    
+
+                                    <div class="bloco_conteiner">
+                                        <div  data-target="#empirek" data-toggle="modal" type="buttom" class="bloco_singular">
+                                            <div class="foto_bloco_sigular">
+                                                <div class="foto_conteiner">
+                                                    <img src="assets/img/botija.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="informacao">
+                                                <h3>Cás de Cozinha</h3>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                
 
                                 </div>
                             </div>
@@ -334,11 +361,8 @@
                       <!--  <a href="#" style="width: 200px; color: var(--primary-color);">Ver todas notícias</a>--></div>
                     
                     <div class="bloco_conteiner" id="localNoticias">
-                        <div class="spinner-grow text-success" role="status" id="carregarNoticias">
-                   
-                       
-                    </div>
-                    
+                        <div class="spinner-grow text-success" role="status" id="carregarNoticias"></div>
+                     <p style="font-size: 20pt; display: none" id="semNoticias">Sem notícias</p>
                 </div>
                 
             </div>
@@ -664,10 +688,10 @@
                         procurados
                         nas farmácias registadas na plataforma</li>
 
-                    <li style="font-size: 16pt;"> Exposição de bens alimentares e produtos de higiene disponíveis
+                   <!-- <li style="font-size: 16pt;"> Exposição de bens alimentares e produtos de higiene disponíveis
                         nos
                         armazéns e supermercados registados</li>
-                        <li style="font-size: 16pt;">Acompanhamento de pacientes suspeitos de Covid-19 recorrendo a serviços de <a href="https://telecovidcina.web.app/" style="color: blue;">telemedicina.</a></li>
+                        <li style="font-size: 16pt;">Acompanhamento de pacientes suspeitos de Covid-19 recorrendo a serviços de <a href="https://telecovidcina.web.app/" style="color: blue;">telemedicina.</a></li>-->
                     <br>
 
                     <div class="conteiner_miss">
@@ -737,9 +761,9 @@
                         <div class="frontside">
                             <div class="card apoio1" >
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="assets/img/logo-farm.png" alt="card image"></p>
-                                    <h4 class="card-title">In-Consciente</h4>
-                                    <p class="card-text">A ideia de criar o que quero, quando quero e como quero agrada-me... Isto é arte</p>
+                                    <p><img class=" img-fluid" src="assets/img/apoiantes/empirek.jpeg" alt="card image"></p>
+                                    <h4 class="card-title">Empire K Express<br><small>(Parceiro)</small></h4>
+                                    <p class="card-text">É uma empresa que atua no ramo de transportação, levando até si diversos produtos de extrema importância</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -747,29 +771,242 @@
                         <div class="backside">
                             <div class="card apoio1" >
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">In-Consciente</h4>
-                                    <p class="card-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabl.</p>
+                                    <h4 class="card-title">Empire K Express</h4>
+                                    <p class="card-text">Nessa fase do covid 19 disponibilizamos para si q venda de gás ao domicílio.<br>
+                                        Tel:925 209 858 <br>Tel: 994 089 061</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-facebook"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com/empirekexpress">
+                                                <i class="fab fa-facebook"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-twitter"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://instagram.com/empirek_express?igshid=fq4adtbnl4kp">
+                                                <i class="fab fa-instagram"></i>
                                             </a>
                                         </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+             <!-- Team member -->
+            <div class="apoio col-xs-12 col-sm-6 col-md-4" >
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center">
+
+                                    <p><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 308 129" style="enable-background:new 0 0 308 129;" xml:space="preserve">
+                                        <image class=" img-fluid" style="overflow:visible;" width="230" height="77" alt="card image" xlink:href="data:image/png;base64,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" transform="matrix(1 0 0 1 39 26)">
+</image>
+</svg>
+</p>
+                                    <h4 class="card-title">Trazlogo<br><small>(Parceiro)</small></h4>
+                                    <p class="card-text" >Oferecemos aos seus clientes a conveniência de fazer compras em praças, armazéns, e supermercados sem precisar sair de casa.</p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card apoio1" >
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Trazlogo</h4>
+                                    <p class="card-text">Após a solicitação das compras, mandamos para si a forma de pagamento que mais lhe convém.
+Dependendo da hora de solicitação das compras, podemos entregar nos mesmo dia ou no dia seguinte.</p>
+                                    <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-skype"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com/TrazLogoLda/">
+                                                <i class="fab fa-facebook"></i>
                                             </a>
                                         </li>
+                                       
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-google"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://trazlogo.com/">
+                                                <i class="fas fa-globe-americas"></i>
                                             </a>
                                         </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -800,26 +1037,18 @@
 
                                     A ideia inical do [IN] Consciente, era de criar uma pequena plataforna para amantes da literatura, com o tempo comecei a expandir mais a página e acobei por abraçar outras formas de arte na minha plataforma, sem deixar a escrita de lado é claro.</p>
                                     <ul class="list-inline">
+                                        
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fab fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://twitter.com/in_conscientee">
                                                 <i class="fab fa-twitter"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://instagram.com/in_conscientee?igshid=jun1yy3ygs6">
                                                 <i class="fab fa-instagram"></i>
                                             </a>
                                         </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fab fa-google"></i>
-                                            </a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -848,13 +1077,9 @@
                                     <h4 class="card-title">Rafaela Santos</h4>
                                     <p class="card-text">Acredita que as pessoas devem ser livres dos padrões sociais, desde que não quebrem as regras de como é viver em sociedade</p>
                                     <ul class="list-inline">
+                                        
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fab fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://twitter.com/KokasXiela?s=08">
                                                 <i class="fab fa-twitter"></i>
                                             </a>
                                         </li>
@@ -863,11 +1088,7 @@
                                                 <i class="fab fa-instagram"></i>
                                             </a>
                                         </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fab fa-google"></i>
-                                            </a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -899,25 +1120,18 @@
                                     <p class="card-text">Acredito que as pessoas devem ter amor pois é a base e aporta para todos outros bons sentimentos como empatia , bom senso , tolerância ..</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com/evaldina.oliveira">
                                                 <i class="fab fa-facebook"></i>
                                             </a>
                                         </li>
+                                        
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fab fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://instagram.com/del_by?r=nametag
+">
                                                 <i class="fab fa-instagram"></i>
                                             </a>
                                         </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fab fa-google"></i>
-                                            </a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -935,7 +1149,7 @@
                                 <div class="card-body text-center">
                                     <p><img class=" img-fluid" src="assets/img/apoiantes/helmerfumuassuka.jpeg" alt="card image"></p>
                                     <h4 class="card-title">Helmer Fumuassuka<br><small>(Apoiante)</small> </h4>
-                                    <p class="card-text">Engenheiro de Software e Desenvolvedor de Sistema (Full - Stack), fantástico por técnologia.</p>
+                                    <p class="card-text" style="font-size: 11pt">Engenheiro de Software e Desenvolvedor de Sistema (Full - Stack), fantástico por técnologia.</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -946,24 +1160,10 @@
                                     <h4 class="card-title">Helmer Fumuassuka</h4>
                                     <p class="card-text">Engenheiro de Software e Desenvolvedor de Sistema (Full - Stack), fantástico por técnologia, gosto de desafios, e acima de tudo projectos que desafiam meus conhecimentos.</p>
                                     <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fab fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fab fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fab fa-skype"></i>
-                                            </a>
-                                        </li>
+                                        
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="https://www.helmercap.rf.gd">
-                                                <i class="fab fa-google"></i>
+                                                <i class="fas fa-globe-americas"></i>
                                             </a>
                                         </li>
                                     </ul>
@@ -995,25 +1195,16 @@
                                     <p class="card-text">Se ontem você não conseguiu alcançar o que queria, hoje é um belo dia para conseguir. O mundo dá voltas para nos mostrar que vale sempre a pena recomeçar. Nunca desista daquilo que acredita.</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-facebook"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com/paulosergio.fuziileiro">
+                                                <i class="fab fa-facebook"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-twitter"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.instagram.com/paullosergio45/?hl=af">
+                                                <i class="fab fa-instagram"></i>
                                             </a>
                                         </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-skype"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-google"></i>
-                                            </a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -1031,7 +1222,7 @@
                                 <div class="card-body text-center">
                                     <p><img class=" img-fluid" src="assets/img/apoiantes/sharonmuaimha.jpeg" alt="card image"></p>
                                     <h4 class="card-title">Sharon Muaimha<br><small>(Apoiante)</small></h4>
-                                    <p class="card-text">Estudante de Geologia e Minas , faço encomenda de doces e salgados , e sou blogger (minha página : Natural-Shay )</p>
+                                    <p class="card-text" style="font-size: 11pt">Estudante de Geologia e Minas , faço encomenda de doces e salgados , e sou blogger (minha página : Natural-Shay )</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -1043,25 +1234,21 @@
                                     <p class="card-text">Creio que as pessoas têm que dar-se mais umas as outra , demonstra amor e carinho , e transbordar sempre amor pois isso é a base do sucesso em todos os sectores da vida</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-facebook"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com/sharonmuaimba/">
+                                                <i class="fab fa-facebook"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-twitter"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com/sharon.muaimbaah">
+                                                <i class="fas fa-globe-americas"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-skype"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://instagram.com/muaimba___?igshid=s2eayhipkkxj">
+                                                <i class="fab fa-instagram"></i>
                                             </a>
                                         </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-google"></i>
-                                            </a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -1079,7 +1266,7 @@
                                 <div class="card-body text-center">
                                     <p><img class=" img-fluid" src="assets/img/apoiantes/armando.jpeg" alt="card image"></p>
                                     <h4 class="card-title">Armando Gonçalves<br><small>(Apoiante)</small></h4>
-                                    <p class="card-text">..........................</p>
+                                    <p class="card-text">Estudante de Engenharia Informática, apaixonado por futebol e rede de computadores</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -1088,28 +1275,24 @@
                             <div class="card apoio1" >
                                 <div class="card-body text-center" style="margin-top: 0%;">
                                     <h4 class="card-title">Armando Gonçalves</h4>
-                                    <p class="card-text">..................................</p>
+                                    <p class="card-text">20 anos de idade estudante do 3º ano de Engenharia Informática.</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-facebook"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com/armandogoncalvesfiel">
+                                                <i class="fab fa-facebook"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-twitter"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://twitter.com/Armando_Goncalv?s=08">
+                                                <i class="fab fa-twitter"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-skype"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://instagram.com/armando_mgoncalves?igshid=1tb5rdh68g66z">
+                                                <i class="fab fa-instagram"></i>
                                             </a>
                                         </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-google"></i>
-                                            </a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -1127,7 +1310,7 @@
                                 <div class="card-body text-center">
                                     <p><img class=" img-fluid" src="assets/img/apoiantes/edsonrocha.jpeg" alt="card image"></p>
                                     <h4 class="card-title">Edson Rocha<br><small>(Apoiante)</small></h4>
-                                    <p class="card-text">..........................</p>
+                                    <p class="card-text">Estudante de Engenharia Informática, apaixonado por futebol e musica</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -1136,28 +1319,24 @@
                             <div class="card apoio1" >
                                 <div class="card-body text-center" style="margin-top: 0%;">
                                     <h4 class="card-title">Edson Rocha</h4>
-                                    <p class="card-text">..................................</p>
+                                    <p class="card-text">20 anos de idade estudante do 4º ano de Engenharia Informática.</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-facebook"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com/edson.ricardo.9889">
+                                                <i class="fab fa-facebook"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-twitter"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://twitter.com/Edson_Ricardo7?s=09">
+                                                <i class="fab fa-twitter"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-skype"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://instagram.com/_edsinho__?igshid=18173ynxvt2ap">
+                                                <i class="fab fa-instagram"></i>
                                             </a>
                                         </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-google"></i>
-                                            </a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -1185,28 +1364,20 @@
                             <div class="card apoio1" >
                                 <div class="card-body text-center" style="margin-top: 0%;">
                                     <h4 class="card-title">Roberto Lemos</h4>
-                                    <p class="card-text">Roberto Lemos, 20 anos de idade estudante do 3 ano de Engenharia Informática. Programador e Design à 2 anos entendimento de Java, C e Web.</p>
+                                    <p class="card-text">Roberto Lemos, 20 anos de idade estudante do 3º ano de Engenharia Informática. Programador e Design à 2 anos entendimento de Java, C e Web.</p>
                                     <ul class="list-inline">
+                                        
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-facebook"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href=" https://twitter.com/_Robbyy1?s=08">
+                                                <i class="fab fa-twitter"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-twitter"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://instagram.com/roblemos1?igshid=9o2q1uqf64dp">
+                                                <i class="fab fa-instagram"></i>
                                             </a>
                                         </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-skype"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-google"></i>
-                                            </a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -1386,7 +1557,29 @@
         </div>
     </div>
 
-    
+<!--Empirek-->
+     <div class="modal fade" id="empirek" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Gás de Cozinha</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>Empire k Express</h4>
+                    <p>Entrega de Gás de cozinha ao domicilio</p>
+                    <p>Tel: 925 209 858 </p>
+                    <p>Tel: 994 089 061 </p>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
     <!--footer--->
 
