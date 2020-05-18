@@ -26,6 +26,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
 
     } else {
+        
         if (url.endsWith("/user.html") || url.endsWith("/user2.html")) {
             window.location.href = 'https://covidango.firebaseapp.com/';
         }
@@ -41,11 +42,14 @@ function messaging(){
 messaging.usePublicVapidKey("BAH3xCaV5kk3aSudc7aCiH-ViUIIl9VsANlFybLbKjB-8AvGXiEQGHT4LYibvXmyB5y14qclHy175NuitNJCSFY");
 
 messaging.requestPermission().then((permission) => {
-  alert("ola");
-    console.log('Notification permission granted.');
+ 
+ 
     
     messaging.getToken().then((currentToken) => {
-        console.log(currentToken);
+         firebase.database().ref('token').push({
+            token: currentToken
+         });
+    
 
 }).catch((err) => {
   console.log('An error occurred while retrieving token. ', err);
@@ -80,7 +84,7 @@ function inicio() {
                 document.getElementById("conta").style.display = "block";
                 document.getElementById("sessao").addEventListener("click", sair, false);
             } else {
-                document.getElementById("sessao").innerHTML = "Iniciar Sessão";
+                document.getElementById("sessao").innerHTML = "Fornecedor";
                 document.getElementById("conta").style.display = "none";
             }
         });
@@ -384,7 +388,7 @@ function verifica() {
             document.getElementById("conta").style.display = "block";
             document.getElementById("sessao").addEventListener("click", sair, false);
         } else {
-            document.getElementById("sessao").innerHTML = "Iniciar Sessão";
+            document.getElementById("sessao").innerHTML = "Fornecedor";
             document.getElementById("conta").style.display = "none";
         }
     });
