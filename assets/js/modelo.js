@@ -12,10 +12,192 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+google.charts.load("visualization", "1", { callback: function () {
+    graficos();
+    $(window).resize(graficos);
+  },'packages':['line','corechart','geochart'], 'language': 'pt'});
+//google.charts.setOnLoadCallback(graficos);
+
+var a=[false,false,false];
+
+function ajustar(i){
+
+document.getElementById("chart").style.opacity="0";
+window.onload = graficos();
+  window.onresize = graficos;
+document.getElementById("chart").style.opacity="1";
+
+}
+function graficos() {
+ 
+var dados=[];
+
+var dadosTransmissao=[];
+
+
+
+firebase.database().ref("transmissao/").once('value').then(function(result)
+      {
+        
+        dadosTransmissao.push(['casos', 'quantidade']);
+        dadosTransmissao.push(["Caso importado",parseInt(result.val().importado)]);
+        dadosTransmissao.push(["Transmissão local",parseInt(result.val().local)]);
+        dadosTransmissao.push(["Desconhecida",parseInt(result.val().desconhecida)]);
+        dadosTransmissao.push(["Transmissão comunitaria",parseInt(result.val().comunitaria)]);
+       var transmissao = google.visualization.arrayToDataTable(dadosTransmissao);
+
+
+        var options3 = {
+            
+          title: 'Origem dos casos',
+          colors: ['#4040f0', '#e6693e', '#cecece', '#f34f2d'],
+           width: '100%',
+            height: '100%',
+            chartArea: {
+                left: "10%",
+                top: "10%",
+                height: "70%",
+                width: "80%"
+            }
+          
+        };
+     var chart3 = new google.visualization.PieChart(document.getElementById('circular'));
+        chart3.draw(transmissao, options3);
+      });
+
+
+
+firebase.database().ref("pais/").once('value').then(function(result)
+      {
+        
+       
+var pais = google.visualization.arrayToDataTable([
+['Provincias', 'Casos'],
+        [{v:'AO-BGO',f:'Bengo'}, parseInt(result.val().bgo)],
+        [{v:'AO-BGU',f:'Benguela'}, parseInt(result.val().bgu)],
+        [{v:'AO-BIE',f:'Bié'}, parseInt(result.val().bie)],
+        [{v:'AO-CAB',f:'Cabinda'}, parseInt(result.val().cab)],
+        [{v:'AO-CCU',f:'Cuando Cubango'}, parseInt(result.val().ccu)],
+        [{v:'AO-CNO',f:'Cuanza Norte'}, parseInt(result.val().cno)],
+        [{v:'AO-CUS',f:'Cuanza Sul'}, parseInt(result.val().cus)],
+        [{v:'AO-CNN',f:'Cunene'}, parseInt(result.val().cnn)],
+        [{v:'AO-HUA',f:'Huambo'}, parseInt(result.val().hua)],
+        [{v:'AO-HUI',f:'Huíla'}, parseInt(result.val().hui)],
+        [{v:'AO-LUA',f:'Luanda'}, parseInt(result.val().lua)],
+        [{v:'AO-LNO',f:'Lunda Norte'}, parseInt(result.val().lno)],
+        [{v:'AO-LSU',f:'Lunda Sul'}, parseInt(result.val().lsu)],
+        [{v:'AO-MAL',f:'Malange'}, parseInt(result.val().mal)],
+        [{v:'AO-MOX',f:'Moxico'}, parseInt(result.val().mox)],
+        [{v:'AO-NAM',f:'Namibe'}, parseInt(result.val().nam)],
+        [{v:'AO-UIG',f:'Uíge'}, parseInt(result.val().uig)],
+        [{v:'AO-ZAI',f:'Zaire'}, parseInt(result.val().zai)],
+
+      
+         
+
+    ]);
+
+        var opcoesPais = {
+            
+        displayMode: 'regions',
+        region: 'AO',
+        resolution: 'provinces',
+        colorAxis: {
+      minValue: 0,
+      maxValue: 100,
+      colors: [ 'white','blue']
+             },
+           width: '100%',
+            height: '100%',
+            chartArea: {
+                left: "10%",
+                top: "0%",
+                height: "70%",
+                width: "80%"
+            }
+          
+        };
+     var chartMapa = new google.visualization.GeoChart(document.getElementById('geografico'));
+        chartMapa.draw(pais, opcoesPais);
+      });
+
+ firebase.database().ref("datas/").once('value').then(function(result){
+     
+        
+        result.forEach(function(dado) {
+            dados.push([new Date(2020,parseInt(dado.val().mes),parseInt(dado.val().dia)),parseInt(dado.val().conf),parseInt(dado.val().rec),parseInt(dado.val().mor)]);
+            
+        });
+
+          var data = new google.visualization.DataTable();
+      data.addColumn('date', 'Data');
+      data.addColumn('number', 'Confirmados');
+      data.addColumn('number', 'Recuperados');
+      data.addColumn('number', 'Mortes');
+      data.addRows(dados);
+      var options = {
+        chart: {
+          title: "Histórico dos casos de Covid-19 em Angola" ,
+          subtitle: "Histórico dos casos de Covid-19 em Angola" 
+        },
+        hAxis: {
+            format: 'dd/MM/yyyy',
+            gridlines: {count: 15}
+          },
+           series: {
+            0: { color: '#2196f0' },
+            1: { color: '#4caf50' },
+            2: { color: '#f44330' },
+        },
+        legend:{position: 'bottom'},
+                    chartArea: {
+        left: "10%",
+        top: "10%",
+        height: "70%",
+        width: "80%"
+    }
+      };
+
+      
 
 
 
 
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);                                                   
+
+ 
+
+      
+
+
+      
+
+        
+
+var chart = new google.visualization.LineChart(document.getElementById('chart'));
+
+
+        //function resize () {
+     
+      chart.draw(data, google.charts.Line.convertOptions(options));
+        
+        //}
+        /*$(document).ready(function () {
+         $(window).resize(function(){
+     graficos();
+     });
+   });*/
+ 
+  //window.onload = ();
+  //window.onresize = graficos;
+    });
+    }
   
 
 
